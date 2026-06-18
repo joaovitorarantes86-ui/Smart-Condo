@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="../../assets/img/logo.png" type="image/png">
+  <title>SmartCondo — Painel do Morador</title>
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <link rel="stylesheet" href="../../assets/css/dashboard.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/6b7a3c5b4f.js" crossorigin="anonymous"></script>
+</head>
+<body class="dashboard-body layout-mobile">
+  <header class="app-bar">
+    <div class="app-bar-inner">
+      <a href="../../index.html" class="app-bar-brand">
+        <img src="../../assets/img/logo.png" alt="SmartCondo" class="logo-sm">
+        <span class="brand-name">Smart<strong>Condo</strong></span>
+      </a>
+      <div class="app-bar-right">
+        <span class="user-chip"><i class="fa-solid fa-user"></i> Morador</span>
+        <a href="../../index.html" class="logout-btn"><i class="fa-solid fa-right-from-bracket"></i> Sair</a>
+      </div>
+    </div>
+  </header>
+  <main class="dash-wrapper">
+
+    <div class="dash-greeting">
+      <p class="greeting-sub"><i class="fa-solid fa-hand-wave"></i> Bem-vindo de volta</p>
+      <h2 class="greeting-name"><i class="fa-solid fa-user" style="margin-right:6px;color:var(--primary);"></i>João Silva</h2>
+      <p class="greeting-condo"><i class="fa-solid fa-building"></i> Residencial das Palmeiras &nbsp;·&nbsp; Apto 204, 2º andar</p>
+    </div>
+
+    <div class="stats-row">
+      <div class="stat-card teal"><span class="stat-value">2</span><span class="stat-label"><i class="fa-solid fa-calendar-check" style="margin-right:4px;font-size:11px;"></i>Reservas</span></div>
+      <div class="stat-card amber"><span class="stat-value">R$320</span><span class="stat-label"><i class="fa-solid fa-hourglass-half" style="margin-right:4px;font-size:11px;"></i>Pendente</span></div>
+      <div class="stat-card blue"><span class="stat-value">5</span><span class="stat-label"><i class="fa-solid fa-bullhorn" style="margin-right:4px;font-size:11px;"></i>Comunicados</span></div>
+    </div>
+
+    <p class="section-title"><i class="fa-solid fa-bolt"></i> Serviços</p>
+    <div class="dash-grid">
+      <a href="reservas.html" class="dash-card">
+        <div class="card-icon icon-teal"><img src="../../assets/img/icons/calendar-check.svg" alt="Reservas"></div>
+        <div class="card-info"><h4>Minhas Reservas</h4><p>Salão, churrasqueira, academia, piscina</p></div>
+        <i class="fa-solid fa-chevron-right card-arrow"></i>
+      </a>
+      <a href="financeiro.html" class="dash-card">
+        <div class="card-icon icon-yellow"><img src="../../assets/img/icons/file-invoice-dollar.svg" alt="Financeiro"></div>
+        <div class="card-info"><h4>Financeiro</h4><p>Boletos, histórico e composição da taxa</p></div>
+        <i class="fa-solid fa-chevron-right card-arrow"></i>
+      </a>
+      <a href="comunicados.html" class="dash-card">
+        <div class="card-icon icon-blue"><img src="../../assets/img/icons/bullhorn.svg" alt="Comunicados"></div>
+        <div class="card-info"><h4>Comunicados</h4><p>Avisos e notificações do condomínio</p></div>
+        <i class="fa-solid fa-chevron-right card-arrow"></i>
+      </a>
+      <a href="documentos.html" class="dash-card">
+        <div class="card-icon icon-purple"><img src="../../assets/img/icons/folder-open.svg" alt="Documentos"></div>
+        <div class="card-info"><h4>Documentos</h4><p>Atas, regimento e convenção interna</p></div>
+        <i class="fa-solid fa-chevron-right card-arrow"></i>
+      </a>
+      <a href="ocorrencias.html" class="dash-card">
+        <div class="card-icon icon-red"><img src="../../assets/img/icons/triangle-exclamation.svg" alt="Ocorrências"></div>
+        <div class="card-info"><h4>Ocorrências</h4><p>Registrar ou acompanhar incidentes</p></div>
+        <i class="fa-solid fa-chevron-right card-arrow"></i>
+      </a>
+    </div>
+
+    <p class="section-title"><i class="fa-solid fa-bullhorn"></i> Comunicados Recentes</p>
+    <div class="notif-list">
+      <div class="notif-item">
+        <div class="notif-dot"></div>
+        <div class="notif-content"><h5>Manutenção da piscina</h5><p>Interditada nos dias 20 e 21/03 para limpeza e tratamento.</p></div>
+        <span class="notif-time">Hoje</span>
+      </div>
+      <div class="notif-item">
+        <div class="notif-dot amber"></div>
+        <div class="notif-content"><h5>Assembleia geral ordinária</h5><p>Reunião marcada para 28/03 às 19h no salão de festas.</p></div>
+        <span class="notif-time">Ontem</span>
+      </div>
+      <div class="notif-item">
+        <div class="notif-dot read"></div>
+        <div class="notif-content"><h5>Nova portaria eletrônica ativada</h5><p>Retire seu cartão de acesso com o síndico até 22/03.</p></div>
+        <span class="notif-time">14/03</span>
+      </div>
+      <div class="notif-item">
+        <div class="notif-dot read"></div>
+        <div class="notif-content"><h5>Coleta de lixo suspensa</h5><p>Feriado municipal na segunda-feira, 11/03. Coleta retoma terça.</p></div>
+        <span class="notif-time">10/03</span>
+      </div>
+    </div>
+
+    <p class="section-title"><i class="fa-solid fa-calendar-days"></i> Próximas Reservas</p>
+    <div class="reserve-list">
+      <div class="reserve-card">
+        <div class="reserve-date"><div class="day">22</div><div class="month">MAR</div></div>
+        <div class="reserve-info"><h5>Salão de Festas</h5><p><i class="fa-regular fa-clock"></i> 14h – 22h &nbsp;·&nbsp; Capacidade 80 pessoas</p></div>
+        <span class="badge badge-ok">Confirmada</span>
+      </div>
+      <div class="reserve-card">
+        <div class="reserve-date"><div class="day">29</div><div class="month">MAR</div></div>
+        <div class="reserve-info"><h5>Churrasqueira 2</h5><p><i class="fa-regular fa-clock"></i> 11h – 18h &nbsp;·&nbsp; Área coberta</p></div>
+        <span class="badge badge-pending">Pendente</span>
+      </div>
+    </div>
+
+    <a href="reservas.html" class="action-btn outline">
+      <i class="fa-solid fa-plus"></i> Nova Reserva
+    </a>
+
+  </main>
+
+  <div class="accessibility-widget">
+    <input type="checkbox" id="access-toggle">
+    <label for="access-toggle" class="access-button" title="Acessibilidade">
+      <img src="../../assets/img/acessibilidade.png" class="access-icon-img" alt="">
+    </label>
+    <div class="access-menu">
+      <label><input type="checkbox" id="font-toggle"> <i class="fa-solid fa-text-height"></i> Aumentar fonte</label>
+      <label><input type="checkbox" id="contrast-toggle"> <i class="fa-solid fa-circle-half-stroke"></i> Alto contraste</label>
+      <label><input type="checkbox" id="read-toggle"> <i class="fa-solid fa-book-open"></i> Modo leitura</label>
+    </div>
+  </div>
+<script src="../../assets/js/validation.js"></script>
+</body>
+</html>

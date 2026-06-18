@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="../../assets/img/logo.png" type="image/png">
+  <title>SmartCondo — Cadastro</title>
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/6b7a3c5b4f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <main class="container">
+    <header class="logo-area">
+      <img src="../../assets/img/logo.png" alt="Logo SmartCondo" class="logo">
+      <div class="logo-text"><h1>Smart Condo</h1><p>Gestão de Condomínios</p></div>
+    </header>
+    <h2><i class="fa-solid fa-user-plus"></i> Criar conta</h2>
+    <p class="subtitle"><i class="fa-solid fa-hand-point-right"></i> Selecione seu perfil para começar o cadastro</p>
+
+    <div class="register-options">
+      <a href="cadastro_sindico.html" class="register-card">
+        <i class="fa-solid fa-star" style="color:#9164fa;"></i>
+        <div>
+          <h3>Síndico</h3>
+        </div>
+        <i class="fa-solid fa-chevron-right" style="color:#ddd;"></i>
+      </a>
+      <a href="../sindico/cadastrar_porteiro.html" class="register-card">
+        <i class="fa-solid fa-shield-halved" style="color:#409eff;"></i>
+        <div>
+          <h3>Porteiro</h3>
+        </div>
+        <i class="fa-solid fa-chevron-right" style="color:#ddd;margin-left:auto;"></i>
+      </a>
+      <a href="cadastro_morador.html" class="register-card">
+        <i class="fa-solid fa-user" style="color:var(--primary);"></i>
+        <div>
+          <h3>Morador</h3>
+        </div>
+        <i class="fa-solid fa-chevron-right" style="color:#ddd;margin-left:auto;"></i>
+      </a>
+    </div>
+
+    <a href="../../index.html" class="back-link">
+      <i class="fa-solid fa-arrow-left"></i> Voltar para o login
+    </a>
+  </main>
+
+  <div class="accessibility-widget">
+    <input type="checkbox" id="access-toggle">
+    <label for="access-toggle" class="access-button" title="Acessibilidade">
+      <img src="../../assets/img/acessibilidade.png" class="access-icon-img" alt="">
+    </label>
+    <div class="access-menu">
+      <label><input type="checkbox" id="font-toggle"> <i class="fa-solid fa-text-height"></i> Aumentar fonte</label>
+      <label><input type="checkbox" id="contrast-toggle"> <i class="fa-solid fa-circle-half-stroke"></i> Alto contraste</label>
+      <label><input type="checkbox" id="read-toggle"> <i class="fa-solid fa-book-open"></i> Modo leitura</label>
+    </div>
+  </div>
+</body>
+</html>

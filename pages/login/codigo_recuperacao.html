@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="../../assets/img/logo.png" type="image/png">
+  <title>SmartCondo — Código de Verificação</title>
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/6b7a3c5b4f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <main class="container">
+    <header class="logo-area">
+      <img src="../../assets/img/logo.png" alt="Logo SmartCondo" class="logo">
+      <div class="logo-text">
+        <h1>Smart Condo</h1>
+        <p>Gestão de Condomínios</p>
+      </div>
+    </header>
+    <h2><i class="fa-solid fa-mobile-screen-button" style="color:var(--primary);font-size:20px;margin-right:8px;"></i>Verifique seu acesso</h2>
+    <p class="subtitle">Digite o código de 8 dígitos enviado para seu e-mail ou telefone.</p>
+
+    <form action="nova_senha.html">
+      <div class="input-box">
+        <i class="fa-solid fa-key"></i>
+        <input type="text" placeholder="0000-0000" required maxlength="9" autocomplete="one-time-code"
+          style="text-align:center;letter-spacing:4px;font-size:20px;font-weight:700;">
+      </div>
+
+      <p style="font-size:12px;color:var(--muted);margin-bottom:20px;text-align:center;font-weight:500;">
+        <i class="fa-solid fa-rotate-right" style="color:var(--muted);margin-right:4px;"></i>Não recebeu? &nbsp;<a href="esqueci_senha.html" style="color:var(--primary);font-weight:700;text-decoration:none;">Reenviar código</a>
+      </p>
+
+      <button class="login-btn" type="submit">
+        <i class="fa-solid fa-check-circle" style="margin-right:6px;"></i>Verificar e continuar
+      </button>
+    </form>
+
+    <a href="esqueci_senha.html" class="back-link">
+      <i class="fa-solid fa-arrow-left"></i> Voltar
+    </a>
+  </main>
+
+  <div class="accessibility-widget">
+    <input type="checkbox" id="access-toggle">
+    <label for="access-toggle" class="access-button" title="Acessibilidade">
+      <img src="../../assets/img/acessibilidade.png" class="access-icon-img" alt="">
+    </label>
+    <div class="access-menu">
+      <label><input type="checkbox" id="font-toggle"> <i class="fa-solid fa-text-height"></i> Aumentar fonte</label>
+      <label><input type="checkbox" id="contrast-toggle"> <i class="fa-solid fa-circle-half-stroke"></i> Alto contraste</label>
+      <label><input type="checkbox" id="read-toggle"> <i class="fa-solid fa-book-open"></i> Modo leitura</label>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelector('form').addEventListener('submit', function(e) {
+        var input = this.querySelector('input');
+        var val = input.value.replace(/\D/g, '');
+        document.querySelectorAll('.erro-validacao').forEach(function(el) { el.remove(); });
+        if (val.length < 4) {
+          mostrarErro(input, 'Informe o código de 4 dígitos');
+          e.preventDefault();
+        }
+      });
+    });
+  </script>
+  <script src="../../assets/js/validation.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="../../assets/img/logo.png" type="image/png">
+  <title>SmartCondo — Recuperar Senha</title>
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/6b7a3c5b4f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <main class="container">
+    <header class="logo-area">
+      <img src="../../assets/img/logo.png" alt="Logo SmartCondo" class="logo">
+      <div class="logo-text">
+        <h1>Smart Condo</h1>
+        <p>Gestão de Condomínios</p>
+      </div>
+    </header>
+    <section class="recover-area">
+      <h2><i class="fa-solid fa-key" style="color:var(--primary);font-size:22px;margin-right:8px;"></i>Esqueci minha senha</h2>
+      <p class="subtitle"><i class="fa-solid fa-circle-info" style="color:var(--primary);margin-right:5px;"></i>Informe seu e-mail ou telefone e enviaremos um código de recuperação.</p>
+
+      <div class="recover-info">
+        <i class="fa-solid fa-circle-info"></i>
+        <span>Você receberá um código de verificação no contato informado.</span>
+      </div>
+
+      <form class="login-form" action="codigo_recuperacao.html">
+        <div class="input-box">
+          <i class="fa-solid fa-envelope"></i>
+          <input type="text" placeholder="E-mail ou telefone cadastrado" required autocomplete="email" class="mask-tel">
+        </div>
+        <button class="login-btn" type="submit">
+          <i class="fa-solid fa-paper-plane" style="margin-right:6px;"></i>Enviar código de recuperação
+        </button>
+      </form>
+
+      <a href="../../index.html" class="back-link">
+        <i class="fa-solid fa-arrow-left" style="margin-right:5px;"></i>Voltar para o login
+      </a>
+    </section>
+  </main>
+
+  <div class="accessibility-widget">
+    <input type="checkbox" id="access-toggle">
+    <label for="access-toggle" class="access-button" title="Acessibilidade">
+      <img src="../../assets/img/acessibilidade.png" class="access-icon-img" alt="">
+    </label>
+    <div class="access-menu">
+      <label><input type="checkbox" id="font-toggle"> <i class="fa-solid fa-text-height"></i> Aumentar fonte</label>
+      <label><input type="checkbox" id="contrast-toggle"> <i class="fa-solid fa-circle-half-stroke"></i> Alto contraste</label>
+      <label><input type="checkbox" id="read-toggle"> <i class="fa-solid fa-book-open"></i> Modo leitura</label>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelector('.login-form').addEventListener('submit', function(e) {
+        var input = this.querySelector('input');
+        var val = input.value.trim();
+        document.querySelectorAll('.erro-validacao').forEach(function(el) { el.remove(); });
+        if (!val) {
+          mostrarErro(input, 'Informe seu e-mail ou telefone');
+          e.preventDefault();
+        }
+      });
+    });
+  </script>
+  <script src="../../assets/js/validation.js"></script>
+
+</body>
+</html>

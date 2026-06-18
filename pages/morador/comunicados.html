@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="../../assets/img/logo.png" type="image/png">
+  <title>SmartCondo — Comunicados</title>
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <link rel="stylesheet" href="../../assets/css/dashboard.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/6b7a3c5b4f.js" crossorigin="anonymous"></script>
+  <style>
+    .filtro-btn {
+      display:inline-flex;align-items:center;gap:5px;padding:7px 14px;
+      border-radius:20px;font-size:12px;font-weight:700;text-decoration:none;
+      border:1.5px solid var(--border);
+      background:var(--surface);color:var(--muted);
+      transition:all .2s;cursor:pointer;
+    }
+    .filtro-btn:hover { border-color:var(--primary);color:var(--primary); }
+    .filtro-btn.ativo {
+      background:var(--primary);color:white;border-color:var(--primary);
+    }
+    .filtro-btn.ativo:hover { opacity:.9; }
+    .comunicado-item.escondido { display:none !important; }
+  </style>
+</head>
+<body class="dashboard-body layout-mobile">
+
+  <header class="app-bar">
+    <div class="app-bar-inner">
+      <a href="../../index.html" class="app-bar-brand">
+        <img src="../../assets/img/logo.png" alt="SmartCondo" class="logo-sm">
+        <span class="brand-name">Smart<strong>Condo</strong></span>
+      </a>
+      <div class="app-bar-right">
+        <span class="user-chip"><i class="fa-solid fa-user"></i> Morador</span>
+        <a href="../../index.html" class="logout-btn"><i class="fa-solid fa-right-from-bracket"></i> Sair</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="dash-wrapper">
+
+    <a href="dashboard.html" class="dash-back">
+      <i class="fa-solid fa-arrow-left"></i> Painel do Morador
+    </a>
+
+    <div class="dash-greeting">
+      <p class="greeting-sub"><i class="fa-solid fa-bullhorn" style="margin-right:6px;color:var(--primary);"></i>Fique por dentro das novidades</p>
+      <h2 class="greeting-name"><i class="fa-solid fa-bullhorn" style="margin-right:8px;font-size:22px;opacity:.85;"></i>Comunicados</h2>
+      <p class="greeting-condo"><i class="fa-solid fa-bullhorn"></i> Residencial das Palmeiras</p>
+    </div>
+
+    <div class="stats-row">
+      <div class="stat-card blue"><span class="stat-value">5</span><span class="stat-label"><i class="fa-solid fa-envelope" style="margin-right:4px;font-size:11px;"></i>Não lidos</span></div>
+      <div class="stat-card teal"><span class="stat-value">12</span><span class="stat-label"><i class="fa-regular fa-calendar" style="margin-right:4px;font-size:11px;"></i>Mês</span></div>
+      <div class="stat-card amber"><span class="stat-value">1</span><span class="stat-label"><i class="fa-solid fa-users" style="margin-right:4px;font-size:11px;"></i>Assembleia</span></div>
+    </div>
+
+    <!-- Filtros de categoria -->
+    <div class="filtro-row" style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px;">
+      <a href="javascript:void(0)" class="filtro-btn ativo" data-filter="todos" onclick="filtrarComunicados('todos')"><i class="fa-solid fa-border-all"></i>Todos</a>
+      <a href="javascript:void(0)" class="filtro-btn" data-filter="manutencao" onclick="filtrarComunicados('manutencao')"><i class="fa-solid fa-wrench"></i>Manutenção</a>
+      <a href="javascript:void(0)" class="filtro-btn" data-filter="assembleia" onclick="filtrarComunicados('assembleia')"><i class="fa-solid fa-users"></i>Assembleias</a>
+      <a href="javascript:void(0)" class="filtro-btn" data-filter="urgente" onclick="filtrarComunicados('urgente')"><i class="fa-solid fa-triangle-exclamation"></i>Urgente</a>
+      <a href="javascript:void(0)" class="filtro-btn" data-filter="informativo" onclick="filtrarComunicados('informativo')"><i class="fa-solid fa-circle-info"></i>Informativo</a>
+    </div>
+
+    <!-- Comunicado em destaque (não lido) -->
+    <p class="section-title"><i class="fa-solid fa-triangle-exclamation" style="margin-right:4px;"></i>Urgente</p>
+    <div class="comunicado-item" data-category="urgente" style="background:linear-gradient(135deg,#fff5f5,#fee2e2);border:1.5px solid rgba(245,108,108,.3);border-radius:18px;padding:22px;margin-bottom:20px;">
+      <div style="display:flex;align-items:flex-start;gap:14px;">
+        <div class="card-icon icon-red" style="width:44px;height:44px;border-radius:12px;flex-shrink:0;"><i class="fa-solid fa-triangle-exclamation"></i></div>
+        <div style="flex:1;">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;flex-wrap:wrap;">
+            <h3 style="font-size:16px;font-weight:800;color:#8a1f1f;">Falta de água — 19/03 das 8h às 17h</h3>
+            <span class="badge badge-alert"><i class="fa-solid fa-triangle-exclamation" style="margin-right:4px;"></i>Urgente</span>
+          </div>
+          <p style="font-size:13px;color:#6b2020;line-height:1.6;margin-bottom:12px;">O condomínio informa que haverá suspensão do fornecimento de água no dia <strong>19/03 (quarta-feira)</strong>, das 08h às 17h, devido à manutenção preventiva na caixa d'água. Recomendamos que todos os moradores se preparem com antecedência.</p>
+          <div style="display:flex;align-items:center;gap:12px;">
+            <span style="font-size:12px;color:#b52020;font-weight:600;"><i class="fa-regular fa-clock"></i> Hoje, 07h30</span>
+            <span style="font-size:12px;color:#b52020;font-weight:600;"><i class="fa-solid fa-user"></i> Síndico Roberto</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Lista de comunicados -->
+    <p class="section-title"><i class="fa-solid fa-bullhorn"></i> Comunicados Recentes</p>
+    <div class="notif-list">
+
+      <div class="notif-item comunicado-item" data-category="manutencao" style="cursor:pointer;">
+        <div class="notif-dot"></div>
+        <div class="notif-content">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:3px;">
+            <h5>Manutenção da piscina</h5>
+            <span class="badge badge-pending" style="font-size:10px;"><i class="fa-solid fa-wrench" style="margin-right:4px;"></i>Manutenção</span>
+          </div>
+          <p>A piscina estará interditada nos dias 20 e 21/03 para limpeza e tratamento químico. O acesso será liberado às 08h do dia 22.</p>
+        </div>
+        <span class="notif-time">Hoje</span>
+      </div>
+
+      <div class="notif-item comunicado-item" data-category="assembleia" style="cursor:pointer;">
+        <div class="notif-dot amber"></div>
+        <div class="notif-content">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:3px;">
+            <h5>Assembleia Geral Ordinária — 28/03</h5>
+            <span class="badge badge-blue" style="font-size:10px;"><i class="fa-solid fa-users" style="margin-right:4px;font-size:11px;"></i>Assembleia</span>
+          </div>
+          <p>Reunião marcada para 28/03 às 19h no salão de festas. Pauta: aprovação do orçamento 2025, eleição de representantes e obras na área comum.</p>
+        </div>
+        <span class="notif-time">Ontem</span>
+      </div>
+
+      <div class="notif-item comunicado-item" data-category="informativo" style="cursor:pointer;">
+        <div class="notif-dot read"></div>
+        <div class="notif-content">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:3px;">
+            <h5>Nova portaria eletrônica ativada</h5>
+            <span class="badge badge-ok" style="font-size:10px;"><i class="fa-solid fa-circle-info" style="margin-right:4px;"></i>Informativo</span>
+          </div>
+          <p>O sistema de portaria eletrônica foi ativado. Retire seu cartão de acesso com o síndico na administração, de segunda a sexta das 9h às 18h.</p>
+        </div>
+        <span class="notif-time">14/03</span>
+      </div>
+
+      <div class="notif-item comunicado-item" data-category="informativo" style="cursor:pointer;">
+        <div class="notif-dot read"></div>
+        <div class="notif-content">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:3px;">
+            <h5>Regras de uso da área de churrasqueiras</h5>
+            <span class="badge badge-neutral" style="font-size:10px;"><i class="fa-solid fa-circle-info" style="margin-right:4px;"></i>Informativo</span>
+          </div>
+          <p>Lembramos que o uso das churrasqueiras requer reserva prévia pelo aplicativo. Limpeza após o uso é obrigatória.</p>
+        </div>
+        <span class="notif-time">10/03</span>
+      </div>
+
+      <div class="notif-item comunicado-item" data-category="informativo" style="cursor:pointer;">
+        <div class="notif-dot read"></div>
+        <div class="notif-content">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:3px;">
+            <h5>Coleta de lixo suspensa — 11/03</h5>
+            <span class="badge badge-neutral" style="font-size:10px;"><i class="fa-solid fa-circle-info" style="margin-right:4px;"></i>Informativo</span>
+          </div>
+          <p>Feriado municipal: sem coleta na segunda-feira, 11/03. A coleta retomará normalmente na terça-feira.</p>
+        </div>
+        <span class="notif-time">08/03</span>
+      </div>
+
+      <div class="notif-item comunicado-item" data-category="manutencao" style="cursor:pointer;">
+        <div class="notif-dot read"></div>
+        <div class="notif-content">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:3px;">
+            <h5>Pintura da fachada — cronograma</h5>
+            <span class="badge badge-pending" style="font-size:10px;"><i class="fa-solid fa-wrench" style="margin-right:4px;"></i>Manutenção</span>
+          </div>
+          <p>Obra de pintura da fachada iniciará em 01/04. Andaimes serão instalados a partir de 28/03. Evite abrir janelas do lado da obra durante esse período.</p>
+        </div>
+        <span class="notif-time">05/03</span>
+      </div>
+
+    </div>
+
+    <!-- Próxima assembleia -->
+    <p class="section-title"><i class="fa-solid fa-users"></i> Próxima Assembleia</p>
+    <div class="comunicado-item" data-category="assembleia" style="background:linear-gradient(135deg,var(--surface),#f0f9f8);border-radius:16px;padding:16px;border:1px solid var(--border);display:flex;align-items:center;gap:16px;margin-bottom:16px;">
+      <div class="reserve-date"><div class="day">28</div><div class="month">MAR</div></div>
+      <div class="reserve-info">
+        <h5>Assembleia Geral Ordinária 2025</h5>
+        <p><i class="fa-regular fa-clock"></i> 19h00 &nbsp;·&nbsp; Salão de Festas</p>
+        <p style="font-size:11px;color:var(--primary);font-weight:600;margin-top:4px;"><i class="fa-solid fa-list-check"></i> Orçamento · Eleição · Obras · Regimento</p>
+      </div>
+      <span class="badge badge-blue">Em 10 dias</span>
+    </div>
+
+  </main>
+
+  <div class="accessibility-widget">
+    <input type="checkbox" id="access-toggle">
+    <label for="access-toggle" class="access-button" title="Acessibilidade">
+      <img src="../../assets/img/acessibilidade.png" class="access-icon-img" alt="">
+    </label>
+    <div class="access-menu">
+      <label><input type="checkbox" id="font-toggle"> <i class="fa-solid fa-text-height"></i> Aumentar fonte</label>
+      <label><input type="checkbox" id="contrast-toggle"> <i class="fa-solid fa-circle-half-stroke"></i> Alto contraste</label>
+      <label><input type="checkbox" id="read-toggle"> <i class="fa-solid fa-book-open"></i> Modo leitura</label>
+    </div>
+  </div>
+
+<script src="../../assets/js/validation.js"></script>
+<script>
+function filtrarComunicados(categoria) {
+  document.querySelectorAll('.filtro-btn').forEach(function(btn) {
+    btn.classList.toggle('ativo', btn.getAttribute('data-filter') === categoria);
+  });
+  document.querySelectorAll('.comunicado-item').forEach(function(item) {
+    if (categoria === 'todos') {
+      item.classList.remove('escondido');
+    } else {
+      item.classList.toggle('escondido', item.getAttribute('data-category') !== categoria);
+    }
+  });
+}
+window.filtrarComunicados = filtrarComunicados;
+</script>
+</body>
+</html>

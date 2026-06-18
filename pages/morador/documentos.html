@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="../../assets/img/logo.png" type="image/png">
+  <title>SmartCondo — Documentos</title>
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <link rel="stylesheet" href="../../assets/css/dashboard.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/6b7a3c5b4f.js" crossorigin="anonymous"></script>
+</head>
+<body class="dashboard-body layout-mobile">
+
+  <header class="app-bar">
+    <div class="app-bar-inner">
+      <a href="../../index.html" class="app-bar-brand">
+        <img src="../../assets/img/logo.png" alt="SmartCondo" class="logo-sm">
+        <span class="brand-name">Smart<strong>Condo</strong></span>
+      </a>
+      <div class="app-bar-right">
+        <span class="user-chip"><i class="fa-solid fa-user"></i> Morador</span>
+        <a href="../../index.html" class="logout-btn"><i class="fa-solid fa-right-from-bracket"></i> Sair</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="dash-wrapper">
+
+    <a href="dashboard.html" class="dash-back">
+      <i class="fa-solid fa-arrow-left"></i> Painel do Morador
+    </a>
+
+    <div class="dash-greeting">
+      <p class="greeting-sub"><i class="fa-solid fa-home" style="margin-right:6px;color:var(--primary);"></i>Apto 204 — João Silva</p>
+      <h2 class="greeting-name"><i class="fa-solid fa-folder-open" style="margin-right:8px;font-size:22px;opacity:.85;"></i>Documentos</h2>
+      <p class="greeting-condo"><i class="fa-solid fa-folder-open"></i> Acesse e baixe os documentos do condomínio</p>
+    </div>
+
+    <!-- Documentos legais -->
+    <p class="section-title"><i class="fa-solid fa-file-contract"></i> Documentos Legais</p>
+    <div class="dash-grid">
+
+      <div class="dash-card" style="cursor:pointer;">
+        <div class="card-icon icon-purple"><img src="../../assets/img/icons/file-contract.svg" alt="Contrato"></div>
+        <div class="card-info">
+          <h4>Convenção do Condomínio</h4>
+          <p>Versão atualizada em Jan/2023 · PDF · 2,4 MB</p>
+        </div>
+        <a href="../assets/documentos/convencao_condominio.pdf" style="display:inline-flex;align-items:center;gap:5px;font-size:12px;font-weight:700;color:var(--primary);text-decoration:none;padding:6px 12px;background:var(--primary-light);border-radius:20px;flex-shrink:0;">
+          <i class="fa-solid fa-download"></i> Baixar
+        </a>
+      </div>
+
+      <div class="dash-card" style="cursor:pointer;">
+        <div class="card-icon icon-blue"><img src="../../assets/img/icons/scroll.svg" alt="Regimento"></div>
+        <div class="card-info">
+          <h4>Regimento Interno</h4>
+          <p>Versão atualizada em Mar/2024 · PDF · 1,8 MB</p>
+        </div>
+        <a href="../assets/documentos/regimento_interno.pdf" style="display:inline-flex;align-items:center;gap:5px;font-size:12px;font-weight:700;color:var(--primary);text-decoration:none;padding:6px 12px;background:var(--primary-light);border-radius:20px;flex-shrink:0;">
+          <i class="fa-solid fa-download"></i> Baixar
+        </a>
+      </div>
+
+      <div class="dash-card" style="cursor:pointer;">
+        <div class="card-icon icon-teal"><img src="../../assets/img/icons/stamp.svg" alt="Planta"></div>
+        <div class="card-info">
+          <h4>Planta Baixa — Apto 204</h4>
+          <p>Planta original do apartamento · PDF · 3,1 MB</p>
+        </div>
+        <a href="../assets/documentos/planta_apto204.pdf" style="display:inline-flex;align-items:center;gap:5px;font-size:12px;font-weight:700;color:var(--primary);text-decoration:none;padding:6px 12px;background:var(--primary-light);border-radius:20px;flex-shrink:0;">
+          <i class="fa-solid fa-download"></i> Baixar
+        </a>
+      </div>
+
+    </div>
+
+    <!-- Atas de Assembleia -->
+    <p class="section-title"><i class="fa-solid fa-scroll"></i> Atas de Assembleia</p>
+    <div class="data-table">
+      <div class="table-head cols-4"><span><i class="fa-solid fa-scroll" style="margin-right:5px;color:var(--primary);"></i>Assembleia</span><span><i class="fa-regular fa-calendar" style="margin-right:4px;color:var(--muted);"></i>Data</span><span><i class="fa-solid fa-tag"></i> Tipo</span><span><i class="fa-solid fa-download" style="margin-right:4px;color:var(--muted);"></i>Arquivo</span></div>
+      <div class="table-row cols-4">
+        <span><strong>Ordinária 2024</strong></span>
+        <span>20/01/2024</span>
+        <span><span class="badge badge-blue">Ordinária</span></span>
+        <span><a href="../assets/atas/ordinaria2024.pdf" style="color:var(--primary);font-weight:700;font-size:13px;text-decoration:none;"><i class="fa-solid fa-download"></i> PDF</a></span>
+      </div>
+      <div class="table-row cols-4">
+        <span><strong>Extraordinária — Obras</strong></span>
+        <span>15/06/2024</span>
+        <span><span class="badge badge-amber" style="background:rgba(230,162,60,.1);color:#c88b1a;border:1px solid rgba(230,162,60,.2);">Extraordinária</span></span>
+        <span><a href="../assets/atas/extra_obras2024.pdf" style="color:var(--primary);font-weight:700;font-size:13px;text-decoration:none;"><i class="fa-solid fa-download"></i> PDF</a></span>
+      </div>
+      <div class="table-row cols-4">
+        <span><strong>Ordinária 2023</strong></span>
+        <span>22/01/2023</span>
+        <span><span class="badge badge-blue">Ordinária</span></span>
+        <span><a href="../assets/atas/ordinaria2023.pdf" style="color:var(--primary);font-weight:700;font-size:13px;text-decoration:none;"><i class="fa-solid fa-download"></i> PDF</a></span>
+      </div>
+      <div class="table-row cols-4">
+        <span><strong>Extraordinária — Eleição Síndico</strong></span>
+        <span>10/01/2023</span>
+        <span><span class="badge badge-amber" style="background:rgba(230,162,60,.1);color:#c88b1a;border:1px solid rgba(230,162,60,.2);">Extraordinária</span></span>
+        <span><a href="../assets/atas/extra_eleicao2023.pdf" style="color:var(--primary);font-weight:700;font-size:13px;text-decoration:none;"><i class="fa-solid fa-download"></i> PDF</a></span>
+      </div>
+    </div>
+
+    <!-- Prestações de Conta -->
+    <p class="section-title"><i class="fa-solid fa-chart-bar"></i> Prestação de Contas</p>
+    <div class="data-table">
+      <div class="table-head cols-4"><span><i class="fa-regular fa-calendar" style="margin-right:5px;color:var(--primary);"></i>Período</span><span><i class="fa-solid fa-arrow-trend-up" style="margin-right:4px;color:var(--muted);"></i>Receita</span><span><i class="fa-solid fa-arrow-trend-down" style="margin-right:4px;color:var(--muted);"></i>Despesa</span><span><i class="fa-solid fa-download" style="margin-right:4px;color:var(--muted);"></i>Arquivo</span></div>
+      <div class="table-row cols-4"><span>4º Trim/2024</span><span>R$55.200</span><span>R$52.100</span><span><a href="../assets/relatorios/4trim2024.pdf" style="color:var(--primary);font-weight:700;font-size:13px;text-decoration:none;"><i class="fa-solid fa-download"></i> PDF</a></span></div>
+      <div class="table-row cols-4"><span>3º Trim/2024</span><span>R$54.800</span><span>R$51.600</span><span><a href="../assets/relatorios/3trim2024.pdf" style="color:var(--primary);font-weight:700;font-size:13px;text-decoration:none;"><i class="fa-solid fa-download"></i> PDF</a></span></div>
+      <div class="table-row cols-4"><span>2º Trim/2024</span><span>R$54.400</span><span>R$55.200</span><span><a href="../assets/relatorios/2trim2024.pdf" style="color:var(--primary);font-weight:700;font-size:13px;text-decoration:none;"><i class="fa-solid fa-download"></i> PDF</a></span></div>
+      <div class="table-row cols-4"><span>1º Trim/2024</span><span>R$53.600</span><span>R$50.800</span><span><a href="../assets/relatorios/1trim2024.pdf" style="color:var(--primary);font-weight:700;font-size:13px;text-decoration:none;"><i class="fa-solid fa-download"></i> PDF</a></span></div>
+    </div>
+
+    <!-- Boletos anteriores -->
+    <p class="section-title"><i class="fa-solid fa-file-invoice"></i> Boletos Anteriores</p>
+    <div class="data-table">
+      <div class="table-head cols-4"><span><i class="fa-solid fa-file-invoice" style="margin-right:5px;color:var(--primary);"></i>Referência</span><span><i class="fa-regular fa-calendar" style="margin-right:4px;color:var(--muted);"></i>Vencimento</span><span><i class="fa-solid fa-dollar-sign" style="margin-right:4px;color:var(--muted);"></i>Valor</span><span><i class="fa-solid fa-barcode" style="margin-right:4px;color:var(--muted);"></i>2ª Via</span></div>
+      <div class="table-row cols-4"><span>Fev/2025</span><span>10/02/2025</span><span>R$320,00</span><span><a href="../assets/boletos/fev2025.pdf" style="color:var(--primary);font-weight:700;font-size:13px;text-decoration:none;"><i class="fa-solid fa-barcode"></i> Boleto</a></span></div>
+      <div class="table-row cols-4"><span>Jan/2025</span><span>10/01/2025</span><span>R$320,00</span><span><a href="../assets/boletos/jan2025.pdf" style="color:var(--primary);font-weight:700;font-size:13px;text-decoration:none;"><i class="fa-solid fa-barcode"></i> Boleto</a></span></div>
+      <div class="table-row cols-4"><span>Dez/2024</span><span>10/12/2024</span><span>R$320,00</span><span><a href="../assets/boletos/dez2024.pdf" style="color:var(--primary);font-weight:700;font-size:13px;text-decoration:none;"><i class="fa-solid fa-barcode"></i> Boleto</a></span></div>
+    </div>
+
+    <div class="info-card">
+      <i class="fa-solid fa-circle-info"></i>
+      <p>Para solicitar documentos não listados ou uma via do seu contrato, entre em contato com a administração: <strong><a href="mailto:smartcondo@gmail.com">smartcondo@gmail.com</a></strong></p>
+    </div>
+
+  </main>
+
+  <div class="accessibility-widget">
+    <input type="checkbox" id="access-toggle">
+    <label for="access-toggle" class="access-button" title="Acessibilidade">
+      <img src="../../assets/img/acessibilidade.png" class="access-icon-img" alt="">
+    </label>
+    <div class="access-menu">
+      <label><input type="checkbox" id="font-toggle"> <i class="fa-solid fa-text-height"></i> Aumentar fonte</label>
+      <label><input type="checkbox" id="contrast-toggle"> <i class="fa-solid fa-circle-half-stroke"></i> Alto contraste</label>
+      <label><input type="checkbox" id="read-toggle"> <i class="fa-solid fa-book-open"></i> Modo leitura</label>
+    </div>
+  </div>
+  
+<script src="../../assets/js/validation.js"></script>
+</body>
+</html>

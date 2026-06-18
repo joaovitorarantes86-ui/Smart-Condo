@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="../../assets/img/logo.png" type="image/png">
+  <title>SmartCondo — Nova Senha</title>
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/6b7a3c5b4f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <main class="container">
+    <header class="logo-area">
+      <img src="../../assets/img/logo.png" alt="Logo SmartCondo" class="logo">
+      <div class="logo-text">
+        <h1>Smart Condo</h1>
+        <p>Gestão de Condomínios</p>
+      </div>
+    </header>
+    <h2><i class="fa-solid fa-lock-open" style="color:var(--primary);font-size:20px;margin-right:8px;"></i>Crie uma nova senha</h2>
+    <p class="subtitle">Sua nova senha precisa ser diferente da anterior.</p>
+
+    <form action="../../index.html">
+      <div class="input-box">
+        <i class="fa-solid fa-lock"></i>
+        <input type="password" placeholder="Nova senha" required autocomplete="new-password">
+      </div>
+      <div class="input-box">
+        <i class="fa-solid fa-lock-open"></i>
+        <input type="password" placeholder="Confirmar nova senha" required autocomplete="new-password">
+      </div>
+
+      <div style="background:var(--surface-2);border-radius:var(--radius-xs);padding:12px 14px;margin-bottom:18px;font-size:12px;color:var(--muted);text-align:left;">
+        <div style="display:flex;align-items:center;gap:7px;margin-bottom:5px;font-weight:600;">
+          <i class="fa-regular fa-circle" style="color:var(--border);"></i> <i class="fa-solid fa-check" style="color:var(--primary);margin-right:5px;"></i>Mínimo 8 caracteres
+        </div>
+        <div style="display:flex;align-items:center;gap:7px;margin-bottom:5px;font-weight:600;">
+          <i class="fa-regular fa-circle" style="color:var(--border);"></i> <i class="fa-solid fa-check" style="color:var(--primary);margin-right:5px;"></i>Letras maiúsculas e minúsculas
+        </div>
+        <div style="display:flex;align-items:center;gap:7px;font-weight:600;">
+          <i class="fa-regular fa-circle" style="color:var(--border);"></i> <i class="fa-regular fa-circle" style="color:#ccc;margin-right:5px;"></i>Ao menos 1 número ou símbolo
+        </div>
+      </div>
+
+      <button class="login-btn" type="submit">
+        <i class="fa-solid fa-floppy-disk" style="margin-right:6px;"></i>Salvar nova senha
+      </button>
+    </form>
+
+    <a href="../../index.html" class="back-link">
+      <i class="fa-solid fa-arrow-left"></i> Voltar para o login
+    </a>
+  </main>
+
+  <div class="accessibility-widget">
+    <input type="checkbox" id="access-toggle">
+    <label for="access-toggle" class="access-button" title="Acessibilidade">
+      <img src="../../assets/img/acessibilidade.png" class="access-icon-img" alt="">
+    </label>
+    <div class="access-menu">
+      <label><input type="checkbox" id="font-toggle"> <i class="fa-solid fa-text-height"></i> Aumentar fonte</label>
+      <label><input type="checkbox" id="contrast-toggle"> <i class="fa-solid fa-circle-half-stroke"></i> Alto contraste</label>
+      <label><input type="checkbox" id="read-toggle"> <i class="fa-solid fa-book-open"></i> Modo leitura</label>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelector('form').addEventListener('submit', function(e) {
+        var senha = document.querySelector('input[type="password"]');
+        var confirmar = document.querySelectorAll('input[type="password"]')[1];
+        document.querySelectorAll('.erro-validacao').forEach(function(el) { el.remove(); });
+        var valido = true;
+        if (!senha.value.trim()) {
+          mostrarErro(senha, 'Informe a nova senha');
+          valido = false;
+        } else if (senha.value.trim().length < 6) {
+          mostrarErro(senha, 'A senha deve ter no mínimo 6 caracteres');
+          valido = false;
+        }
+        if (!confirmar.value.trim()) {
+          mostrarErro(confirmar, 'Confirme a nova senha');
+          valido = false;
+        } else if (confirmar.value.trim().length < 6) {
+          mostrarErro(confirmar, 'A senha deve ter no mínimo 6 caracteres');
+          valido = false;
+        }
+        if (valido && senha.value.trim() !== confirmar.value.trim()) {
+          mostrarErro(confirmar, 'As senhas não coincidem');
+          valido = false;
+        }
+        if (!valido) e.preventDefault();
+      });
+    });
+  </script>
+  <script src="../../assets/js/validation.js"></script>
+
+</body>
+</html>

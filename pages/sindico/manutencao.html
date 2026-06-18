@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="../../assets/img/logo.png" type="image/png">
+  <title>SmartCondo — Manutenção</title>
+  <link rel="stylesheet" href="../../assets/css/style.css"><link rel="stylesheet" href="../../assets/css/dashboard.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/6b7a3c5b4f.js" crossorigin="anonymous"></script>
+</head>
+<body class="dashboard-body layout-mobile">
+  <header class="app-bar"><div class="app-bar-inner wide">
+    <a href="../../index.html" class="app-bar-brand"><img src="../../assets/img/logo.png" alt="" class="logo-sm"><span class="brand-name">Smart<strong>Condo</strong></span></a>
+    <div class="app-bar-right"><span class="user-chip"><i class="fa-solid fa-star"></i> Síndico</span><a href="../../index.html" class="logout-btn"><i class="fa-solid fa-right-from-bracket"></i> Sair</a></div>
+  </div></header>
+  <main class="dash-wrapper wide">
+    <a href="dashboard.html" class="dash-back"><i class="fa-solid fa-arrow-left"></i> Painel do Síndico</a>
+    <div class="dash-greeting">
+      <p class="greeting-sub"><i class="fa-solid fa-user-tie"></i> Painel Administrativo</p>
+      <h2 class="greeting-name"><i class="fa-solid fa-wrench"></i> Manutenção</h2>
+      <p class="greeting-condo"><i class="fa-solid fa-wrench"></i> Ordens de serviço e fornecedores</p>
+    </div>
+    <div class="stats-row">
+      <div class="stat-card red"><span class="stat-value">3</span><span class="stat-label"><i class="fa-solid fa-circle-exclamation" style="margin-right:4px;font-size:11px;"></i>Em aberto</span></div>
+      <div class="stat-card blue"><span class="stat-value">2</span><span class="stat-label"><i class="fa-solid fa-gear" style="margin-right:4px;font-size:11px;"></i>Em execução</span></div>
+      <div class="stat-card teal"><span class="stat-value">8</span><span class="stat-label"><i class="fa-solid fa-circle-check" style="margin-right:4px;font-size:11px;"></i>Concluídas</span></div>
+    </div>
+    <p class="section-title"><i class="fa-solid fa-plus-circle"></i> Nova Ordem de Serviço</p>
+    <div class="form-card">
+      <h3><i class="fa-solid fa-screwdriver-wrench"></i> Abertura de OS</h3>
+      <div class="form-row">
+        <div class="form-group"><label><i class="fa-solid fa-wrench" style="color:var(--primary);margin-right:5px;font-size:11px;"></i>Tipo de manutenção</label><select required style="width:100%;padding:12px;border-radius:var(--radius-xs);border:1.5px solid var(--border);font-size:14px;font-family:'Plus Jakarta Sans',sans-serif;background:var(--surface-2);outline:none;"><option value="" disabled selected>Selecione</option><option>Elétrica</option><option>Hidráulica</option><option>Estrutural</option><option>Pintura</option><option>Jardim / Paisagismo</option><option>Elevador</option><option>Limpeza especial</option></select></div>
+        <div class="form-group"><label><i class="fa-solid fa-exclamation-triangle" style="color:var(--primary);margin-right:5px;font-size:11px;"></i>Prioridade</label><select required style="width:100%;padding:12px;border-radius:var(--radius-xs);border:1.5px solid var(--border);font-size:14px;font-family:'Plus Jakarta Sans',sans-serif;background:var(--surface-2);outline:none;"><option value="" disabled selected>Selecione</option><option>🔴 Urgente</option><option>🟡 Alta</option><option>🟢 Normal</option></select></div>
+      </div>
+      <div class="form-group"><label><i class="fa-solid fa-align-left" style="color:var(--primary);margin-right:5px;font-size:11px;"></i>Descrição</label><textarea required placeholder="Descreva o problema e localização..." style="min-height:80px;width:100%;padding:12px;border-radius:var(--radius-xs);border:1.5px solid var(--border);font-size:14px;font-family:'Plus Jakarta Sans',sans-serif;background:var(--surface-2);resize:vertical;outline:none;"></textarea></div>
+      <div class="form-row">
+        <div class="form-group"><label><i class="fa-solid fa-address-card" style="color:var(--primary);margin-right:5px;font-size:11px;"></i>Fornecedor responsável</label><input type="text" placeholder="Nome da empresa ou autônomo" required style="width:100%;padding:12px;border-radius:var(--radius-xs);border:1.5px solid var(--border);font-size:14px;font-family:'Plus Jakarta Sans',sans-serif;background:var(--surface-2);outline:none;"></div>
+        <div class="form-group"><label><i class="fa-regular fa-calendar" style="color:var(--primary);margin-right:5px;font-size:11px;"></i>Data prevista</label><input type="date" required style="width:100%;padding:12px;border-radius:var(--radius-xs);border:1.5px solid var(--border);font-size:14px;font-family:'Plus Jakarta Sans',sans-serif;background:var(--surface-2);outline:none;"></div>
+      </div>
+      <div class="form-group"><label><i class="fa-solid fa-dollar-sign" style="color:var(--primary);margin-right:5px;font-size:11px;"></i>Custo estimado (R$)</label><input type="text" placeholder="Ex: 1.500,00" required style="width:100%;padding:12px;border-radius:var(--radius-xs);border:1.5px solid var(--border);font-size:14px;font-family:'Plus Jakarta Sans',sans-serif;background:var(--surface-2);outline:none;"></div>
+      <a href="dashboard.html" class="action-btn" style="margin-top:4px;"><i class="fa-solid fa-plus"></i> Abrir Ordem de Serviço</a>
+    </div>
+    <p class="section-title"><i class="fa-solid fa-list"></i> Ordens de Serviço Ativas</p>
+    <div class="list-items">
+      <div class="list-item">
+        <div class="card-icon icon-red" style="width:44px;height:44px;border-radius:12px;flex-shrink:0;"><i class="fa-solid fa-droplet"></i></div>
+        <div class="list-info"><h5>Infiltração — 3º andar</h5><p>Empresa HídroFix · Aberta 15/03 · Previsão: 20/03 · R$2.800</p></div>
+        <span class="badge badge-alert">Urgente</span>
+      </div>
+      <div class="list-item">
+        <div class="card-icon icon-yellow" style="width:44px;height:44px;border-radius:12px;flex-shrink:0;"><i class="fa-solid fa-lightbulb"></i></div>
+        <div class="list-info"><h5>Iluminação — Corredor B</h5><p>Eletro Matos · Aberta 16/03 · Previsão: 19/03 · R$450</p></div>
+        <span class="badge badge-blue"><i class="fa-solid fa-gear" style="margin-right:4px;font-size:11px;"></i>Em execução</span>
+      </div>
+      <div class="list-item">
+        <div class="card-icon icon-teal" style="width:44px;height:44px;border-radius:12px;flex-shrink:0;"><i class="fa-solid fa-paint-roller"></i></div>
+        <div class="list-info"><h5>Pintura da fachada</h5><p>PintaCondo Ltda · Início: 01/04 · Orçamento: R$18.000</p></div>
+        <span class="badge badge-pending">Agendada</span>
+      </div>
+    </div>
+    <p class="section-title"><i class="fa-solid fa-clock-rotate-left"></i> Histórico de Manutenções</p>
+    <div class="data-table">
+      <div class="table-head cols-4"><span><i class="fa-solid fa-wrench" style="margin-right:5px;color:var(--primary);"></i>Serviço</span><span><i class="fa-solid fa-building" style="margin-right:4px;color:var(--muted);"></i>Fornecedor</span><span><i class="fa-solid fa-flag-checkered" style="margin-right:4px;color:var(--muted);"></i>Conclusão</span><span><i class="fa-solid fa-dollar-sign" style="margin-right:4px;color:var(--muted);"></i>Custo</span></div>
+      <div class="table-row cols-4"><span>Revisão elevador</span><span>Otis Elevadores</span><span>10/03</span><span>R$1.200</span></div>
+      <div class="table-row cols-4"><span>Limpeza caixa d'água</span><span>CleanWater</span><span>05/03</span><span>R$800</span></div>
+      <div class="table-row cols-4"><span>Reparo portão eletrônico</span><span>AutoGates</span><span>28/02</span><span>R$650</span></div>
+    </div>
+  </main>
+
+  <div class="accessibility-widget">
+    <input type="checkbox" id="access-toggle">
+    <label for="access-toggle" class="access-button"><img src="../../assets/img/acessibilidade.png" class="access-icon-img" alt=""></label>
+    <div class="access-menu">
+      <label><input type="checkbox" id="font-toggle"> <i class="fa-solid fa-text-height"></i> Aumentar fonte</label>
+      <label><input type="checkbox" id="contrast-toggle"> <i class="fa-solid fa-circle-half-stroke"></i> Alto contraste</label>
+      <label><input type="checkbox" id="read-toggle"> <i class="fa-solid fa-book-open"></i> Modo leitura</label>
+    </div>
+  </div>
+<script src="../../assets/js/validation.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var btn = document.querySelector('.action-btn');
+  if (btn) {
+    btn.addEventListener('click', function(e) {
+      var inputs = this.closest('.form-card').querySelectorAll('input, select, textarea');
+      var valido = true;
+      document.querySelectorAll('.erro-validacao').forEach(function(el) { el.remove(); });
+      inputs.forEach(function(inp) {
+        if (inp.hasAttribute('required') && !inp.value.trim()) {
+          mostrarErro(inp, 'Campo obrigatório');
+          valido = false;
+        }
+      });
+      if (!valido) e.preventDefault();
+    });
+  }
+});
+</script>
+</body></html>

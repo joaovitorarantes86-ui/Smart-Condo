@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="../../assets/img/logo.png" type="image/png">
+  <title>SmartCondo — Controle de Visitantes</title>
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <link rel="stylesheet" href="../../assets/css/dashboard.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/6b7a3c5b4f.js" crossorigin="anonymous"></script>
+</head>
+<body class="dashboard-body layout-desktop">
+  <header class="app-bar">
+    <div class="app-bar-inner">
+      <a href="../../index.html" class="app-bar-brand">
+        <img src="../../assets/img/logo.png" alt="SmartCondo" class="logo-sm">
+        <span class="brand-name">Smart<strong>Condo</strong></span>
+      </a>
+      <div class="app-bar-right">
+        <span class="user-chip"><i class="fa-solid fa-shield-halved"></i> Porteiro</span>
+        <a href="../../index.html" class="logout-btn"><i class="fa-solid fa-right-from-bracket"></i> Sair</a>
+      </div>
+    </div>
+  </header>
+  <main class="dash-wrapper">
+
+    <a href="dashboard.html" class="dash-back">
+      <i class="fa-solid fa-arrow-left"></i> Painel do Porteiro
+    </a>
+
+    <div class="dash-greeting">
+      <p class="greeting-sub"><i class="fa-solid fa-clock" style="margin-right:6px;color:var(--primary);"></i>Turno 07h – 15h &nbsp;·&nbsp; Carlos Pereira</p>
+      <h2 class="greeting-name"><img src="../../assets/img/icons/person-walking-arrow-right.svg" alt="" style="width:26px;height:26px;vertical-align:middle;margin-right:8px;filter:brightness(0) invert(1);"> Controle de Visitantes</h2>
+      <p class="greeting-condo"><img src="../../assets/img/icons/person-walking-arrow-right.svg" alt="" style="width:16px;height:16px;vertical-align:middle;margin-right:6px;filter:brightness(0) invert(1);"> Registre entradas e saídas em tempo real</p>
+    </div>
+
+    <div class="stats-row">
+      <div class="stat-card teal"><span class="stat-value">4</span><span class="stat-label"><i class="fa-solid fa-building" style="margin-right:4px;font-size:11px;"></i>No cond.</span></div>
+      <div class="stat-card blue"><span class="stat-value">11</span><span class="stat-label"><i class="fa-solid fa-users" style="margin-right:4px;font-size:11px;"></i>Total hoje</span></div>
+      <div class="stat-card amber"><span class="stat-value">7</span><span class="stat-label"><i class="fa-solid fa-door-open" style="margin-right:4px;font-size:11px;"></i>Saíram</span></div>
+    </div>
+
+    <p class="section-title"><i class="fa-solid fa-user-plus"></i> Registrar Novo Visitante</p>
+    <div class="form-card">
+      <h3><i class="fa-solid fa-user-plus"></i> Dados do Visitante</h3>
+      <form action="dashboard.html">
+        <div class="form-row">
+          <div class="form-group"><label><i class="fa-solid fa-user" style="color:var(--primary);margin-right:5px;font-size:11px;"></i>Nome completo</label><input type="text" placeholder="Nome do visitante" required></div>
+          <div class="form-group"><label><i class="fa-solid fa-id-card" style="color:var(--primary);margin-right:5px;font-size:11px;"></i>CPF / Documento</label><input type="text" placeholder="000.000.000-00" class="mask-cpf" required></div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label><i class="fa-solid fa-building" style="color:var(--primary);margin-right:5px;font-size:11px;"></i>Visitando o apartamento</label>
+            <select required>
+              <option value="" disabled selected>Selecione o apto</option>
+              <option>Apto 101</option><option>Apto 102</option><option>Apto 103</option>
+              <option>Apto 201</option><option>Apto 202</option><option>Apto 203</option><option>Apto 204</option>
+              <option>Apto 301</option><option>Apto 302</option><option>Apto 303</option><option>Apto 305</option>
+              <option>Apto 401</option><option>Apto 402</option><option>Apto 410</option>
+              <option>Apto 501</option><option>Apto 502</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label><i class="fa-solid fa-tag" style="color:var(--primary);margin-right:5px;font-size:11px;"></i>Tipo de visita</label>
+            <select required>
+              <option value="" disabled selected>Selecione o tipo</option>
+              <option>Visita pessoal</option>
+              <option>Prestador de serviço</option>
+              <option>Delivery / Entrega</option>
+              <option>Manutenção</option>
+              <option>Outros</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group"><label><i class="fa-solid fa-car" style="color:var(--primary);margin-right:5px;font-size:11px;"></i>Placa do veículo (opcional)</label><input type="text" placeholder="ABC-1D23"></div>
+          <div class="form-group"><label><i class="fa-regular fa-clock" style="color:var(--primary);margin-right:5px;font-size:11px;"></i>Horário de entrada</label><input type="time" required></div>
+        </div>
+        <button class="action-btn" type="submit" style="margin-top:8px;">
+          <i class="fa-solid fa-arrow-right-to-bracket" style="margin-right:6px;"></i>Registrar Entrada
+        </button>
+      </form>
+    </div>
+
+    <p class="section-title"><i class="fa-solid fa-eye"></i> Visitantes no Condomínio Agora</p>
+    <div class="list-items">
+      <div class="list-item">
+        <div class="list-avatar">MA</div>
+        <div class="list-info"><h5>Marcos Alves</h5><p>Apto 102 &nbsp;·&nbsp; Visita pessoal &nbsp;·&nbsp; Entrada: 09h15</p></div>
+        <span class="badge badge-ok">Dentro</span>
+      </div>
+      <div class="list-item">
+        <div class="list-avatar amber">FS</div>
+        <div class="list-info"><h5>Fernanda Souza</h5><p>Apto 305 &nbsp;·&nbsp; Visita pessoal &nbsp;·&nbsp; Entrada: 10h40</p></div>
+        <span class="badge badge-ok">Dentro</span>
+      </div>
+      <div class="list-item">
+        <div class="list-avatar blue">LO</div>
+        <div class="list-info"><h5>Lucas Oliveira</h5><p>Apto 201 &nbsp;·&nbsp; Técnico de manutenção &nbsp;·&nbsp; Entrada: 11h00</p></div>
+        <span class="badge badge-blue">Serviço</span>
+      </div>
+      <div class="list-item">
+        <div class="list-avatar purple">RP</div>
+        <div class="list-info"><h5>Rafael Pinto</h5><p>Apto 410 &nbsp;·&nbsp; Visita pessoal &nbsp;·&nbsp; Entrada: 12h55</p></div>
+        <span class="badge badge-ok">Dentro</span>
+      </div>
+    </div>
+
+    <p class="section-title"><i class="fa-solid fa-clock-rotate-left"></i> Histórico de Hoje — 18/03/2025</p>
+    <div class="data-table">
+      <div class="table-head cols-5"><span><i class="fa-solid fa-user" style="margin-right:5px;color:var(--primary);"></i>Visitante</span><span><i class="fa-solid fa-door-open" style="margin-right:4px;color:var(--muted);"></i>Apto</span><span><i class="fa-solid fa-arrow-right-to-bracket" style="margin-right:4px;color:var(--muted);"></i>Entrada</span><span><i class="fa-solid fa-arrow-right-from-bracket" style="margin-right:4px;color:var(--muted);"></i>Saída</span><span><i class="fa-solid fa-tag"></i> Tipo</span></div>
+      <div class="table-row cols-5"><span><strong>Ana Carvalho</strong></span><span>204</span><span>07h30</span><span>08h15</span><span><span class="badge badge-neutral">Delivery</span></span></div>
+      <div class="table-row cols-5"><span><strong>José Mendes</strong></span><span>101</span><span>07h50</span><span>09h00</span><span><span class="badge badge-neutral">Visita</span></span></div>
+      <div class="table-row cols-5"><span><strong>Técnico Eletro</strong></span><span>502</span><span>08h20</span><span>10h10</span><span><span class="badge badge-blue">Serviço</span></span></div>
+      <div class="table-row cols-5"><span><strong>Patrícia Lima</strong></span><span>303</span><span>08h45</span><span>09h30</span><span><span class="badge badge-neutral">Delivery</span></span></div>
+      <div class="table-row cols-5"><span><strong>Marcos Alves</strong></span><span>102</span><span>09h15</span><span>—</span><span><span class="badge badge-ok">Dentro</span></span></div>
+      <div class="table-row cols-5"><span><strong>Fernanda Souza</strong></span><span>305</span><span>10h40</span><span>—</span><span><span class="badge badge-ok">Dentro</span></span></div>
+      <div class="table-row cols-5"><span><strong>Lucas Oliveira</strong></span><span>201</span><span>11h00</span><span>—</span><span><span class="badge badge-blue">Serviço</span></span></div>
+    </div>
+
+  </main>
+
+  <div class="accessibility-widget">
+    <input type="checkbox" id="access-toggle">
+    <label for="access-toggle" class="access-button" title="Acessibilidade">
+      <img src="../../assets/img/acessibilidade.png" class="access-icon-img" alt="">
+    </label>
+    <div class="access-menu">
+      <label><input type="checkbox" id="font-toggle"> <i class="fa-solid fa-text-height"></i> Aumentar fonte</label>
+      <label><input type="checkbox" id="contrast-toggle"> <i class="fa-solid fa-circle-half-stroke"></i> Alto contraste</label>
+      <label><input type="checkbox" id="read-toggle"> <i class="fa-solid fa-book-open"></i> Modo leitura</label>
+    </div>
+  </div>
+  <script src="../../assets/js/validation.js"></script>
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelector('.form-card form').addEventListener('submit', function(e) {
+      var inputs = this.querySelectorAll('input[required], select[required]');
+      var valido = true;
+      document.querySelectorAll('.erro-validacao').forEach(function(el) { el.remove(); });
+      inputs.forEach(function(inp) {
+        if (!inp.value.trim()) {
+          mostrarErro(inp, 'Campo obrigatório');
+          valido = false;
+        }
+      });
+      if (!valido) e.preventDefault();
+    });
+  });
+  </script>
+</body>
+</html>

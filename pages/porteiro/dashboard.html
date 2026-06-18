@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="../../assets/img/logo.png" type="image/png">
+  <title>SmartCondo — Painel do Porteiro</title>
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <link rel="stylesheet" href="../../assets/css/dashboard.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/6b7a3c5b4f.js" crossorigin="anonymous"></script>
+</head>
+<body class="dashboard-body layout-desktop">
+  <header class="app-bar">
+    <div class="app-bar-inner">
+      <a href="../../index.html" class="app-bar-brand">
+        <img src="../../assets/img/logo.png" alt="SmartCondo" class="logo-sm">
+        <span class="brand-name">Smart<strong>Condo</strong></span>
+      </a>
+      <div class="app-bar-right">
+        <span class="user-chip"><i class="fa-solid fa-shield-halved"></i> Porteiro</span>
+        <a href="../../index.html" class="logout-btn"><i class="fa-solid fa-right-from-bracket"></i> Sair</a>
+      </div>
+    </div>
+  </header>
+  <main class="dash-wrapper">
+
+    <div class="dash-greeting">
+      <p class="greeting-sub"><i class="fa-solid fa-shield-halved" style="margin-right:6px;color:var(--success);"></i>Plantão ativo &nbsp;·&nbsp; Turno: 07h – 15h</p>
+      <h2 class="greeting-name"><i class="fa-solid fa-user" style="margin-right:6px;color:var(--primary);"></i>Carlos Pereira</h2>
+      <p class="greeting-condo"><i class="fa-solid fa-building"></i> Residencial das Palmeiras &nbsp;·&nbsp; Portaria Principal</p>
+    </div>
+
+    <div class="stats-row">
+      <div class="stat-card teal"><span class="stat-value">4</span><span class="stat-label"><i class="fa-solid fa-person-walking-arrow-right"></i> Visitantes</span></div>
+      <div class="stat-card amber"><span class="stat-value">7</span><span class="stat-label"><i class="fa-solid fa-box-archive"></i> Encomendas</span></div>
+      <div class="stat-card blue"><span class="stat-value">2</span><span class="stat-label"><i class="fa-solid fa-bullhorn"></i> Avisos</span></div>
+    </div>
+
+    <p class="section-title"><i class="fa-solid fa-bolt"></i> Ações Rápidas</p>
+    <div class="dash-grid">
+      <a href="visitantes.html" class="dash-card">
+        <div class="card-icon icon-teal"><img src="../../assets/img/icons/person-walking-arrow-right.svg" alt="Visitantes"></div>
+        <div class="card-info"><h4>Controle de Visitantes</h4><p>Registrar entrada, saída e identificação</p></div>
+        <i class="fa-solid fa-chevron-right card-arrow"></i>
+      </a>
+      <a href="encomendas.html" class="dash-card">
+        <div class="card-icon icon-yellow"><img src="../../assets/img/icons/box-archive.svg" alt="Encomendas"></div>
+        <div class="card-info"><h4>Encomendas</h4><p>Recebimento, guarda e entrega de pacotes</p></div>
+        <i class="fa-solid fa-chevron-right card-arrow"></i>
+      </a>
+      <a href="veiculos.html" class="dash-card">
+        <div class="card-icon icon-blue"><img src="../../assets/img/icons/car.svg" alt="Veículos"></div>
+        <div class="card-info"><h4>Controle de Veículos</h4><p>Entrada e saída no estacionamento</p></div>
+        <i class="fa-solid fa-chevron-right card-arrow"></i>
+      </a>
+      <a href="ocorrencias.html" class="dash-card">
+        <div class="card-icon icon-red"><img src="../../assets/img/icons/circle-exclamation.svg" alt="Ocorrências"></div>
+        <div class="card-info"><h4>Registrar Ocorrência</h4><p>Incidentes, irregularidades e emergências</p></div>
+        <i class="fa-solid fa-chevron-right card-arrow"></i>
+      </a>
+    </div>
+
+    <p class="section-title"><i class="fa-solid fa-person-walking-arrow-right"></i> Visitantes no Condomínio Agora</p>
+    <div class="list-items">
+      <div class="list-item">
+        <div class="list-avatar">MA</div>
+        <div class="list-info"><h5>Marcos Alves</h5><p>Apto 102 &nbsp;·&nbsp; Visita pessoal &nbsp;·&nbsp; Entrada: 09h15</p></div>
+        <span class="badge badge-ok">Dentro</span>
+      </div>
+      <div class="list-item">
+        <div class="list-avatar amber">FS</div>
+        <div class="list-info"><h5>Fernanda Souza</h5><p>Apto 305 &nbsp;·&nbsp; Visita pessoal &nbsp;·&nbsp; Entrada: 10h40</p></div>
+        <span class="badge badge-ok">Dentro</span>
+      </div>
+      <div class="list-item">
+        <div class="list-avatar blue">LO</div>
+        <div class="list-info"><h5>Lucas Oliveira</h5><p>Apto 201 &nbsp;·&nbsp; Técnico de manutenção &nbsp;·&nbsp; Entrada: 11h00</p></div>
+        <span class="badge badge-blue">Serviço</span>
+      </div>
+      <div class="list-item">
+        <div class="list-avatar purple">RP</div>
+        <div class="list-info"><h5>Rafael Pinto</h5><p>Apto 410 &nbsp;·&nbsp; Visita pessoal &nbsp;·&nbsp; Entrada: 12h55</p></div>
+        <span class="badge badge-ok">Dentro</span>
+      </div>
+    </div>
+
+    <a href="visitantes.html" class="action-btn">
+      <i class="fa-solid fa-plus"></i> Registrar Novo Visitante
+    </a>
+
+    <p class="section-title"><img src="../../assets/img/icons/box.svg" alt="" style="width:16px;height:16px;vertical-align:middle;margin-right:6px;"> Encomendas Aguardando Retirada</p>
+    <div class="list-items">
+      <div class="list-item">
+        <div class="card-icon icon-yellow" style="width:42px;height:42px;border-radius:10px;flex-shrink:0;"><img src="../../assets/img/icons/box.svg" alt="" style="width:20px;height:20px;"></div>
+        <div class="list-info"><h5>Encomenda — Apto 204</h5><p>Remetente: Amazon &nbsp;·&nbsp; Recebida em 17/03 às 08h30</p></div>
+        <span class="badge badge-pending">Aguardando</span>
+      </div>
+      <div class="list-item">
+        <div class="card-icon icon-teal" style="width:42px;height:42px;border-radius:10px;flex-shrink:0;"><img src="../../assets/img/icons/envelope.svg" alt="" style="width:20px;height:20px;"></div>
+        <div class="list-info"><h5>Correspondência — Apto 110</h5><p>Remetente: Correios &nbsp;·&nbsp; Recebida em 16/03 às 14h10</p></div>
+        <span class="badge badge-pending">Aguardando</span>
+      </div>
+      <div class="list-item">
+        <div class="card-icon icon-blue" style="width:42px;height:42px;border-radius:10px;flex-shrink:0;"><img src="../../assets/img/icons/box-open.svg" alt="" style="width:20px;height:20px;"></div>
+        <div class="list-info"><h5>Encomenda grande — Apto 312</h5><p>Remetente: Shopee &nbsp;·&nbsp; Recebida em 15/03 às 11h50</p></div>
+        <span class="badge badge-alert">3 dias</span>
+      </div>
+    </div>
+
+    <p class="section-title"><i class="fa-solid fa-bullhorn"></i> Avisos do Síndico</p>
+    <div class="notif-list">
+      <div class="notif-item">
+        <div class="notif-dot alert"></div>
+        <div class="notif-content"><h5>Proibição de obras nos finais de semana</h5><p>Não autorizar entrada de prestadores para obras aos sábados e domingos.</p></div>
+        <span class="notif-time">Hoje</span>
+      </div>
+      <div class="notif-item">
+        <div class="notif-dot amber"></div>
+        <div class="notif-content"><h5>Reunião de equipe — 20/03</h5><p>Obrigatória para todos os porteiros na sala de administração às 08h.</p></div>
+        <span class="notif-time">15/03</span>
+      </div>
+    </div>
+
+  </main>
+
+  <div class="accessibility-widget">
+    <input type="checkbox" id="access-toggle">
+    <label for="access-toggle" class="access-button" title="Acessibilidade">
+      <img src="../../assets/img/acessibilidade.png" class="access-icon-img" alt="">
+    </label>
+    <div class="access-menu">
+      <label><input type="checkbox" id="font-toggle"> <i class="fa-solid fa-text-height"></i> Aumentar fonte</label>
+      <label><input type="checkbox" id="contrast-toggle"> <i class="fa-solid fa-circle-half-stroke"></i> Alto contraste</label>
+      <label><input type="checkbox" id="read-toggle"> <i class="fa-solid fa-book-open"></i> Modo leitura</label>
+    </div>
+  </div>
+  <script src="../../assets/js/validation.js"></script>
+</body>
+</html>

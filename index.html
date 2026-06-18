@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="assets/img/logo.png" type="image/png">
+  <title>SmartCondo — Login</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/6b7a3c5b4f.js" crossorigin="anonymous"></script>
+  <style>
+
+    /* ── Feedback de erro ─────────────────────────────────── */
+    .erro-login {
+      display: none;
+      background: linear-gradient(135deg, #fff0f0, #fee2e2);
+      border: 1.5px solid rgba(245,108,108,.35);
+      border-radius: var(--radius-xs);
+      padding: 12px 16px;
+      margin-bottom: 16px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #b52020;
+      align-items: center;
+      gap: 10px;
+    }
+    .erro-login.visivel {
+      display: flex;
+      animation: fadeUp .3s ease;
+    }
+
+    /* ── Indicador de perfil detectado ───────────────────── */
+    .perfil-detectado {
+      display: none;
+      padding: 10px 16px;
+      border-radius: var(--radius-xs);
+      margin-bottom: 14px;
+      font-size: 12px;
+      font-weight: 700;
+      align-items: center;
+      gap: 9px;
+    }
+    .perfil-detectado.visivel  { display: flex; animation: fadeUp .3s ease; }
+    .perfil-detectado.morador  { background: rgba(7,158,146,.1);   color: #068a7f; border: 1px solid rgba(7,158,146,.25); }
+    .perfil-detectado.porteiro { background: rgba(64,158,255,.1);  color: #1a5fa8; border: 1px solid rgba(64,158,255,.25); }
+    .perfil-detectado.sindico  { background: rgba(145,100,250,.1); color: #6540c8; border: 1px solid rgba(145,100,250,.25); }
+
+    /* ── Botão olhinho — sobrescreve .input-box i ─────────── */
+    #toggleSenha {
+      position: absolute !important;
+      right: 14px !important;
+      left: auto !important;
+      top: 50% !important;
+      transform: translateY(-50%) !important;
+      pointer-events: all !important;
+      cursor: pointer !important;
+      color: var(--muted) !important;
+      font-size: 17px !important;
+      z-index: 10 !important;
+      user-select: none;
+      background: none;
+      border: none;
+      padding: 0;
+      transition: color .2s;
+    }
+    #toggleSenha:hover { color: var(--primary) !important; }
+    #toggleSenha i {
+      position: static !important;
+      transform: none !important;
+      pointer-events: none !important;
+      left: auto !important;
+      top: auto !important;
+      font-size: inherit !important;
+      color: inherit !important;
+    }
+
+    /* ── Animação shake (senha inválida) ──────────────────── */
+    @keyframes shake {
+      0%, 100% { transform: translateX(0); }
+      20%       { transform: translateX(-8px); }
+      40%       { transform: translateX(8px); }
+      60%       { transform: translateX(-5px); }
+      80%       { transform: translateX(5px); }
+    }
+
+  </style>
+</head>
+<body>
+
+  <main class="container">
+
+    <!-- Logo -->
+    <header class="logo-area">
+      <img src="assets/img/logo.png" alt="Logo SmartCondo" class="logo" style="width:42px;height:42px;">
+      <div class="logo-text">
+        <h1>Smart Condo</h1>
+        <p>Gestão de Condomínios</p>
+      </div>
+    </header>
+
+    <h2>Bem-vindo de volta</h2>
+    <p class="subtitle">Acesse sua conta para continuar</p>
+
+    <!-- Indicador de perfil detectado (preenchido via JS) -->
+    <div class="perfil-detectado" id="perfilDetectado">
+      <i class="fa-solid fa-circle-check"></i>
+      <span id="perfilTexto"></span>
+    </div>
+
+    <!-- Mensagem de erro -->
+    <div class="erro-login" id="erroLogin">
+      <i class="fa-solid fa-circle-xmark" style="font-size:16px;flex-shrink:0;"></i>
+      <span>Senha inválida. Verifique suas credenciais e tente novamente.</span>
+    </div>
+
+    <form class="login-form" id="loginForm">
+
+      <!-- Campo de e-mail -->
+      <div class="input-box">
+        <i class="fa-solid fa-envelope"></i>
+        <input type="email" id="emailInput"
+          placeholder="E-mail ou telefone"
+          required autocomplete="username">
+      </div>
+
+      <!-- Campo de senha + botão olhinho -->
+      <div class="input-box">
+        <i class="fa-solid fa-lock"></i>
+        <input type="password" id="senhaInput"
+          placeholder="Senha"
+          required autocomplete="current-password"
+          style="padding-right:48px;"
+          oninput="detectarPerfil(this.value)">
+        <!-- Botão olhinho — usa span para não herdar o reset de <button> no form -->
+        <span id="toggleSenha" onclick="toggleVerSenha()" title="Mostrar / ocultar senha">
+          <i class="fa-solid fa-eye" id="toggleIcon"></i>
+        </span>
+      </div>
+
+      <!-- Lembrar + Esqueci senha -->
+      <div class="options">
+        <label class="remember">
+          <input type="checkbox">
+          <span>Lembrar-me</span>
+        </label>
+        <a href="pages/login/esqueci_senha.html">
+          <i class="fa-solid fa-circle-question" style="margin-right:4px;"></i>Esqueci minha senha
+        </a>
+      </div>
+
+      <!-- Botão único de login -->
+      <button type="button" class="login-btn" id="btnEntrar" onclick="fazerLogin()">
+        <i class="fa-solid fa-right-to-bracket" style="margin-right:8px;"></i>Entrar
+      </button>
+
+    </form>
+
+    <div class="divider"><span></span><p>ou</p><span></span></div>
+
+    <div class="register">
+      <p>Ainda não tem uma conta?</p>
+      <a href="pages/cadastro/cadastro.html">
+        <i class="fa-solid fa-user-plus" style="margin-right:5px;"></i>Cadastre-se gratuitamente →
+      </a>
+    </div>
+
+    <div class="terms">
+      <a href="#"><i class="fa-solid fa-file-shield" style="margin-right:3px;"></i>Política de privacidade</a>
+      <span>·</span>
+      <a href="#"><i class="fa-solid fa-file-lines" style="margin-right:3px;"></i>Termos de uso</a>
+    </div>
+
+    <div class="contact">
+      <p>
+        <i class="fa-solid fa-envelope" style="color:var(--primary);margin-right:5px;"></i>smartcondoip@gmail.com
+        &nbsp;·&nbsp;
+        <i class="fa-solid fa-phone" style="color:var(--primary);margin-right:5px;"></i>(67) 91234-5678
+      </p>
+    </div>
+
+  </main>
+
+  <!-- Widget de acessibilidade -->
+  <div class="accessibility-widget">
+    <input type="checkbox" id="access-toggle">
+    <label for="access-toggle" class="access-button" title="Acessibilidade">
+      <img src="assets/img/acessibilidade.png" class="access-icon-img" alt="">
+    </label>
+    <div class="access-menu">
+      <label><input type="checkbox" id="font-toggle"> <i class="fa-solid fa-text-height"></i> Aumentar fonte</label>
+      <label><input type="checkbox" id="contrast-toggle"> <i class="fa-solid fa-circle-half-stroke"></i> Alto contraste</label>
+      <label><input type="checkbox" id="read-toggle"> <i class="fa-solid fa-book-open"></i> Modo leitura</label>
+    </div>
+  </div>
+
+  <script>
+
+    // ── SENHAS DE ACESSO ─────────────────────────────────────────
+    // Para mudar uma senha, edite o valor entre aspas aqui:
+    const SENHAS = {
+      morador:  "morador",   // ex.: "joao2025"
+      porteiro: "porteiro",  // ex.: "carlos456"
+      sindico:  "sindico",   // ex.: "roberto@adm"
+    };
+
+    // ── DESTINOS (não precisa alterar) ───────────────────────────
+    const DESTINOS = {
+      morador:  "pages/morador/dashboard.html",
+      porteiro: "pages/porteiro/dashboard.html",
+      sindico:  "pages/sindico/dashboard.html",
+    };
+
+    // ── MOSTRAR / OCULTAR SENHA ──────────────────────────────────
+    function toggleVerSenha() {
+      const input = document.getElementById("senhaInput");
+      const icon  = document.getElementById("toggleIcon");
+
+      if (input.type === "password") {
+        input.type = "text";
+        icon.className = "fa-solid fa-eye-slash";
+      } else {
+        input.type = "password";
+        icon.className = "fa-solid fa-eye";
+      }
+      input.focus();
+    }
+
+    // ── DETECTA PERFIL EM TEMPO REAL ─────────────────────────────
+    function detectarPerfil(senha) {
+      const div   = document.getElementById("perfilDetectado"); // ← FIX: declarado aqui
+      const texto = document.getElementById("perfilTexto");
+      const erro  = document.getElementById("erroLogin");
+
+      // Esconde mensagem de erro ao redigitar
+      erro.classList.remove("visivel");
+
+      // Reseta classes do indicador
+      div.className = "perfil-detectado";
+
+      if (senha === SENHAS.morador) {
+        div.classList.add("visivel", "morador");
+        texto.innerHTML = '<i class="fa-solid fa-user" style="margin-right:5px;"></i>Perfil detectado: <strong>Morador</strong>';
+      } else if (senha === SENHAS.porteiro) {
+        div.classList.add("visivel", "porteiro");
+        texto.innerHTML = '<i class="fa-solid fa-shield-halved" style="margin-right:5px;"></i>Perfil detectado: <strong>Porteiro</strong>';
+      } else if (senha === SENHAS.sindico) {
+        div.classList.add("visivel", "sindico");
+        texto.innerHTML = '<i class="fa-solid fa-star" style="margin-right:5px;"></i>Perfil detectado: <strong>Síndico</strong>';
+      }
+      // Se não casar com nenhuma senha, o indicador fica oculto
+    }
+
+    // ── FAZER LOGIN ──────────────────────────────────────────────
+    function fazerLogin() {
+      const senha = document.getElementById("senhaInput").value.trim();
+      const erro  = document.getElementById("erroLogin");
+      const btn   = document.getElementById("btnEntrar");
+      const form  = document.getElementById("loginForm");
+
+      // Loading no botão
+      btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin" style="margin-right:8px;"></i>Verificando...';
+      btn.disabled = true;
+
+      setTimeout(() => {
+
+        if (senha === SENHAS.morador) {
+          window.location.href = DESTINOS.morador;
+
+        } else if (senha === SENHAS.porteiro) {
+          window.location.href = DESTINOS.porteiro;
+
+        } else if (senha === SENHAS.sindico) {
+          window.location.href = DESTINOS.sindico;
+
+        } else {
+          // Senha errada
+          erro.classList.add("visivel");
+          document.getElementById("senhaInput").value = "";
+          document.getElementById("perfilDetectado").className = "perfil-detectado";
+
+          btn.innerHTML = '<i class="fa-solid fa-right-to-bracket" style="margin-right:8px;"></i>Entrar';
+          btn.disabled = false;
+
+          // Efeito shake no formulário
+          form.style.animation = "none";
+          form.offsetHeight; // força reflow
+          form.style.animation = "shake .4s ease";
+        }
+
+      }, 600);
+    }
+
+    // ── ENTER no campo senha dispara login ───────────────────────
+    document.addEventListener("DOMContentLoaded", () => {
+      document.getElementById("senhaInput").addEventListener("keydown", (e) => {
+        if (e.key === "Enter") fazerLogin();
+      });
+    });
+
+  </script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      document.getElementById('loginForm').addEventListener('submit', function(e) {
+        var email = document.getElementById('emailInput');
+        var senha = document.getElementById('senhaInput');
+        var valido = true;
+        document.querySelectorAll('.erro-validacao').forEach(function(el) { el.remove(); });
+        if (!email.value.trim()) {
+          mostrarErro(email, 'Informe seu e-mail ou telefone');
+          valido = false;
+        }
+        if (!senha.value.trim()) {
+          mostrarErro(senha, 'Informe sua senha');
+          valido = false;
+        }
+        if (!valido) e.preventDefault();
+      });
+    });
+  </script>
+  <script src="assets/js/validation.js"></script>
+
+</body>
+</html>
