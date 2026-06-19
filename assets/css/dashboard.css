@@ -66,6 +66,8 @@ body.dashboard-body {
   padding: 6px 13px; border-radius: 30px;
 }
 .user-chip i { color: var(--primary); font-size: 12px; }
+a.user-chip { text-decoration: none; color: var(--text-2); transition: all .2s; }
+a.user-chip:hover { background: var(--primary-light); border-color: var(--primary); color: var(--primary); }
 
 .logout-btn {
   display: flex; align-items: center; gap: 6px;

@@ -10,27 +10,43 @@
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/6b7a3c5b4f.js" crossorigin="anonymous"></script>
   <style>
-    .profile-header{display:flex;align-items:center;gap:20px;margin-bottom:28px;flex-wrap:wrap;}
-    .profile-avatar{width:100px;height:100px;border-radius:50%;background:linear-gradient(135deg,#9164fa,#7c3aed);display:flex;align-items:center;justify-content:center;font-size:40px;color:#fff;flex-shrink:0;box-shadow:0 4px 16px rgba(145,100,250,.3);}
-    .profile-avatar.morador-bg{background:linear-gradient(135deg,var(--primary),var(--primary-dark));box-shadow:0 4px 16px rgba(7,158,146,.3);}
-    .profile-avatar.porteiro-bg{background:linear-gradient(135deg,#409eff,#2563eb);box-shadow:0 4px 16px rgba(64,158,255,.3);}
-    .profile-info h2{font-size:22px;font-weight:700;color:var(--text);margin:0 0 4px;}
-    .profile-info .profile-role{font-size:13px;color:var(--text-2);display:flex;align-items:center;gap:6px;}
-    .profile-info .profile-role i{font-size:14px;}
-    .profile-badge{display:inline-block;padding:3px 10px;border-radius:20px;font-size:11px;font-weight:600;background:var(--primary-light);color:var(--primary);margin-top:6px;}
-    .profile-badge.purple{background:#f0e6ff;color:#7c3aed;}
-    .profile-badge.blue{background:#e6f0ff;color:#2563eb;}
-    .profile-section{background:var(--surface);border-radius:var(--radius-2);padding:20px;margin-bottom:16px;}
-    .profile-section h3{font-size:14px;font-weight:700;color:var(--text);margin:0 0 16px;display:flex;align-items:center;gap:8px;}
-    .profile-section h3 i{font-size:15px;color:var(--primary);width:20px;text-align:center;}
-    .profile-section h3 i.purple-icon{color:#7c3aed;}
-    .profile-section h3 i.blue-icon{color:#2563eb;}
-    .profile-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
-    .profile-field{}
-    .profile-field .field-label{font-size:11px;color:var(--text-2);font-weight:600;text-transform:uppercase;letter-spacing:.3px;margin-bottom:2px;}
-    .profile-field .field-value{font-size:14px;color:var(--text);font-weight:500;}
-    .profile-actions{display:flex;gap:10px;margin-top:20px;flex-wrap:wrap;}
-    @media(max-width:480px){.profile-grid{grid-template-columns:1fr;}.profile-header{flex-direction:column;text-align:center;}}
+    .p-card{background:var(--surface);border-radius:var(--radius-sm);padding:24px;margin-bottom:18px;border:1px solid var(--border);box-shadow:var(--shadow-sm);transition:all .25s var(--ease-smooth);}
+    .p-card:hover{box-shadow:var(--shadow-md);}
+    .p-card h3{font-size:13px;font-weight:800;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;margin-bottom:18px;display:flex;align-items:center;gap:8px;}
+    .p-card h3 i{font-size:16px;color:#409eff;width:20px;}
+    .p-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+    .p-field{min-height:44px;}
+    .p-field .p-lbl{font-size:10.5px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.4px;margin-bottom:3px;}
+    .p-field .p-val{font-size:14.5px;font-weight:600;color:var(--text);padding:4px 0;word-break:break-word;}
+    .p-field .p-val.hidden{display:none;}
+    .p-field .p-edit{display:none;}
+    .p-field .p-edit.show{display:block;}
+    .p-field .p-edit input,.p-field .p-edit select{width:100%;padding:9px 12px;border:1.5px solid var(--border);border-radius:10px;font-size:13.5px;font-weight:500;font-family:'Plus Jakarta Sans',sans-serif;background:var(--surface);color:var(--text);transition:all .2s;box-sizing:border-box;}
+    .p-field .p-edit input:focus,.p-field .p-edit select:focus{outline:none;border-color:#409eff;box-shadow:0 0 0 3px rgba(64,158,255,.22);}
+    .p-field .p-edit input::placeholder{color:#b8c6cc;font-weight:400;}
+    .profile-top{display:flex;align-items:center;gap:24px;margin-bottom:24px;flex-wrap:wrap;}
+    .p-avatar-wrap{position:relative;flex-shrink:0;}
+    .p-avatar{width:100px;height:100px;border-radius:50%;background:linear-gradient(135deg,#409eff,#2563eb);display:flex;align-items:center;justify-content:center;font-size:38px;color:#fff;box-shadow:0 4px 16px rgba(64,158,255,.3);cursor:pointer;transition:all .25s;overflow:hidden;position:relative;}
+    .p-avatar img{width:100%;height:100%;object-fit:cover;border-radius:50%;}
+    .p-avatar .avatar-overlay{position:absolute;inset:0;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;color:#fff;font-size:14px;font-weight:600;opacity:0;transition:opacity .25s;border-radius:50%;}
+    .p-avatar:hover .avatar-overlay{opacity:1;}
+    .p-avatar input[type="file"]{position:absolute;inset:0;opacity:0;cursor:pointer;z-index:2;}
+    .p-name h1{font-size:24px;font-weight:800;color:var(--text);margin:0 0 4px;letter-spacing:-.3px;}
+    .p-name .p-role{font-size:13px;color:var(--text-2);display:flex;align-items:center;gap:6px;}
+    .p-name .p-role i{font-size:13px;}
+    .p-name .p-tag{display:inline-flex;align-items:center;gap:5px;margin-top:8px;padding:4px 12px;border-radius:20px;font-size:11px;font-weight:700;background:#e6f0ff;color:#2563eb;}
+    .p-actions{display:flex;flex-direction:column;gap:10px;margin-top:8px;}
+    .toast{position:fixed;bottom:30px;left:50%;transform:translateX(-50%) translateY(80px);background:#1a2e3a;color:#fff;padding:14px 28px;border-radius:14px;font-size:14px;font-weight:600;box-shadow:0 8px 32px rgba(0,0,0,.25);opacity:0;transition:all .4s var(--ease-smooth);z-index:999;pointer-events:none;display:flex;align-items:center;gap:10px;}
+    .toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
+    .toast i{font-size:18px;}
+    .toast.success i{color:#34d399;}
+    .p-field .p-edit select{cursor:pointer;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%237a909a' d='M1 1l5 5 5-5'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 13px center;padding-right:32px;}
+    .edit-mode .p-field .p-val{display:none;}
+    .edit-mode .p-field .p-edit{display:block;}
+    a.user-chip{text-decoration:none;color:var(--text-2);transition:all .2s;}
+    a.user-chip:hover{background:#e6f0ff;border-color:#409eff;color:#2563eb;}
+    @media(min-width:521px){.p-actions{flex-direction:row;}.p-actions .action-btn{margin-bottom:0;}}
+    @media(max-width:520px){.p-grid{grid-template-columns:1fr;}.profile-top{flex-direction:column;text-align:center;}}
   </style>
 </head>
 <body class="dashboard-body layout-desktop">
@@ -48,55 +64,67 @@
       <p class="greeting-condo"><i class="fa-solid fa-info-circle"></i> Seus dados pessoais e informações profissionais</p>
     </div>
 
-    <div class="profile-header">
-      <div class="profile-avatar porteiro-bg">
-        <i class="fa-solid fa-shield-halved"></i>
+    <div class="profile-top">
+      <div class="p-avatar-wrap">
+        <div class="p-avatar" onclick="document.getElementById('avatarInput').click()">
+          <i class="fa-solid fa-shield-halved" id="avatarIcon"></i>
+          <img id="avatarPreview" src="" alt="" style="display:none;">
+          <div class="avatar-overlay"><i class="fa-solid fa-camera"></i></div>
+          <input type="file" id="avatarInput" accept="image/*" onchange="trocarAvatar(event)">
+        </div>
       </div>
-      <div class="profile-info">
-        <h2>Carlos Pereira</h2>
-        <p class="profile-role"><i class="fa-solid fa-shield-halved" style="color:#409eff;"></i> Porteiro</p>
-        <span class="profile-badge blue">Residencial das Palmeiras · Portaria Principal</span>
-      </div>
-    </div>
-
-    <div class="profile-section">
-      <h3><i class="fa-solid fa-user blue-icon"></i> Dados Pessoais</h3>
-      <div class="profile-grid">
-        <div class="profile-field"><p class="field-label">CPF</p><p class="field-value">987.654.321-00</p></div>
-        <div class="profile-field"><p class="field-label">RG</p><p class="field-value">98.765.432-1</p></div>
-        <div class="profile-field"><p class="field-label">Data de Nascimento</p><p class="field-value">22/08/1990</p></div>
-        <div class="profile-field"><p class="field-label">E-mail</p><p class="field-value">carlos.pereira@email.com</p></div>
-        <div class="profile-field"><p class="field-label">Celular</p><p class="field-value">(11) 97654-3210</p></div>
+      <div class="p-name">
+        <h1 id="viewNome">Carlos Pereira</h1>
+        <p class="p-role"><i class="fa-solid fa-shield-halved" style="color:#409eff;"></i> Porteiro</p>
+        <span class="p-tag">Residencial das Palmeiras · Portaria Principal</span>
       </div>
     </div>
 
-    <div class="profile-section">
-      <h3><i class="fa-solid fa-briefcase blue-icon"></i> Dados Profissionais</h3>
-      <div class="profile-grid">
-        <div class="profile-field"><p class="field-label">Turno</p><p class="field-value">07h – 15h (Matutino)</p></div>
-        <div class="profile-field"><p class="field-label">Tipo de Contrato</p><p class="field-value">CLT</p></div>
-        <div class="profile-field"><p class="field-label">Data de Início</p><p class="field-value">10/01/2024</p></div>
-        <div class="profile-field"><p class="field-label">Local de Atuação</p><p class="field-value">Portaria Principal</p></div>
+    <div class="p-card">
+      <h3><i class="fa-solid fa-user" style="color:#409eff;"></i> Dados Pessoais</h3>
+      <div class="p-grid">
+        <div class="p-field"><div class="p-lbl">CPF</div><div class="p-val" id="val-cpf">987.654.321-00</div><div class="p-edit"><input type="text" id="edit-cpf" value="987.654.321-00" class="mask-cpf"></div></div>
+        <div class="p-field"><div class="p-lbl">RG</div><div class="p-val" id="val-rg">98.765.432-1</div><div class="p-edit"><input type="text" id="edit-rg" value="98.765.432-1"></div></div>
+        <div class="p-field"><div class="p-lbl">Data de Nascimento</div><div class="p-val" id="val-nasc">22/08/1990</div><div class="p-edit"><input type="date" id="edit-nasc" value="1990-08-22"></div></div>
+        <div class="p-field"><div class="p-lbl">E-mail</div><div class="p-val" id="val-email">carlos.pereira@email.com</div><div class="p-edit"><input type="email" id="edit-email" value="carlos.pereira@email.com"></div></div>
+        <div class="p-field"><div class="p-lbl">Celular / WhatsApp</div><div class="p-val" id="val-tel">(11) 97654-3210</div><div class="p-edit"><input type="tel" id="edit-tel" value="(11) 97654-3210" class="mask-tel"></div></div>
       </div>
     </div>
 
-    <div class="profile-section">
-      <h3><i class="fa-solid fa-lock blue-icon"></i> Permissões de Acesso</h3>
-      <div class="profile-grid">
-        <div class="profile-field"><p class="field-label">Visitantes</p><p class="field-value"><i class="fa-solid fa-circle-check" style="color:var(--success);"></i> Acesso total</p></div>
-        <div class="profile-field"><p class="field-label">Encomendas</p><p class="field-value"><i class="fa-solid fa-circle-check" style="color:var(--success);"></i> Acesso total</p></div>
-        <div class="profile-field"><p class="field-label">Veículos</p><p class="field-value"><i class="fa-solid fa-circle-check" style="color:var(--success);"></i> Acesso total</p></div>
-        <div class="profile-field"><p class="field-label">Ocorrências</p><p class="field-value"><i class="fa-solid fa-circle-check" style="color:var(--success);"></i> Acesso total</p></div>
-        <div class="profile-field"><p class="field-label">Financeiro</p><p class="field-value"><i class="fa-solid fa-circle-xmark" style="color:var(--danger);"></i> Sem acesso</p></div>
+    <div class="p-card">
+      <h3><i class="fa-solid fa-briefcase" style="color:#409eff;"></i> Dados Profissionais</h3>
+      <div class="p-grid">
+        <div class="p-field"><div class="p-lbl">Turno</div><div class="p-val" id="val-turno">07h – 15h (Matutino)</div><div class="p-edit"><select id="edit-turno"><option value="07h – 15h (Matutino)" selected>07h – 15h (Matutino)</option><option value="15h – 23h (Vespertino)">15h – 23h (Vespertino)</option><option value="23h – 07h (Noturno)">23h – 07h (Noturno)</option></select></div></div>
+        <div class="p-field"><div class="p-lbl">Tipo de Contrato</div><div class="p-val" id="val-contrato">CLT</div><div class="p-edit"><select id="edit-contrato"><option value="CLT" selected>CLT</option><option value="PJ">PJ</option><option value="Temporário">Temporário</option><option value="Estágio">Estágio</option></select></div></div>
+        <div class="p-field"><div class="p-lbl">Data de Início</div><div class="p-val" id="val-inicio">10/01/2024</div><div class="p-edit"><input type="date" id="edit-inicio" value="2024-01-10"></div></div>
+        <div class="p-field"><div class="p-lbl">Local de Atuação</div><div class="p-val" id="val-local">Portaria Principal</div><div class="p-edit"><input type="text" id="edit-local" value="Portaria Principal"></div></div>
       </div>
     </div>
 
-    <div class="profile-actions">
-      <a href="#" class="action-btn" onclick="alert('Funcionalidade de edição disponível em breve!');return false;"><i class="fa-solid fa-pen"></i> Editar Perfil</a>
+    <div class="p-card">
+      <h3><i class="fa-solid fa-lock" style="color:#409eff;"></i> Permissões de Acesso</h3>
+      <div class="p-grid">
+        <div class="p-field"><div class="p-lbl">Visitantes</div><div class="p-val"><i class="fa-solid fa-circle-check" style="color:var(--success);"></i> Acesso total</div></div>
+        <div class="p-field"><div class="p-lbl">Encomendas</div><div class="p-val"><i class="fa-solid fa-circle-check" style="color:var(--success);"></i> Acesso total</div></div>
+        <div class="p-field"><div class="p-lbl">Veículos</div><div class="p-val"><i class="fa-solid fa-circle-check" style="color:var(--success);"></i> Acesso total</div></div>
+        <div class="p-field"><div class="p-lbl">Ocorrências</div><div class="p-val"><i class="fa-solid fa-circle-check" style="color:var(--success);"></i> Acesso total</div></div>
+        <div class="p-field"><div class="p-lbl">Financeiro</div><div class="p-val"><i class="fa-solid fa-circle-xmark" style="color:var(--danger);"></i> Sem acesso</div></div>
+      </div>
+    </div>
+
+    <div class="p-actions" id="viewActions">
+      <button class="action-btn" onclick="entrarEdicao()"><i class="fa-solid fa-pen"></i> Editar Perfil</button>
       <a href="dashboard.html" class="action-btn outline"><i class="fa-solid fa-arrow-left"></i> Voltar</a>
     </div>
 
+    <div class="p-actions" id="editActions" style="display:none;">
+      <button class="action-btn" onclick="salvarDados()"><i class="fa-solid fa-floppy-disk"></i> Salvar Alterações</button>
+      <button class="action-btn outline" onclick="cancelarEdicao()"><i class="fa-solid fa-xmark"></i> Cancelar</button>
+    </div>
+
   </main>
+
+  <div id="toast" class="toast"><i class="fa-solid fa-circle-check"></i> <span id="toastMsg">Dados salvos com sucesso!</span></div>
 
   <div class="accessibility-widget">
     <input type="checkbox" id="access-toggle">
@@ -110,5 +138,122 @@
     </div>
   </div>
   <script src="../../assets/js/validation.js"></script>
+  <script>
+    const STORAGE_KEY = 'smartcondo_perfil_porteiro';
+    let dadosOriginais = null;
+
+    const fields = [
+      { id: 'nome', isNome: true },
+      { id: 'cpf' }, { id: 'rg' }, { id: 'nasc', isDate: true },
+      { id: 'email' }, { id: 'tel' },
+      { id: 'turno' }, { id: 'contrato' }, { id: 'inicio', isDate: true }, { id: 'local' },
+    ];
+
+    function carregarDados() {
+      const salvos = localStorage.getItem(STORAGE_KEY);
+      if (!salvos) return;
+      const dados = JSON.parse(salvos);
+      fields.forEach(f => {
+        const val = dados[f.id];
+        if (val !== undefined) {
+          const elView = document.getElementById('val-' + f.id);
+          const elEdit = document.getElementById('edit-' + f.id);
+          if (elView) {
+            if (f.isDate && val) {
+              const [a, m, d] = val.split('-');
+              elView.textContent = `${d}/${m}/${a}`;
+            } else {
+              elView.textContent = val || '';
+            }
+          }
+          if (elEdit) elEdit.value = val || '';
+        }
+      });
+      if (dados.nome) document.getElementById('viewNome').textContent = dados.nome;
+      if (dados.avatar) {
+        const img = document.getElementById('avatarPreview');
+        const icon = document.getElementById('avatarIcon');
+        img.src = dados.avatar; img.style.display = 'block'; icon.style.display = 'none';
+      }
+    }
+
+    function entrarEdicao() {
+      dadosOriginais = {};
+      document.querySelectorAll('.p-field').forEach(el => {
+        const inp = el.querySelector('.p-edit input, .p-edit select');
+        if (inp) dadosOriginais[inp.id] = inp.value;
+      });
+      document.querySelectorAll('.p-card').forEach(c => c.classList.add('edit-mode'));
+      document.getElementById('viewActions').style.display = 'none';
+      document.getElementById('editActions').style.display = 'flex';
+    }
+
+    function salvarDados() {
+      const dados = {};
+      fields.forEach(f => {
+        const el = document.getElementById('edit-' + f.id);
+        if (el) dados[f.id] = el.value;
+      });
+      if (document.getElementById('edit-nome')) dados.nome = document.getElementById('edit-nome').value;
+      const avatarImg = document.getElementById('avatarPreview');
+      if (avatarImg.src && avatarImg.style.display !== 'none') dados.avatar = avatarImg.src;
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(dados));
+      fields.forEach(f => {
+        const elEdit = document.getElementById('edit-' + f.id);
+        const elView = document.getElementById('val-' + f.id);
+        if (elEdit && elView) {
+          if (f.isDate && elEdit.value) {
+            const [a, m, d] = elEdit.value.split('-');
+            elView.textContent = `${d}/${m}/${a}`;
+          } else {
+            elView.textContent = elEdit.value || '';
+          }
+        }
+      });
+      if (dados.nome) document.getElementById('viewNome').textContent = dados.nome;
+      sairEdicao();
+      mostrarToast('Dados salvos com sucesso!', 'success');
+    }
+
+    function cancelarEdicao() {
+      if (dadosOriginais) {
+        document.querySelectorAll('.p-field').forEach(el => {
+          const inp = el.querySelector('.p-edit input, .p-edit select');
+          if (inp && dadosOriginais[inp.id] !== undefined) inp.value = dadosOriginais[inp.id];
+        });
+      }
+      sairEdicao();
+    }
+
+    function sairEdicao() {
+      document.querySelectorAll('.p-card').forEach(c => c.classList.remove('edit-mode'));
+      document.getElementById('viewActions').style.display = 'flex';
+      document.getElementById('editActions').style.display = 'none';
+      dadosOriginais = null;
+    }
+
+    function trocarAvatar(e) {
+      const file = e.target.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = function(ev) {
+        const img = document.getElementById('avatarPreview');
+        const icon = document.getElementById('avatarIcon');
+        img.src = ev.target.result; img.style.display = 'block'; icon.style.display = 'none';
+      };
+      reader.readAsDataURL(file);
+    }
+
+    function mostrarToast(msg, tipo) {
+      const toast = document.getElementById('toast');
+      const span = document.getElementById('toastMsg');
+      span.textContent = msg;
+      toast.className = 'toast ' + (tipo || '');
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), 3000);
+    }
+
+    carregarDados();
+  </script>
 </body>
 </html>
