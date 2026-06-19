@@ -7,8 +7,7 @@
   <title>SmartCondo — Cadastro em Verificação</title>
   <link rel="stylesheet" href="../../assets/css/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css">
-</head>
+  </head>
 <body>
 
   <main class="container-lg">
@@ -26,11 +25,11 @@
       <!-- Ícone animado — cor roxa (síndico) -->
       <div class="waiting-icon-wrap">
         <div class="waiting-icon-bg" style="background:linear-gradient(135deg,#ede0ff,#d8c0ff);">
-          <i class="fa-solid fa-star" style="color:#7a4ee0;font-size:36px;"></i>
+          <img src="/assets/img/icons/star.svg" alt="">
         </div>
       </div>
 
-      <h2 class="waiting-title"><i class="fa-solid fa-paper-plane"></i> Solicitação enviada!</h2>
+      <h2 class="waiting-title"> Solicitação enviada!</h2>
       <p class="waiting-subtitle">
         O cadastro do condomínio foi recebido. Nossa equipe realizará a <strong>verificação dos documentos legais</strong>, incluindo a Ata de Eleição, antes de ativar sua conta de síndico.
       </p>
@@ -40,7 +39,7 @@
 
         <div class="status-step done">
           <div class="ss-icon done" style="background:linear-gradient(135deg,#9e72fc,#7a4ee0);">
-            <i class="fa-solid fa-check"></i>
+            <img src="/assets/img/icons/check.svg" alt="">
           </div>
           <div class="ss-info">
             <strong>Cadastro enviado</strong>
@@ -51,7 +50,7 @@
 
         <div class="status-step done">
           <div class="ss-icon done" style="background:linear-gradient(135deg,#9e72fc,#7a4ee0);">
-            <i class="fa-solid fa-folder-open"></i>
+            <img src="/assets/img/icons/folder-open.svg" alt="">
           </div>
           <div class="ss-info">
             <strong>Documentos recebidos</strong>
@@ -62,7 +61,7 @@
 
         <div class="status-step active">
           <div class="ss-icon active">
-            <i class="fa-solid fa-magnifying-glass"></i>
+            
           </div>
           <div class="ss-info">
             <strong>Verificação legal dos documentos</strong>
@@ -73,7 +72,7 @@
 
         <div class="status-step pending">
           <div class="ss-icon pending">
-            <i class="fa-solid fa-building-circle-check"></i>
+            
           </div>
           <div class="ss-info">
             <strong>Condomínio registrado na plataforma</strong>
@@ -84,7 +83,7 @@
 
         <div class="status-step pending">
           <div class="ss-icon pending">
-            <i class="fa-solid fa-envelope-open-text"></i>
+            
           </div>
           <div class="ss-info">
             <strong>E-mail de ativação enviado</strong>
@@ -95,7 +94,7 @@
 
         <div class="status-step pending">
           <div class="ss-icon pending">
-            <i class="fa-solid fa-star"></i>
+            <img src="/assets/img/icons/star.svg" alt="">
           </div>
           <div class="ss-info">
             <strong>Conta de síndico ativa</strong>
@@ -108,7 +107,7 @@
 
       <!-- Prazo -->
       <div class="waiting-info-box" style="background:linear-gradient(135deg,rgba(145,100,250,.06),rgba(145,100,250,.02));border-color:rgba(145,100,250,.2);">
-        <i class="fa-solid fa-clock" style="color:#9164fa;font-size:20px;"></i>
+        <img src="/assets/img/icons/clock.svg" alt="">
         <div>
           <strong style="display:block;margin-bottom:3px;color:#4a28a0;">Prazo estimado: 5 dias úteis</strong>
           A verificação dos documentos legais exige análise manual pela equipe SmartCondo. Você será notificado por e-mail a cada atualização do processo.
@@ -117,14 +116,14 @@
 
       <!-- Alerta documentos obrigatórios -->
       <div style="background:linear-gradient(135deg,rgba(230,162,60,.08),rgba(230,162,60,.04));border:1.5px solid rgba(230,162,60,.3);border-radius:var(--radius-sm);padding:16px 18px;display:flex;align-items:flex-start;gap:12px;text-align:left;margin-bottom:20px;font-size:13px;color:#7a5200;font-weight:500;line-height:1.6;">
-        <i class="fa-solid fa-triangle-exclamation" style="font-size:18px;color:#e6a23c;flex-shrink:0;margin-top:1px;"></i>
+        <img src="/assets/img/icons/triangle-exclamation.svg" alt="">
         <div>
           <strong style="display:block;margin-bottom:6px;color:#5a3c00;">Documentos verificados nesta etapa</strong>
           <div style="display:flex;flex-direction:column;gap:5px;">
-            <span><i class="fa-solid fa-gavel" style="color:#e6a23c;margin-right:7px;width:14px;"></i>Ata de Eleição do Síndico (registrada em cartório)</span>
-            <span><i class="fa-solid fa-file-contract" style="color:#e6a23c;margin-right:7px;width:14px;"></i>Convenção do Condomínio</span>
-            <span><i class="fa-solid fa-university" style="color:#e6a23c;margin-right:7px;width:14px;"></i>Cartão CNPJ — Receita Federal</span>
-            <span><i class="fa-solid fa-id-card" style="color:#e6a23c;margin-right:7px;width:14px;"></i>Documento de identidade do síndico</span>
+            <span>Ata de Eleição do Síndico (registrada em cartório)</span>
+            <span><img src="/assets/img/icons/file-contract.svg" alt="">Convenção do Condomínio</span>
+            <span>Cartão CNPJ — Receita Federal</span>
+            <span><img src="/assets/img/icons/id-card.svg" alt="">Documento de identidade do síndico</span>
           </div>
         </div>
       </div>
@@ -132,40 +131,40 @@
       <!-- Acesso após aprovação -->
       <div style="background:var(--surface-2);border:1.5px solid var(--border);border-radius:var(--radius-md);padding:20px;margin-bottom:24px;text-align:left;">
         <p style="font-size:11px;font-weight:800;color:var(--muted);text-transform:uppercase;letter-spacing:.9px;margin-bottom:14px;">
-          <i class="fa-solid fa-star" style="color:#9164fa;margin-right:6px;"></i>
+          <img src="/assets/img/icons/star.svg" alt="">
           Após ativação, você terá acesso completo a:
         </p>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
           <div style="display:flex;align-items:center;gap:9px;font-size:13px;color:var(--text-2);font-weight:500;padding:9px 12px;background:white;border-radius:var(--radius-xs);border:1px solid var(--border-soft);">
-            <i class="fa-solid fa-dollar-sign" style="color:#9164fa;width:16px;text-align:center;"></i> Gestão financeira
+             Gestão financeira
           </div>
           <div style="display:flex;align-items:center;gap:9px;font-size:13px;color:var(--text-2);font-weight:500;padding:9px 12px;background:white;border-radius:var(--radius-xs);border:1px solid var(--border-soft);">
-            <i class="fa-solid fa-users" style="color:#9164fa;width:16px;text-align:center;"></i> Gestão de moradores
+             Gestão de moradores
           </div>
           <div style="display:flex;align-items:center;gap:9px;font-size:13px;color:var(--text-2);font-weight:500;padding:9px 12px;background:white;border-radius:var(--radius-xs);border:1px solid var(--border-soft);">
-            <i class="fa-solid fa-shield-halved" style="color:#9164fa;width:16px;text-align:center;"></i> Gestão de porteiros
+            <img src="/assets/img/icons/shield-halved.svg" alt=""> Gestão de porteiros
           </div>
           <div style="display:flex;align-items:center;gap:9px;font-size:13px;color:var(--text-2);font-weight:500;padding:9px 12px;background:white;border-radius:var(--radius-xs);border:1px solid var(--border-soft);">
-            <i class="fa-solid fa-calendar-days" style="color:#9164fa;width:16px;text-align:center;"></i> Aprovação de reservas
+             Aprovação de reservas
           </div>
           <div style="display:flex;align-items:center;gap:9px;font-size:13px;color:var(--text-2);font-weight:500;padding:9px 12px;background:white;border-radius:var(--radius-xs);border:1px solid var(--border-soft);">
-            <i class="fa-solid fa-bullhorn" style="color:#9164fa;width:16px;text-align:center;"></i> Envio de comunicados
+            <img src="/assets/img/icons/bullhorn.svg" alt=""> Envio de comunicados
           </div>
           <div style="display:flex;align-items:center;gap:9px;font-size:13px;color:var(--text-2);font-weight:500;padding:9px 12px;background:white;border-radius:var(--radius-xs);border:1px solid var(--border-soft);">
-            <i class="fa-solid fa-wrench" style="color:#9164fa;width:16px;text-align:center;"></i> Ordens de manutenção
+             Ordens de manutenção
           </div>
         </div>
 
         <!-- Código de acesso para convidar porteiros/moradores -->
         <div style="margin-top:14px;padding:14px;background:linear-gradient(135deg,rgba(145,100,250,.07),rgba(145,100,250,.03));border:1px solid rgba(145,100,250,.18);border-radius:var(--radius-xs);">
-          <p style="font-size:12px;font-weight:700;color:#6540c8;margin-bottom:4px;"><i class="fa-solid fa-key" style="margin-right:6px;"></i>Código de acesso do condomínio</p>
+          <p style="font-size:12px;font-weight:700;color:#6540c8;margin-bottom:4px;">Código de acesso do condomínio</p>
           <p style="font-size:12px;color:var(--muted);font-weight:500;line-height:1.5;">Após a ativação, você receberá um <strong style="color:#6540c8;">código único do condomínio</strong> para compartilhar com moradores e porteiros durante o cadastro deles.</p>
         </div>
       </div>
 
       <!-- Contato suporte -->
       <div style="font-size:13px;color:var(--muted);text-align:center;line-height:1.8;padding:16px;background:var(--surface-2);border-radius:var(--radius-sm);border:1px solid var(--border);margin-bottom:20px;">
-        <p style="font-weight:700;color:var(--text-2);margin-bottom:6px;"><i class="fa-solid fa-headset" style="color:var(--primary);margin-right:6px;"></i>Acompanhe o processo</p>
+        <p style="font-weight:700;color:var(--text-2);margin-bottom:6px;">Acompanhe o processo</p>
         <p>Nossa equipe entrará em contato se precisar de documentos adicionais:</p>
         <p style="margin-top:6px;">
           <strong style="color:var(--primary);">smartcondoip@gmail.com</strong>
@@ -175,7 +174,7 @@
       </div>
 
       <a href="../../index.html" class="back-link" style="display:inline-flex;margin-top:0;">
-        <i class="fa-solid fa-arrow-left"></i> Voltar para o login
+        <img src="/assets/img/icons/arrow-left.svg" alt=""> Voltar para o login
       </a>
 
     </div>
@@ -188,9 +187,9 @@
       <img src="../../assets/img/acessibilidade.png" class="access-icon-img" alt="">
     </label>
     <div class="access-menu">
-      <label><input type="checkbox" id="font-toggle"> <i class="fa-solid fa-text-height"></i> Aumentar fonte</label>
-      <label><input type="checkbox" id="contrast-toggle"> <i class="fa-solid fa-circle-half-stroke"></i> Alto contraste</label>
-      <label><input type="checkbox" id="read-toggle"> <i class="fa-solid fa-book-open"></i> Modo leitura</label>
+      <label><input type="checkbox" id="font-toggle">  Aumentar fonte</label>
+      <label><input type="checkbox" id="contrast-toggle">  Alto contraste</label>
+      <label><input type="checkbox" id="read-toggle">  Modo leitura</label>
     </div>
   </div>
 

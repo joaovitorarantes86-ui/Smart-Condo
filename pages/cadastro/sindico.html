@@ -7,8 +7,7 @@
   <title>SmartCondo — Cadastro Síndico</title>
   <link rel="stylesheet" href="../../assets/css/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css">
-</head>
+  </head>
 <body>
 
 <main class="container-lg">
@@ -19,7 +18,7 @@
   </header>
 
   <div class="chosen-role sindico">
-    <i class="fa-solid fa-star"></i> Cadastro de Síndico
+    <img src="/assets/img/icons/star.svg" alt=""> Cadastro de Síndico
   </div>
 
   <!-- ══ STEP 1 — DADOS PESSOAIS ══ -->
@@ -39,41 +38,41 @@
     </nav>
 
     <div class="form-section">
-      <p class="form-section-title"><i class="fa-solid fa-id-card"></i> Dados do Síndico <span class="section-tag obrig">Obrigatório</span></p>
+      <p class="form-section-title"><img src="/assets/img/icons/id-card.svg" alt=""> Dados do Síndico <span class="section-tag obrig">Obrigatório</span></p>
       <div class="cad-row">
-        <div class="cad-group"><label><i class="fa-solid fa-user" style="color:var(--primary);margin-right:5px;font-size:11px;"></i>Nome completo <span class="req">*</span></label><input type="text" placeholder="Como consta no documento" required></div>
-        <div class="cad-group"><label><i class="fa-solid fa-fingerprint" style="color:var(--primary);margin-right:5px;font-size:11px;"></i>CPF <span class="req">*</span></label><input type="text" placeholder="000.000.000-00" required maxlength="14"></div>
+        <div class="cad-group"><label><img src="/assets/img/icons/user.svg" alt="">Nome completo <span class="req">*</span></label><input type="text" placeholder="Como consta no documento" required></div>
+        <div class="cad-group"><label>CPF <span class="req">*</span></label><input type="text" placeholder="000.000.000-00" required maxlength="14"></div>
       </div>
       <div class="cad-row">
-        <div class="cad-group"><label><i class="fa-solid fa-id-card" style="color:var(--primary);margin-right:5px;font-size:11px;"></i>RG <span class="req">*</span></label><input type="text" placeholder="00.000.000-0" required></div>
-        <div class="cad-group"><label><i class="fa-regular fa-calendar" style="color:var(--primary);margin-right:5px;font-size:11px;"></i>Data de nascimento <span class="req">*</span></label><input type="date" required></div>
+        <div class="cad-group"><label><img src="/assets/img/icons/id-card.svg" alt="">RG <span class="req">*</span></label><input type="text" placeholder="00.000.000-0" required></div>
+        <div class="cad-group"><label>Data de nascimento <span class="req">*</span></label><input type="date" required></div>
       </div>
       <div class="cad-row">
         <div class="cad-group">
           <label>E-mail pessoal <span class="req">*</span></label>
-          <div class="cad-input-icon"><i class="fa-solid fa-envelope"></i><input type="email" placeholder="seu@email.com" required></div>
+          <div class="cad-input-icon"><img src="/assets/img/icons/envelope.svg" alt=""><input type="email" placeholder="seu@email.com" required></div>
         </div>
         <div class="cad-group">
           <label>Celular / WhatsApp <span class="req">*</span></label>
-          <div class="cad-input-icon"><i class="fa-solid fa-mobile-screen"></i><input type="tel" class="mask-tel" placeholder="(00) 90000-0000" required></div>
+          <div class="cad-input-icon"><input type="tel" class="mask-tel" placeholder="(00) 90000-0000" required></div>
         </div>
       </div>
       <div class="cad-row">
-        <div class="cad-group"><label><i class="fa-solid fa-star" style="color:var(--primary);margin-right:5px;font-size:11px;"></i>Tipo de síndico <span class="req">*</span></label>
+        <div class="cad-group"><label><img src="/assets/img/icons/star.svg" alt="">Tipo de síndico <span class="req">*</span></label>
           <select required><option value="" disabled selected>Selecione</option><option>Síndico morador (eleito em assembleia)</option><option>Síndico profissional (contratado)</option><option>Subsíndico</option><option>Administrador delegado</option></select>
         </div>
-        <div class="cad-group"><label><i class="fa-solid fa-building" style="color:var(--primary);margin-right:5px;font-size:11px;"></i>Unidade <span class="req">*</span></label><input type="text" placeholder="Ex: Apto 101 — Bloco A" required></div>
+        <div class="cad-group"><label><img src="/assets/img/icons/building.svg" alt="">Unidade <span class="req">*</span></label><input type="text" placeholder="Ex: Apto 101 — Bloco A" required></div>
       </div>
       <div class="cad-row">
-        <div class="cad-group"><label><i class="fa-regular fa-calendar-check" style="color:var(--primary);margin-right:5px;font-size:11px;"></i>Início do mandato <span class="req">*</span></label><input type="date" required></div>
-        <div class="cad-group"><label><i class="fa-regular fa-calendar" style="color:var(--primary);margin-right:5px;font-size:11px;"></i>Término do mandato <span class="req">*</span></label><input type="date" required></div>
+        <div class="cad-group"><label><img src="/assets/img/icons/calendar-check.svg" alt="">Início do mandato <span class="req">*</span></label><input type="date" required></div>
+        <div class="cad-group"><label>Término do mandato <span class="req">*</span></label><input type="date" required></div>
       </div>
     </div>
 
     <div class="form-section">
-      <p class="form-section-title"><i class="fa-solid fa-camera"></i> Foto de Perfil <span class="section-tag opc">Opcional</span></p>
+      <p class="form-section-title"><img src="/assets/img/icons/camera.svg" alt=""> Foto de Perfil <span class="section-tag opc">Opcional</span></p>
       <label class="photo-upload" for="foto-s">
-        <i class="fa-solid fa-camera"></i>
+        <img src="/assets/img/icons/camera.svg" alt="">
         <span>Clique para enviar sua foto</span>
         <small>Aparecerá para moradores e porteiros · Máx. 5 MB</small>
       </label>
@@ -81,8 +80,8 @@
     </div>
 
     <div class="step-nav-btns">
-      <a href="../cadastro/cadastro.html" class="step-btn-back"><i class="fa-solid fa-arrow-left"></i> Voltar</a>
-      <a href="#sstep2" class="step-btn-next purple" onclick="mostrarStep(2)">Próximo <i class="fa-solid fa-arrow-right"></i></a>
+      <a href="../cadastro/cadastro.html" class="step-btn-back"><img src="/assets/img/icons/arrow-left.svg" alt=""> Voltar</a>
+      <a href="#sstep2" class="step-btn-next purple" onclick="mostrarStep(2)">Próximo </a>
     </div>
 
   </div><!-- /sstep1 -->
@@ -95,7 +94,7 @@
     <div class="form-progress-bar"><div class="form-progress-fill purple" style="width:50%"></div></div>
 
     <nav class="step-nav">
-      <div class="step-nav-item done-s"><div class="step-nav-circle"><i class="fa-solid fa-check" style="font-size:12px;"></i></div><span class="step-nav-label">Pessoal</span></div>
+      <div class="step-nav-item done-s"><div class="step-nav-circle"><img src="/assets/img/icons/check.svg" alt=""></div><span class="step-nav-label">Pessoal</span></div>
       <div class="step-nav-line done-line-s"></div>
       <div class="step-nav-item active-s"><div class="step-nav-circle">2</div><span class="step-nav-label">Condomínio</span></div>
       <div class="step-nav-line"></div>
@@ -105,69 +104,69 @@
     </nav>
 
     <div class="form-section">
-      <p class="form-section-title"><i class="fa-solid fa-building"></i> Dados do Condomínio <span class="section-tag obrig">Obrigatório</span></p>
+      <p class="form-section-title"><img src="/assets/img/icons/building.svg" alt=""> Dados do Condomínio <span class="section-tag obrig">Obrigatório</span></p>
       <div class="cad-group">
         <label>Nome do condomínio <span class="req">*</span></label>
-        <div class="cad-input-icon"><i class="fa-solid fa-building"></i><input type="text" placeholder="Ex: Residencial das Palmeiras" required></div>
+        <div class="cad-input-icon"><img src="/assets/img/icons/building.svg" alt=""><input type="text" placeholder="Ex: Residencial das Palmeiras" required></div>
       </div>
       <div class="cad-row">
-        <div class="cad-group"><label><i class="fa-solid fa-university" style="color:var(--primary);margin-right:5px;font-size:11px;"></i>CNPJ <span class="req">*</span></label><input type="text" class="mask-cnpj" placeholder="00.000.000/0000-00" required maxlength="18"></div>
-        <div class="cad-group"><label><i class="fa-solid fa-tag" style="color:var(--primary);margin-right:5px;font-size:11px;"></i>Tipo <span class="req">*</span></label>
+        <div class="cad-group"><label>CNPJ <span class="req">*</span></label><input type="text" class="mask-cnpj" placeholder="00.000.000/0000-00" required maxlength="18"></div>
+        <div class="cad-group"><label>Tipo <span class="req">*</span></label>
           <select required><option value="" disabled selected>Selecione</option><option>Residencial</option><option>Comercial</option><option>Misto</option></select>
         </div>
       </div>
       <div class="cad-group">
         <label>Endereço completo <span class="req">*</span></label>
-        <div class="cad-input-icon"><i class="fa-solid fa-location-dot"></i><input type="text" placeholder="Rua, número — Bairro, Cidade - UF" required></div>
+        <div class="cad-input-icon"><input type="text" placeholder="Rua, número — Bairro, Cidade - UF" required></div>
       </div>
       <div class="cad-row">
-        <div class="cad-group"><label><i class="fa-solid fa-map-pin" style="color:var(--primary);margin-right:5px;font-size:11px;"></i>CEP <span class="req">*</span></label><input type="text" class="mask-cep" placeholder="00000-000" required maxlength="9"></div>
-        <div class="cad-group"><label><i class="fa-solid fa-layer-group" style="color:var(--primary);margin-right:5px;font-size:11px;"></i>Nº de unidades <span class="req">*</span></label><input type="text" placeholder="Ex: 48" required></div>
+        <div class="cad-group"><label>CEP <span class="req">*</span></label><input type="text" class="mask-cep" placeholder="00000-000" required maxlength="9"></div>
+        <div class="cad-group"><label>Nº de unidades <span class="req">*</span></label><input type="text" placeholder="Ex: 48" required></div>
       </div>
       <div class="cad-row">
-        <div class="cad-group"><label><i class="fa-solid fa-layer-group" style="color:var(--primary);margin-right:5px;font-size:11px;"></i>Nº de torres / blocos</label><input type="text" placeholder="Ex: 2 torres"></div>
-        <div class="cad-group"><label><i class="fa-solid fa-stairs" style="color:var(--primary);margin-right:5px;font-size:11px;"></i>Nº de andares</label><input type="text" placeholder="Ex: 12 andares"></div>
+        <div class="cad-group"><label>Nº de torres / blocos</label><input type="text" placeholder="Ex: 2 torres"></div>
+        <div class="cad-group"><label>Nº de andares</label><input type="text" placeholder="Ex: 12 andares"></div>
       </div>
       <div class="cad-row">
         <div class="cad-group">
-          <label><i class="fa-solid fa-coins" style="color:var(--primary);margin-right:5px;font-size:11px;"></i>Taxa mensal (R$) <span class="req">*</span></label>
-          <div class="cad-input-icon"><i class="fa-solid fa-dollar-sign"></i><input type="text" placeholder="Ex: 380,00" required></div>
+          <label>Taxa mensal (R$) <span class="req">*</span></label>
+          <div class="cad-input-icon"><input type="text" placeholder="Ex: 380,00" required></div>
         </div>
-        <div class="cad-group"><label><i class="fa-regular fa-calendar" style="color:var(--primary);margin-right:5px;font-size:11px;"></i>Vencimento do boleto <span class="req">*</span></label>
+        <div class="cad-group"><label>Vencimento do boleto <span class="req">*</span></label>
           <select required><option value="" disabled selected>Selecione o dia</option><option>Dia 05</option><option>Dia 10</option><option>Dia 15</option><option>Dia 20</option><option>Dia 25</option></select>
         </div>
       </div>
       <div class="cad-row">
         <div class="cad-group">
           <label>E-mail oficial do condomínio</label>
-          <div class="cad-input-icon"><i class="fa-solid fa-envelope"></i><input type="email" placeholder="contato@condominio.com.br"></div>
+          <div class="cad-input-icon"><img src="/assets/img/icons/envelope.svg" alt=""><input type="email" placeholder="contato@condominio.com.br"></div>
         </div>
         <div class="cad-group">
           <label>Telefone do condomínio</label>
-          <div class="cad-input-icon"><i class="fa-solid fa-phone"></i><input type="tel" class="mask-tel" placeholder="(00) 0000-0000"></div>
+          <div class="cad-input-icon"><img src="/assets/img/icons/phone.svg" alt=""><input type="tel" class="mask-tel" placeholder="(00) 0000-0000"></div>
         </div>
       </div>
     </div>
 
     <div class="form-section">
-      <p class="form-section-title"><i class="fa-solid fa-list-check"></i> Áreas Comuns <span class="section-tag opc">Opcional</span></p>
+      <p class="form-section-title"> Áreas Comuns <span class="section-tag opc">Opcional</span></p>
       <div class="tag-select">
-        <input type="checkbox" id="a-salao"><label for="a-salao"><i class="fa-solid fa-champagne-glasses"></i> Salão de festas</label>
-        <input type="checkbox" id="a-churras"><label for="a-churras"><i class="fa-solid fa-fire-burner"></i> Churrasqueira</label>
-        <input type="checkbox" id="a-piscina"><label for="a-piscina"><i class="fa-solid fa-person-swimming"></i> Piscina</label>
-        <input type="checkbox" id="a-academia"><label for="a-academia"><i class="fa-solid fa-dumbbell"></i> Academia</label>
-        <input type="checkbox" id="a-jogos"><label for="a-jogos"><i class="fa-solid fa-gamepad"></i> Salão de jogos</label>
-        <input type="checkbox" id="a-estac"><label for="a-estac"><i class="fa-solid fa-car"></i> Estacionamento</label>
-        <input type="checkbox" id="a-play"><label for="a-play"><i class="fa-solid fa-child-reaching"></i> Playground</label>
-        <input type="checkbox" id="a-cow"><label for="a-cow"><i class="fa-solid fa-laptop"></i> Coworking</label>
-        <input type="checkbox" id="a-pet"><label for="a-pet"><i class="fa-solid fa-paw"></i> Pet place</label>
-        <input type="checkbox" id="a-lav"><label for="a-lav"><i class="fa-solid fa-shirt"></i> Lavanderia</label>
+        <input type="checkbox" id="a-salao"><label for="a-salao"> Salão de festas</label>
+        <input type="checkbox" id="a-churras"><label for="a-churras"> Churrasqueira</label>
+        <input type="checkbox" id="a-piscina"><label for="a-piscina"> Piscina</label>
+        <input type="checkbox" id="a-academia"><label for="a-academia"> Academia</label>
+        <input type="checkbox" id="a-jogos"><label for="a-jogos"> Salão de jogos</label>
+        <input type="checkbox" id="a-estac"><label for="a-estac"><img src="/assets/img/icons/car.svg" alt=""> Estacionamento</label>
+        <input type="checkbox" id="a-play"><label for="a-play"> Playground</label>
+        <input type="checkbox" id="a-cow"><label for="a-cow"> Coworking</label>
+        <input type="checkbox" id="a-pet"><label for="a-pet"> Pet place</label>
+        <input type="checkbox" id="a-lav"><label for="a-lav"> Lavanderia</label>
       </div>
     </div>
 
     <div class="step-nav-btns">
-      <a href="#sstep1" class="step-btn-back" onclick="mostrarStep(1)"><i class="fa-solid fa-arrow-left"></i> Voltar</a>
-      <a href="#sstep3" class="step-btn-next purple" onclick="mostrarStep(3)">Próximo <i class="fa-solid fa-arrow-right"></i></a>
+      <a href="#sstep1" class="step-btn-back" onclick="mostrarStep(1)"><img src="/assets/img/icons/arrow-left.svg" alt=""> Voltar</a>
+      <a href="#sstep3" class="step-btn-next purple" onclick="mostrarStep(3)">Próximo </a>
     </div>
 
   </div><!-- /sstep2 -->
@@ -180,9 +179,9 @@
     <div class="form-progress-bar"><div class="form-progress-fill purple" style="width:75%"></div></div>
 
     <nav class="step-nav">
-      <div class="step-nav-item done-s"><div class="step-nav-circle"><i class="fa-solid fa-check" style="font-size:12px;"></i></div><span class="step-nav-label">Pessoal</span></div>
+      <div class="step-nav-item done-s"><div class="step-nav-circle"><img src="/assets/img/icons/check.svg" alt=""></div><span class="step-nav-label">Pessoal</span></div>
       <div class="step-nav-line done-line-s"></div>
-      <div class="step-nav-item done-s"><div class="step-nav-circle"><i class="fa-solid fa-check" style="font-size:12px;"></i></div><span class="step-nav-label">Condomínio</span></div>
+      <div class="step-nav-item done-s"><div class="step-nav-circle"><img src="/assets/img/icons/check.svg" alt=""></div><span class="step-nav-label">Condomínio</span></div>
       <div class="step-nav-line done-line-s"></div>
       <div class="step-nav-item active-s"><div class="step-nav-circle">3</div><span class="step-nav-label">Documentos</span></div>
       <div class="step-nav-line"></div>
@@ -190,14 +189,14 @@
     </nav>
 
     <div class="form-section">
-      <p class="form-section-title"><i class="fa-solid fa-folder-open"></i> Documentos Legais <span class="section-tag obrig">Obrigatório</span></p>
+      <p class="form-section-title"><img src="/assets/img/icons/folder-open.svg" alt=""> Documentos Legais <span class="section-tag obrig">Obrigatório</span></p>
       <div class="step-alert danger">
-        <i class="fa-solid fa-gavel"></i>
+        
         <p>Para validar o cadastro, o SmartCondo precisa confirmar que você é o <strong>síndico legítimo</strong>. Todos os documentos obrigatórios serão verificados antes da ativação da conta.</p>
       </div>
 
       <label class="doc-upload" for="ds-ata">
-        <div class="doc-upload-icon purple"><i class="fa-solid fa-gavel"></i></div>
+        <div class="doc-upload-icon purple"></div>
         <div class="doc-upload-text">
           <strong>Ata de Eleição do Síndico</strong>
           <span>Ata da assembleia que comprova sua eleição — assinada e registrada em cartório</span>
@@ -207,7 +206,7 @@
       <input type="file" id="ds-ata" accept=".pdf,.jpg,.jpeg,.png" style="display:none;" required>
 
       <label class="doc-upload" for="ds-conv">
-        <div class="doc-upload-icon"><i class="fa-solid fa-file-contract"></i></div>
+        <div class="doc-upload-icon"><img src="/assets/img/icons/file-contract.svg" alt=""></div>
         <div class="doc-upload-text">
           <strong>Convenção do Condomínio</strong>
           <span>Documento que rege as regras internas — registrado em cartório</span>
@@ -217,7 +216,7 @@
       <input type="file" id="ds-conv" accept=".pdf,.jpg,.jpeg,.png" style="display:none;" required>
 
       <label class="doc-upload" for="ds-cnpj">
-        <div class="doc-upload-icon blue"><i class="fa-solid fa-university"></i></div>
+        <div class="doc-upload-icon blue"></div>
         <div class="doc-upload-text">
           <strong>Cartão CNPJ do Condomínio</strong>
           <span>Comprovante do CNPJ emitido pela Receita Federal</span>
@@ -227,7 +226,7 @@
       <input type="file" id="ds-cnpj" accept=".pdf,.jpg,.jpeg,.png" style="display:none;" required>
 
       <label class="doc-upload" for="ds-rg">
-        <div class="doc-upload-icon"><i class="fa-solid fa-id-card"></i></div>
+        <div class="doc-upload-icon"><img src="/assets/img/icons/id-card.svg" alt=""></div>
         <div class="doc-upload-text">
           <strong>RG ou CNH do Síndico (frente e verso)</strong>
           <span>Documento pessoal de identidade com foto</span>
@@ -237,7 +236,7 @@
       <input type="file" id="ds-rg" accept=".pdf,.jpg,.jpeg,.png" style="display:none;" required>
 
       <label class="doc-upload" for="ds-cpf">
-        <div class="doc-upload-icon amber"><i class="fa-solid fa-file-lines"></i></div>
+        <div class="doc-upload-icon amber"></div>
         <div class="doc-upload-text">
           <strong>CPF do Síndico</strong>
           <span>Cartão CPF ou documento que comprove o número</span>
@@ -247,7 +246,7 @@
       <input type="file" id="ds-cpf" accept=".pdf,.jpg,.jpeg,.png" style="display:none;" required>
 
       <label class="doc-upload" for="ds-reg">
-        <div class="doc-upload-icon"><i class="fa-solid fa-stamp"></i></div>
+        <div class="doc-upload-icon"><img src="/assets/img/icons/stamp.svg" alt=""></div>
         <div class="doc-upload-text">
           <strong>Regimento Interno</strong>
           <span>Normas de convivência e uso das áreas comuns</span>
@@ -257,7 +256,7 @@
       <input type="file" id="ds-reg" accept=".pdf,.jpg,.jpeg,.png" style="display:none;">
 
       <label class="doc-upload" for="ds-procu">
-        <div class="doc-upload-icon purple"><i class="fa-solid fa-file-signature"></i></div>
+        <div class="doc-upload-icon purple"></div>
         <div class="doc-upload-text">
           <strong>Procuração (se síndico profissional)</strong>
           <span>Documento que comprova autorização para representar o condomínio</span>
@@ -267,7 +266,7 @@
       <input type="file" id="ds-procu" accept=".pdf,.jpg,.jpeg,.png" style="display:none;">
 
       <label class="doc-upload" for="ds-bal">
-        <div class="doc-upload-icon amber"><i class="fa-solid fa-chart-bar"></i></div>
+        <div class="doc-upload-icon amber"></div>
         <div class="doc-upload-text">
           <strong>Balanço financeiro do último ano</strong>
           <span>Prestação de contas aprovada em assembleia (se houver gestão anterior)</span>
@@ -278,8 +277,8 @@
     </div>
 
     <div class="step-nav-btns">
-      <a href="#sstep2" class="step-btn-back" onclick="mostrarStep(2)"><i class="fa-solid fa-arrow-left"></i> Voltar</a>
-      <a href="#sstep4" class="step-btn-next purple" onclick="mostrarStep(4)">Próximo <i class="fa-solid fa-arrow-right"></i></a>
+      <a href="#sstep2" class="step-btn-back" onclick="mostrarStep(2)"><img src="/assets/img/icons/arrow-left.svg" alt=""> Voltar</a>
+      <a href="#sstep4" class="step-btn-next purple" onclick="mostrarStep(4)">Próximo </a>
     </div>
 
   </div><!-- /sstep3 -->
@@ -292,42 +291,42 @@
     <div class="form-progress-bar"><div class="form-progress-fill purple" style="width:100%"></div></div>
 
     <nav class="step-nav">
-      <div class="step-nav-item done-s"><div class="step-nav-circle"><i class="fa-solid fa-check" style="font-size:12px;"></i></div><span class="step-nav-label">Pessoal</span></div>
+      <div class="step-nav-item done-s"><div class="step-nav-circle"><img src="/assets/img/icons/check.svg" alt=""></div><span class="step-nav-label">Pessoal</span></div>
       <div class="step-nav-line done-line-s"></div>
-      <div class="step-nav-item done-s"><div class="step-nav-circle"><i class="fa-solid fa-check" style="font-size:12px;"></i></div><span class="step-nav-label">Condomínio</span></div>
+      <div class="step-nav-item done-s"><div class="step-nav-circle"><img src="/assets/img/icons/check.svg" alt=""></div><span class="step-nav-label">Condomínio</span></div>
       <div class="step-nav-line done-line-s"></div>
-      <div class="step-nav-item done-s"><div class="step-nav-circle"><i class="fa-solid fa-check" style="font-size:12px;"></i></div><span class="step-nav-label">Documentos</span></div>
+      <div class="step-nav-item done-s"><div class="step-nav-circle"><img src="/assets/img/icons/check.svg" alt=""></div><span class="step-nav-label">Documentos</span></div>
       <div class="step-nav-line done-line-s"></div>
       <div class="step-nav-item active-s"><div class="step-nav-circle">4</div><span class="step-nav-label">Configurações</span></div>
     </nav>
 
     <div class="form-section">
-      <p class="form-section-title"><i class="fa-solid fa-lock"></i> Segurança da Conta Admin <span class="section-tag obrig">Obrigatório</span></p>
+      <p class="form-section-title"><img src="/assets/img/icons/lock.svg" alt=""> Segurança da Conta Admin <span class="section-tag obrig">Obrigatório</span></p>
       <div class="step-alert danger">
-        <i class="fa-solid fa-lock"></i>
+        <img src="/assets/img/icons/lock.svg" alt="">
         <p>A conta de síndico tem <strong>acesso total</strong> ao sistema. Recomendamos ativar todas as proteções abaixo.</p>
       </div>
       <div class="cad-group">
         <label>E-mail administrador <span class="req">*</span></label>
-        <div class="cad-input-icon"><i class="fa-solid fa-envelope"></i><input type="email" placeholder="email@condominio.com.br" required></div>
+        <div class="cad-input-icon"><img src="/assets/img/icons/envelope.svg" alt=""><input type="email" placeholder="email@condominio.com.br" required></div>
       </div>
       <div class="cad-group">
         <label>Senha de administrador <span class="req">*</span></label>
-        <div class="cad-input-icon"><i class="fa-solid fa-lock"></i><input type="password" placeholder="Senha forte para conta admin" required></div>
+        <div class="cad-input-icon"><img src="/assets/img/icons/lock.svg" alt=""><input type="password" placeholder="Senha forte para conta admin" required></div>
         <div class="pwd-strength-row">
           <div class="pwd-strength"><div class="pwd-bar weak"></div><div class="pwd-bar medium"></div><div class="pwd-bar"></div><div class="pwd-bar"></div></div>
           <span class="pwd-level medium">Média</span>
         </div>
         <div class="pwd-reqs">
-          <div class="pwd-req ok"><i class="fa-solid fa-check-circle"></i> Mínimo 8 caracteres</div>
-          <div class="pwd-req ok"><i class="fa-solid fa-check-circle"></i> Maiúsculas e minúsculas</div>
-          <div class="pwd-req"><i class="fa-regular fa-circle"></i> Ao menos 1 número</div>
-          <div class="pwd-req"><i class="fa-regular fa-circle"></i> Ao menos 1 símbolo (!@#$...)</div>
+          <div class="pwd-req ok"> Mínimo 8 caracteres</div>
+          <div class="pwd-req ok"> Maiúsculas e minúsculas</div>
+          <div class="pwd-req"> Ao menos 1 número</div>
+          <div class="pwd-req"> Ao menos 1 símbolo (!@#$...)</div>
         </div>
       </div>
       <div class="cad-group">
         <label>Confirmar senha <span class="req">*</span></label>
-        <div class="cad-input-icon"><i class="fa-solid fa-lock"></i><input type="password" placeholder="Repita a senha" required></div>
+        <div class="cad-input-icon"><img src="/assets/img/icons/lock.svg" alt=""><input type="password" placeholder="Repita a senha" required></div>
       </div>
       <div class="cad-divider">Proteções de Segurança</div>
       <div class="toggle-row">
@@ -335,57 +334,57 @@
         <div class="toggle-switch"><input type="checkbox" id="2fa-sms-s" checked><label for="2fa-sms-s" ></label></div>
       </div>
       <div class="toggle-row">
-        <div class="toggle-info"><strong><i class="fa-solid fa-shield" style="color:var(--primary);margin-right:6px;"></i>2FA por e-mail</strong><span>Código adicional enviado ao e-mail admin</span></div>
+        <div class="toggle-info"><strong>2FA por e-mail</strong><span>Código adicional enviado ao e-mail admin</span></div>
         <div class="toggle-switch"><input type="checkbox" id="2fa-email-s" checked><label for="2fa-email-s" ></label></div>
       </div>
       <div class="toggle-row">
-        <div class="toggle-info"><strong><i class="fa-solid fa-bell" style="color:var(--primary);margin-right:6px;"></i>Alerta de login em novo dispositivo</strong><span>Notificação imediata via SMS e e-mail</span></div>
+        <div class="toggle-info"><strong>Alerta de login em novo dispositivo</strong><span>Notificação imediata via SMS e e-mail</span></div>
         <div class="toggle-switch"><input type="checkbox" id="alert-s" checked><label for="alert-s" ></label></div>
       </div>
       <div class="toggle-row">
-        <div class="toggle-info"><strong><i class="fa-solid fa-clipboard-list" style="color:var(--primary);margin-right:6px;"></i>Log de todas as ações administrativas</strong><span>Histórico de alterações feitas pelo síndico</span></div>
+        <div class="toggle-info"><strong>Log de todas as ações administrativas</strong><span>Histórico de alterações feitas pelo síndico</span></div>
         <div class="toggle-switch"><input type="checkbox" id="log-s" checked><label for="log-s" ></label></div>
       </div>
       <div class="toggle-row">
-        <div class="toggle-info"><strong><i class="fa-solid fa-user-check" style="color:var(--primary);margin-right:6px;"></i>Aprovação manual de novos cadastros</strong><span>Moradores e porteiros precisam de aprovação</span></div>
+        <div class="toggle-info"><strong>Aprovação manual de novos cadastros</strong><span>Moradores e porteiros precisam de aprovação</span></div>
         <div class="toggle-switch"><input type="checkbox" id="aprov-s" checked><label for="aprov-s" ></label></div>
       </div>
       <div class="cad-divider">Notificações Administrativas</div>
       <div class="tag-select">
-        <input type="checkbox" id="sn-inad" checked><label for="sn-inad"><i class="fa-solid fa-circle-exclamation"></i> Inadimplência</label>
-        <input type="checkbox" id="sn-ocorr" checked><label for="sn-ocorr"><i class="fa-solid fa-triangle-exclamation"></i> Ocorrências</label>
-        <input type="checkbox" id="sn-cad" checked><label for="sn-cad"><i class="fa-solid fa-user-plus"></i> Novos cadastros</label>
-        <input type="checkbox" id="sn-res" checked><label for="sn-res"><i class="fa-solid fa-calendar-check"></i> Reservas</label>
-        <input type="checkbox" id="sn-rel" checked><label for="sn-rel"><i class="fa-solid fa-chart-bar"></i> Relatório mensal</label>
+        <input type="checkbox" id="sn-inad" checked><label for="sn-inad"><img src="/assets/img/icons/circle-exclamation.svg" alt=""> Inadimplência</label>
+        <input type="checkbox" id="sn-ocorr" checked><label for="sn-ocorr"><img src="/assets/img/icons/triangle-exclamation.svg" alt=""> Ocorrências</label>
+        <input type="checkbox" id="sn-cad" checked><label for="sn-cad"> Novos cadastros</label>
+        <input type="checkbox" id="sn-res" checked><label for="sn-res"><img src="/assets/img/icons/calendar-check.svg" alt=""> Reservas</label>
+        <input type="checkbox" id="sn-rel" checked><label for="sn-rel"> Relatório mensal</label>
       </div>
     </div>
 
     <div class="form-section">
-      <p class="form-section-title"><i class="fa-solid fa-check-circle"></i> Confirmação Final</p>
+      <p class="form-section-title"> Confirmação Final</p>
       <div class="summary-box" style="background:linear-gradient(135deg,rgba(145,100,250,.07),rgba(145,100,250,.03));border-color:rgba(145,100,250,.2);">
-        <h4 style="color:#7a4ee0;"><i class="fa-solid fa-star"></i> Resumo do Cadastro</h4>
+        <h4 style="color:#7a4ee0;"><img src="/assets/img/icons/star.svg" alt=""> Resumo do Cadastro</h4>
         <div class="summary-row"><span>Perfil</span><span>Síndico</span></div>
         <div class="summary-row"><span>Condomínio</span><span>Preenchido na etapa 2</span></div>
         <div class="summary-row"><span>Ata de Eleição</span><span>Enviada na etapa 3</span></div>
         <div class="summary-row"><span>2FA</span><span>SMS + E-mail ativados</span></div>
         <div class="summary-row"><span>Aprovação de cadastros</span><span>Manual (ativado)</span></div>
       </div>
-      <div class="terms-check"><input type="checkbox" required><span><i class="fa-solid fa-check-circle" style="color:var(--primary);margin-right:5px;"></i>Li e aceito os <a href="#">Termos de Uso</a> e a <a href="#">Política de Privacidade</a> do SmartCondo.</span></div>
-      <div class="terms-check" style="margin-top:10px;"><input type="checkbox" required><span><i class="fa-solid fa-check-circle" style="color:var(--primary);margin-right:5px;"></i>Declaro que as informações do condomínio são <strong>verdadeiras</strong> e que estou <strong>legalmente autorizado</strong> a representá-lo nesta plataforma.</span></div>
-      <div class="terms-check" style="margin-top:10px;"><input type="checkbox" required><span><i class="fa-solid fa-check-circle" style="color:var(--primary);margin-right:5px;"></i>Declaro que sou o síndico eleito ou designado e que a <strong>ata de eleição enviada é autêntica</strong>, assumindo responsabilidade por eventuais falsidades.</span></div>
-      <div class="terms-check" style="margin-top:10px;"><input type="checkbox" required><span><i class="fa-solid fa-check-circle" style="color:var(--primary);margin-right:5px;"></i>Autorizo o armazenamento dos dados do condomínio conforme a <a href="#">LGPD (Lei 13.709/2018)</a>.</span></div>
+      <div class="terms-check"><input type="checkbox" required><span>Li e aceito os <a href="#">Termos de Uso</a> e a <a href="#">Política de Privacidade</a> do SmartCondo.</span></div>
+      <div class="terms-check" style="margin-top:10px;"><input type="checkbox" required><span>Declaro que as informações do condomínio são <strong>verdadeiras</strong> e que estou <strong>legalmente autorizado</strong> a representá-lo nesta plataforma.</span></div>
+      <div class="terms-check" style="margin-top:10px;"><input type="checkbox" required><span>Declaro que sou o síndico eleito ou designado e que a <strong>ata de eleição enviada é autêntica</strong>, assumindo responsabilidade por eventuais falsidades.</span></div>
+      <div class="terms-check" style="margin-top:10px;"><input type="checkbox" required><span>Autorizo o armazenamento dos dados do condomínio conforme a <a href="#">LGPD (Lei 13.709/2018)</a>.</span></div>
     </div>
 
     <div class="step-nav-btns">
-      <a href="#sstep3" class="step-btn-back" onclick="mostrarStep(3)"><i class="fa-solid fa-arrow-left"></i> Voltar</a>
-      <a href="../sindico/aguardando_aprovacao.html" class="step-btn-next purple" onclick="return validarStepSindico(4)"><i class="fa-solid fa-star"></i> Enviar cadastro para verificação</a>
+      <a href="#sstep3" class="step-btn-back" onclick="mostrarStep(3)"><img src="/assets/img/icons/arrow-left.svg" alt=""> Voltar</a>
+      <a href="../sindico/aguardando_aprovacao.html" class="step-btn-next purple" onclick="return validarStepSindico(4)"><img src="/assets/img/icons/star.svg" alt=""> Enviar cadastro para verificação</a>
     </div>
 
     <div class="info-card" style="margin-top:14px;">
-      <i class="fa-solid fa-clock"></i>
+      <img src="/assets/img/icons/clock.svg" alt="">
       <p>Cadastro de síndico passa por verificação de documentos legais. Prazo estimado: <strong>5 dias úteis</strong>.</p>
     </div>
-    <p class="cad-login-link">Já tem conta? <a href="../../index.html"><i class="fa-solid fa-arrow-right-to-bracket"></i> Fazer login</a></p>
+    <p class="cad-login-link">Já tem conta? <a href="../../index.html"> Fazer login</a></p>
 
   </div><!-- /sstep4 -->
 
@@ -397,9 +396,9 @@
     <img src="../../assets/img/acessibilidade.png" class="access-icon-img" alt="">
   </label>
   <div class="access-menu">
-      <label><input type="checkbox" id="font-toggle"> <i class="fa-solid fa-text-height"></i> Aumentar fonte</label>
-      <label><input type="checkbox" id="contrast-toggle"> <i class="fa-solid fa-circle-half-stroke"></i> Alto contraste</label>
-      <label><input type="checkbox" id="read-toggle"> <i class="fa-solid fa-book-open"></i> Modo leitura</label>
+      <label><input type="checkbox" id="font-toggle">  Aumentar fonte</label>
+      <label><input type="checkbox" id="contrast-toggle">  Alto contraste</label>
+      <label><input type="checkbox" id="read-toggle">  Modo leitura</label>
   </div>
 </div>
 

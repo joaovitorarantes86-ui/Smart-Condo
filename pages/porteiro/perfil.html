@@ -8,12 +8,11 @@
   <link rel="stylesheet" href="../../assets/css/style.css">
   <link rel="stylesheet" href="../../assets/css/dashboard.css">
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css">
   <style>
     .p-card{background:var(--surface);border-radius:var(--radius-sm);padding:24px;margin-bottom:18px;border:1px solid var(--border);box-shadow:var(--shadow-sm);transition:all .25s var(--ease-smooth);}
     .p-card:hover{box-shadow:var(--shadow-md);}
     .p-card h3{font-size:13px;font-weight:800;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;margin-bottom:18px;display:flex;align-items:center;gap:8px;}
-    .p-card h3 i{font-size:16px;color:#409eff;width:20px;}
+    .p-card h3 img{width:20px;height:20px;}
     .p-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
     .p-field{min-height:44px;}
     .p-field .p-lbl{font-size:10.5px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.4px;margin-bottom:3px;}
@@ -33,13 +32,13 @@
     .p-avatar input[type="file"]{position:absolute;inset:0;opacity:0;cursor:pointer;z-index:2;}
     .p-name h1{font-size:24px;font-weight:800;color:var(--text);margin:0 0 4px;letter-spacing:-.3px;}
     .p-name .p-role{font-size:13px;color:var(--text-2);display:flex;align-items:center;gap:6px;}
-    .p-name .p-role i{font-size:13px;}
+    .p-name .p-role img{width:14px;height:14px;}
     .p-name .p-tag{display:inline-flex;align-items:center;gap:5px;margin-top:8px;padding:4px 12px;border-radius:20px;font-size:11px;font-weight:700;background:#e6f0ff;color:#2563eb;}
     .p-actions{display:flex;flex-direction:column;gap:10px;margin-top:8px;}
     .toast{position:fixed;bottom:30px;left:50%;transform:translateX(-50%) translateY(80px);background:#1a2e3a;color:#fff;padding:14px 28px;border-radius:14px;font-size:14px;font-weight:600;box-shadow:0 8px 32px rgba(0,0,0,.25);opacity:0;transition:all .4s var(--ease-smooth);z-index:999;pointer-events:none;display:flex;align-items:center;gap:10px;}
     .toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
-    .toast i{font-size:18px;}
-    .toast.success i{color:#34d399;}
+    .toast img{width:20px;height:20px;}
+
     .p-field .p-edit select{cursor:pointer;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%237a909a' d='M1 1l5 5 5-5'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 13px center;padding-right:32px;}
     .edit-mode .p-field .p-val{display:none;}
     .edit-mode .p-field .p-edit{display:block;}
@@ -52,37 +51,37 @@
 <body class="dashboard-body layout-desktop">
   <header class="app-bar"><div class="app-bar-inner">
     <div class="app-bar-left">
-      <a href="dashboard.html" class="mobile-back"><i class="fa-solid fa-arrow-left"></i></a>
+      <a href="dashboard.html" class="mobile-back"><img src="/assets/img/icons/arrow-left.svg" alt=""></a>
       <a href="../../index.html" class="app-bar-brand"><img src="../../assets/img/logo.png" alt="" class="logo-sm"><span class="brand-name">Smart<strong>Condo</strong></span></a>
     </div>
-    <div class="app-bar-right"><span class="profile-link"><span class="profile-avatar"><i class="fa-solid fa-user"></i></span><span class="profile-name" id="hdrName">Carlos Pereira</span><span class="profile-role">Porteiro</span></span><a href="../../index.html" class="logout-btn"><i class="fa-solid fa-right-from-bracket"></i> Sair</a></div>
+    <div class="app-bar-right"><span class="profile-link"><span class="profile-avatar"><img src="/assets/img/icons/user.svg" alt="" style="width:16px;height:16px;display:block;"></span><span class="profile-name" id="hdrName">Carlos Pereira</span><span class="profile-role">Porteiro</span></span><a href="../../index.html" class="logout-btn"><img src="/assets/img/icons/right-from-bracket.svg" alt=""> Sair</a></div>
   </div></header>
   <main class="dash-wrapper">
 
     <div class="dash-greeting">
-      <p class="greeting-sub"><i class="fa-solid fa-clock" style="margin-right:6px;color:var(--primary);"></i>Turno 07h – 15h &nbsp;·&nbsp; Carlos Pereira</p>
-      <h2 class="greeting-name"><i class="fa-solid fa-user" style="margin-right:8px;font-size:22px;opacity:.85;"></i>Meu Perfil</h2>
-      <p class="greeting-condo"><i class="fa-solid fa-info-circle"></i> Seus dados pessoais e informações profissionais</p>
+      <p class="greeting-sub"><img src="/assets/img/icons/clock.svg" alt="">Turno 07h – 15h &nbsp;·&nbsp; Carlos Pereira</p>
+      <h2 class="greeting-name"><img src="/assets/img/icons/user.svg" alt="">Meu Perfil</h2>
+      <p class="greeting-condo"> Seus dados pessoais e informações profissionais</p>
     </div>
 
     <div class="profile-top">
       <div class="p-avatar-wrap">
         <div class="p-avatar" onclick="document.getElementById('avatarInput').click()">
-          <i class="fa-solid fa-user" id="avatarIcon"></i>
+          <img src="/assets/img/icons/user.svg" alt="" id="avatarIcon">
           <img id="avatarPreview" src="" alt="" style="display:none;">
-          <div class="avatar-overlay"><i class="fa-solid fa-camera"></i></div>
+          <div class="avatar-overlay"><img src="/assets/img/icons/camera.svg" alt=""></div>
           <input type="file" id="avatarInput" accept="image/*" onchange="trocarAvatar(event)">
         </div>
       </div>
       <div class="p-name">
         <h1 id="viewNome">Carlos Pereira</h1>
-        <p class="p-role"><i class="fa-solid fa-shield-halved" style="color:#409eff;"></i> Porteiro</p>
+        <p class="p-role"><img src="/assets/img/icons/shield-halved.svg" alt=""> Porteiro</p>
         <span class="p-tag">Residencial das Palmeiras · Portaria Principal</span>
       </div>
     </div>
 
     <div class="p-card">
-      <h3><i class="fa-solid fa-user" style="color:#409eff;"></i> Dados Pessoais</h3>
+      <h3><img src="/assets/img/icons/user.svg" alt=""> Dados Pessoais</h3>
       <div class="p-grid">
         <div class="p-field"><div class="p-lbl">CPF</div><div class="p-val" id="val-cpf">987.654.321-00</div></div>
         <div class="p-field"><div class="p-lbl">RG</div><div class="p-val" id="val-rg">98.765.432-1</div></div>
@@ -93,7 +92,7 @@
     </div>
 
     <div class="p-card">
-      <h3><i class="fa-solid fa-briefcase" style="color:#409eff;"></i> Dados Profissionais</h3>
+      <h3><img src="/assets/img/icons/briefcase.svg" alt=""> Dados Profissionais</h3>
       <div class="p-grid">
         <div class="p-field"><div class="p-lbl">Turno</div><div class="p-val" id="val-turno">07h – 15h (Matutino)</div><div class="p-edit"><select id="edit-turno"><option value="07h – 15h (Matutino)" selected>07h – 15h (Matutino)</option><option value="15h – 23h (Vespertino)">15h – 23h (Vespertino)</option><option value="23h – 07h (Noturno)">23h – 07h (Noturno)</option></select></div></div>
         <div class="p-field"><div class="p-lbl">Tipo de Contrato</div><div class="p-val" id="val-contrato">CLT</div><div class="p-edit"><select id="edit-contrato"><option value="CLT" selected>CLT</option><option value="PJ">PJ</option><option value="Temporário">Temporário</option><option value="Estágio">Estágio</option></select></div></div>
@@ -103,29 +102,29 @@
     </div>
 
     <div class="p-card">
-      <h3><i class="fa-solid fa-lock" style="color:#409eff;"></i> Permissões de Acesso</h3>
+      <h3><img src="/assets/img/icons/lock.svg" alt=""> Permissões de Acesso</h3>
       <div class="p-grid">
-        <div class="p-field"><div class="p-lbl">Visitantes</div><div class="p-val"><i class="fa-solid fa-circle-check" style="color:var(--success);"></i> Acesso total</div></div>
-        <div class="p-field"><div class="p-lbl">Encomendas</div><div class="p-val"><i class="fa-solid fa-circle-check" style="color:var(--success);"></i> Acesso total</div></div>
-        <div class="p-field"><div class="p-lbl">Veículos</div><div class="p-val"><i class="fa-solid fa-circle-check" style="color:var(--success);"></i> Acesso total</div></div>
-        <div class="p-field"><div class="p-lbl">Ocorrências</div><div class="p-val"><i class="fa-solid fa-circle-check" style="color:var(--success);"></i> Acesso total</div></div>
-        <div class="p-field"><div class="p-lbl">Financeiro</div><div class="p-val"><i class="fa-solid fa-circle-xmark" style="color:var(--danger);"></i> Sem acesso</div></div>
+        <div class="p-field"><div class="p-lbl">Visitantes</div><div class="p-val"><img src="/assets/img/icons/circle-check.svg" alt=""> Acesso total</div></div>
+        <div class="p-field"><div class="p-lbl">Encomendas</div><div class="p-val"><img src="/assets/img/icons/circle-check.svg" alt=""> Acesso total</div></div>
+        <div class="p-field"><div class="p-lbl">Veículos</div><div class="p-val"><img src="/assets/img/icons/circle-check.svg" alt=""> Acesso total</div></div>
+        <div class="p-field"><div class="p-lbl">Ocorrências</div><div class="p-val"><img src="/assets/img/icons/circle-check.svg" alt=""> Acesso total</div></div>
+        <div class="p-field"><div class="p-lbl">Financeiro</div><div class="p-val"><img src="/assets/img/icons/circle-xmark.svg" alt=""> Sem acesso</div></div>
       </div>
     </div>
 
     <div class="p-actions" id="viewActions">
-      <button class="action-btn" onclick="entrarEdicao()"><i class="fa-solid fa-pen"></i> Editar Perfil</button>
-      <a href="dashboard.html" class="action-btn outline"><i class="fa-solid fa-arrow-left"></i> Voltar</a>
+      <button class="action-btn" onclick="entrarEdicao()"><img src="/assets/img/icons/pen.svg" alt=""> Editar Perfil</button>
+      <a href="dashboard.html" class="action-btn outline"><img src="/assets/img/icons/arrow-left.svg" alt=""> Voltar</a>
     </div>
 
     <div class="p-actions" id="editActions" style="display:none;">
-      <button class="action-btn" onclick="salvarDados()"><i class="fa-solid fa-floppy-disk"></i> Salvar Alterações</button>
-      <button class="action-btn outline" onclick="cancelarEdicao()"><i class="fa-solid fa-xmark"></i> Cancelar</button>
+      <button class="action-btn" onclick="salvarDados()"><img src="/assets/img/icons/floppy-disk.svg" alt=""> Salvar Alterações</button>
+      <button class="action-btn outline" onclick="cancelarEdicao()"><img src="/assets/img/icons/xmark.svg" alt=""> Cancelar</button>
     </div>
 
   </main>
 
-  <div id="toast" class="toast"><i class="fa-solid fa-circle-check"></i> <span id="toastMsg">Dados salvos com sucesso!</span></div>
+  <div id="toast" class="toast"><img src="/assets/img/icons/circle-check.svg" alt=""> <span id="toastMsg">Dados salvos com sucesso!</span></div>
 
   <div class="accessibility-widget">
     <input type="checkbox" id="access-toggle">
@@ -133,9 +132,9 @@
       <img src="../../assets/img/acessibilidade.png" class="access-icon-img" alt="">
     </label>
     <div class="access-menu">
-      <label><input type="checkbox" id="font-toggle"> <i class="fa-solid fa-text-height"></i> Aumentar fonte</label>
-      <label><input type="checkbox" id="contrast-toggle"> <i class="fa-solid fa-circle-half-stroke"></i> Alto contraste</label>
-      <label><input type="checkbox" id="read-toggle"> <i class="fa-solid fa-book-open"></i> Modo leitura</label>
+      <label><input type="checkbox" id="font-toggle">  Aumentar fonte</label>
+      <label><input type="checkbox" id="contrast-toggle">  Alto contraste</label>
+      <label><input type="checkbox" id="read-toggle">  Modo leitura</label>
     </div>
   </div>
   <script src="../../assets/js/validation.js"></script>

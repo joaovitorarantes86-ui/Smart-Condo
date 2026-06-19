@@ -8,8 +8,7 @@
   <link rel="stylesheet" href="../../assets/css/style.css">
   <link rel="stylesheet" href="../../assets/css/dashboard.css">
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css">
-</head>
+  </head>
 <body class="dashboard-body layout-desktop">
 
   <header class="app-bar">
@@ -19,8 +18,8 @@
         <span class="brand-name">Smart<strong>Condo</strong></span>
       </a>
       <div class="app-bar-right">
-        <a href="perfil.html" class="profile-link"><span class="profile-avatar"><i class="fa-solid fa-shield-halved"></i></span><span class="profile-name" id="hdrName">Carlos Pereira</span><span class="profile-role">Porteiro</span></a>
-        <a href="../../index.html" class="logout-btn"><i class="fa-solid fa-right-from-bracket"></i> Sair</a>
+        <a href="perfil.html" class="profile-link"><span class="profile-avatar"><img src="/assets/img/icons/shield-halved.svg" alt="" style="width:16px;height:16px;display:block;"></span><span class="profile-name" id="hdrName">Carlos Pereira</span><span class="profile-role">Porteiro</span></a>
+        <a href="../../index.html" class="logout-btn"><img src="/assets/img/icons/right-from-bracket.svg" alt=""> Sair</a>
       </div>
     </div>
   </header>
@@ -28,29 +27,29 @@
   <main class="dash-wrapper">
 
     <a href="dashboard.html" class="dash-back">
-      <i class="fa-solid fa-arrow-left"></i> Painel do Porteiro
+      <img src="/assets/img/icons/arrow-left.svg" alt=""> Painel do Porteiro
     </a>
 
     <div class="dash-greeting">
-      <p class="greeting-sub"><i class="fa-solid fa-clock" style="margin-right:6px;color:var(--primary);"></i>Turno 07h – 15h · Carlos Pereira</p>
+      <p class="greeting-sub"><img src="/assets/img/icons/clock.svg" alt="">Turno 07h – 15h · Carlos Pereira</p>
       <h2 class="greeting-name"><img src="../../assets/img/icons/box-archive.svg" alt="" style="width:26px;height:26px;vertical-align:middle;margin-right:8px;filter:brightness(0) invert(1);"> Encomendas</h2>
       <p class="greeting-condo"><img src="../../assets/img/icons/box-archive.svg" alt="" style="width:16px;height:16px;vertical-align:middle;margin-right:6px;filter:brightness(0) invert(1);"> Registre recebimentos e confirme retiradas</p>
     </div>
 
     <div class="stats-row">
-      <div class="stat-card amber"><span class="stat-value">7</span><span class="stat-label"><i class="fa-solid fa-hourglass-half" style="margin-right:4px;font-size:11px;"></i>Aguardando</span></div>
-      <div class="stat-card blue"><span class="stat-value">3</span><span class="stat-label"><i class="fa-solid fa-box-open" style="margin-right:4px;font-size:11px;"></i>Recebidas</span></div>
-      <div class="stat-card red"><span class="stat-value">2</span><span class="stat-label"><i class="fa-solid fa-triangle-exclamation" style="margin-right:4px;font-size:11px;color:#f56c6c;"></i>Atrasadas</span></div>
+      <div class="stat-card amber"><span class="stat-value">7</span><span class="stat-label">Aguardando</span></div>
+      <div class="stat-card blue"><span class="stat-value">3</span><span class="stat-label"><img src="/assets/img/icons/box-open.svg" alt="">Recebidas</span></div>
+      <div class="stat-card red"><span class="stat-value">2</span><span class="stat-label"><img src="/assets/img/icons/triangle-exclamation.svg" alt="">Atrasadas</span></div>
     </div>
 
     <!-- Registrar nova encomenda -->
-    <p class="section-title"><i class="fa-solid fa-plus-circle"></i> Registrar Nova Encomenda</p>
+    <p class="section-title"> Registrar Nova Encomenda</p>
     <div class="form-card">
-      <h3><i class="fa-solid fa-box"></i> Dados da Encomenda</h3>
+      <h3><img src="/assets/img/icons/box.svg" alt=""> Dados da Encomenda</h3>
       <form action="dashboard.html">
         <div class="form-row">
           <div class="form-group">
-            <label><i class="fa-solid fa-user" style="color:var(--primary);margin-right:5px;font-size:11px;"></i>Destinatário — Apartamento</label>
+            <label><img src="/assets/img/icons/user.svg" alt="">Destinatário — Apartamento</label>
             <select required>
               <option value="" disabled selected>Selecione o apto</option>
               <option>Apto 101</option><option>Apto 102</option><option>Apto 103</option>
@@ -61,7 +60,7 @@
             </select>
           </div>
           <div class="form-group">
-            <label><i class="fa-solid fa-truck" style="color:var(--primary);margin-right:5px;font-size:11px;"></i>Remetente / Transportadora</label>
+            <label>Remetente / Transportadora</label>
             <select required>
               <option value="" disabled selected>Selecione</option>
               <option>Correios</option><option>Amazon</option><option>Mercado Livre</option>
@@ -71,7 +70,7 @@
         </div>
         <div class="form-row">
           <div class="form-group">
-            <label><i class="fa-solid fa-box" style="color:var(--primary);margin-right:5px;font-size:11px;"></i>Tipo de volume</label>
+            <label><img src="/assets/img/icons/box.svg" alt="">Tipo de volume</label>
             <select required>
               <option value="" disabled selected>Selecione</option>
               <option>Caixa pequena</option><option>Caixa média</option><option>Caixa grande</option>
@@ -79,32 +78,32 @@
             </select>
           </div>
           <div class="form-group">
-            <label><i class="fa-solid fa-barcode" style="color:var(--primary);margin-right:5px;font-size:11px;"></i>Código de rastreio</label>
+            <label>Código de rastreio</label>
             <input type="text" placeholder="Ex: BR123456789" style="text-transform:uppercase;" required>
           </div>
         </div>
         <div class="form-row">
           <div class="form-group">
-            <label><i class="fa-regular fa-clock" style="color:var(--primary);margin-right:5px;font-size:11px;"></i>Data e hora de recebimento</label>
+            <label><img src="/assets/img/icons/clock.svg" alt="">Data e hora de recebimento</label>
             <input type="datetime-local" required>
           </div>
           <div class="form-group">
-            <label><i class="fa-solid fa-comment" style="color:var(--primary);margin-right:5px;font-size:11px;"></i>Observações</label>
+            <label>Observações</label>
             <input type="text" placeholder="Frágil, refrigerado, urgente...">
           </div>
         </div>
         <button class="action-btn" type="submit" style="margin-top:4px;">
-          <i class="fa-solid fa-inbox" style="margin-right:6px;"></i>Registrar Recebimento
+          Registrar Recebimento
         </button>
       </form>
     </div>
 
     <!-- Encomendas aguardando -->
-    <p class="section-title"><i class="fa-solid fa-clock"></i> Aguardando Retirada</p>
+    <p class="section-title"><img src="/assets/img/icons/clock.svg" alt=""> Aguardando Retirada</p>
     <div class="list-items">
 
       <div class="list-item">
-        <div class="card-icon icon-yellow" style="width:44px;height:44px;border-radius:12px;flex-shrink:0;"><i class="fa-solid fa-box"></i></div>
+        <div class="card-icon icon-yellow" style="width:44px;height:44px;border-radius:12px;flex-shrink:0;"><img src="/assets/img/icons/box.svg" alt=""></div>
         <div class="list-info">
           <h5>Apto 204 — João Silva</h5>
           <p>Amazon · Caixa média · Recebida 17/03 às 08h30 · Código: BR789012345</p>
@@ -113,7 +112,7 @@
       </div>
 
       <div class="list-item">
-        <div class="card-icon icon-teal" style="width:44px;height:44px;border-radius:12px;flex-shrink:0;"><i class="fa-solid fa-envelope"></i></div>
+        <div class="card-icon icon-teal" style="width:44px;height:44px;border-radius:12px;flex-shrink:0;"><img src="/assets/img/icons/envelope.svg" alt=""></div>
         <div class="list-info">
           <h5>Apto 110 — Maria Santos</h5>
           <p>Correios · Envelope · Recebida 16/03 às 14h10</p>
@@ -122,7 +121,7 @@
       </div>
 
       <div class="list-item">
-        <div class="card-icon icon-blue" style="width:44px;height:44px;border-radius:12px;flex-shrink:0;"><i class="fa-solid fa-box-open"></i></div>
+        <div class="card-icon icon-blue" style="width:44px;height:44px;border-radius:12px;flex-shrink:0;"><img src="/assets/img/icons/box-open.svg" alt=""></div>
         <div class="list-info">
           <h5>Apto 312 — Carlos Mendes</h5>
           <p>Shopee · Caixa grande · Recebida 15/03 às 11h50</p>
@@ -131,7 +130,7 @@
       </div>
 
       <div class="list-item">
-        <div class="card-icon icon-red" style="width:44px;height:44px;border-radius:12px;flex-shrink:0;"><i class="fa-solid fa-thermometer-three-quarters"></i></div>
+        <div class="card-icon icon-red" style="width:44px;height:44px;border-radius:12px;flex-shrink:0;"></div>
         <div class="list-info">
           <h5>Apto 201 — Ana Ribeiro</h5>
           <p>iFood · Alimento perecível — ⚠️ REQUER ATENÇÃO IMEDIATA</p>
@@ -142,42 +141,42 @@
     </div>
 
     <!-- Confirmar retirada -->
-    <p class="section-title"><i class="fa-solid fa-check" style="margin-right:6px;"></i>Confirmar Retirada</p>
+    <p class="section-title"><img src="/assets/img/icons/check.svg" alt="">Confirmar Retirada</p>
     <div class="form-card">
-      <h3><i class="fa-solid fa-check-circle"></i> Registro de Retirada</h3>
+      <h3> Registro de Retirada</h3>
       <form action="dashboard.html">
         <div class="form-row">
           <div class="form-group">
-            <label><i class="fa-solid fa-building" style="color:var(--primary);margin-right:5px;font-size:11px;"></i>Apartamento</label>
+            <label><img src="/assets/img/icons/building.svg" alt="">Apartamento</label>
             <select required><option value="" disabled selected>Selecione o apto</option>
               <option>Apto 204</option><option>Apto 110</option><option>Apto 312</option><option>Apto 201</option>
             </select>
           </div>
           <div class="form-group">
-            <label><i class="fa-solid fa-user-check" style="color:var(--primary);margin-right:5px;font-size:11px;"></i>Nome de quem retirou</label>
+            <label>Nome de quem retirou</label>
             <input type="text" placeholder="Nome do morador ou autorizado" required>
           </div>
         </div>
         <div class="form-row">
           <div class="form-group">
-            <label><i class="fa-solid fa-id-card" style="color:var(--primary);margin-right:5px;font-size:11px;"></i>Documento</label>
+            <label><img src="/assets/img/icons/id-card.svg" alt="">Documento</label>
             <input type="text" placeholder="CPF ou RG" required>
           </div>
           <div class="form-group">
-            <label><i class="fa-regular fa-clock" style="color:var(--primary);margin-right:5px;font-size:11px;"></i>Horário de retirada</label>
+            <label><img src="/assets/img/icons/clock.svg" alt="">Horário de retirada</label>
             <input type="time" required>
           </div>
         </div>
         <button class="action-btn" type="submit" style="background:linear-gradient(135deg,#32c871,#1e9956);box-shadow:0 2px 6px rgba(50,200,113,.25),0 6px 16px rgba(50,200,113,.18);margin-top:4px;">
-          <i class="fa-solid fa-check" style="margin-right:6px;"></i>Confirmar Retirada
+          <img src="/assets/img/icons/check.svg" alt="">Confirmar Retirada
         </button>
       </form>
     </div>
 
     <!-- Histórico do dia -->
-    <p class="section-title"><i class="fa-solid fa-clock-rotate-left"></i> Retiradas de Hoje</p>
+    <p class="section-title"> Retiradas de Hoje</p>
     <div class="data-table">
-      <div class="table-head cols-4"><span><i class="fa-solid fa-building" style="margin-right:5px;color:var(--primary);"></i>Apto / Morador</span><span><i class="fa-solid fa-truck" style="margin-right:4px;color:var(--muted);"></i>Remetente</span><span><i class="fa-regular fa-clock" style="margin-right:4px;color:var(--muted);"></i>Retirada</span><span><i class="fa-solid fa-user" style="margin-right:4px;color:var(--muted);"></i>Por quem</span></div>
+      <div class="table-head cols-4"><span><img src="/assets/img/icons/building.svg" alt="">Apto / Morador</span><span>Remetente</span><span><img src="/assets/img/icons/clock.svg" alt="">Retirada</span><span><img src="/assets/img/icons/user.svg" alt="">Por quem</span></div>
       <div class="table-row cols-4"><span>Apto 103 — Pedro Lima</span><span>Mercado Livre</span><span>08h45</span><span>Pedro Lima</span></div>
       <div class="table-row cols-4"><span>Apto 405 — Sandra Costa</span><span>Correios</span><span>10h20</span><span>Sandra Costa</span></div>
     </div>
@@ -190,9 +189,9 @@
       <img src="../../assets/img/acessibilidade.png" class="access-icon-img" alt="">
     </label>
     <div class="access-menu">
-      <label><input type="checkbox" id="font-toggle"> <i class="fa-solid fa-text-height"></i> Aumentar fonte</label>
-      <label><input type="checkbox" id="contrast-toggle"> <i class="fa-solid fa-circle-half-stroke"></i> Alto contraste</label>
-      <label><input type="checkbox" id="read-toggle"> <i class="fa-solid fa-book-open"></i> Modo leitura</label>
+      <label><input type="checkbox" id="font-toggle">  Aumentar fonte</label>
+      <label><input type="checkbox" id="contrast-toggle">  Alto contraste</label>
+      <label><input type="checkbox" id="read-toggle">  Modo leitura</label>
     </div>
   </div>
 

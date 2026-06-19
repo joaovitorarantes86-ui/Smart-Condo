@@ -7,7 +7,6 @@
   <title>SmartCondo — Login</title>
   <link rel="stylesheet" href="assets/css/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css">
   <style>
 
     /* ── Feedback de erro ─────────────────────────────────── */
@@ -103,13 +102,13 @@
 
     <!-- Indicador de perfil detectado (preenchido via JS) -->
     <div class="perfil-detectado" id="perfilDetectado">
-      <i class="fa-solid fa-circle-check"></i>
+      <img src="/assets/img/icons/circle-check.svg" alt="">
       <span id="perfilTexto"></span>
     </div>
 
     <!-- Mensagem de erro -->
     <div class="erro-login" id="erroLogin">
-      <i class="fa-solid fa-circle-xmark" style="font-size:16px;flex-shrink:0;"></i>
+      <img src="/assets/img/icons/circle-xmark.svg" alt="">
       <span>Senha inválida. Verifique suas credenciais e tente novamente.</span>
     </div>
 
@@ -117,7 +116,7 @@
 
       <!-- Campo de e-mail -->
       <div class="input-box">
-        <i class="fa-solid fa-envelope"></i>
+        <img src="/assets/img/icons/envelope.svg" alt="">
         <input type="email" id="emailInput"
           placeholder="E-mail ou telefone"
           required autocomplete="username">
@@ -125,7 +124,7 @@
 
       <!-- Campo de senha + botão olhinho -->
       <div class="input-box">
-        <i class="fa-solid fa-lock"></i>
+        <img src="/assets/img/icons/lock.svg" alt="">
         <input type="password" id="senhaInput"
           placeholder="Senha"
           required autocomplete="current-password"
@@ -133,7 +132,7 @@
           oninput="detectarPerfil(this.value)">
         <!-- Botão olhinho — usa span para não herdar o reset de <button> no form -->
         <span id="toggleSenha" onclick="toggleVerSenha()" title="Mostrar / ocultar senha">
-          <i class="fa-solid fa-eye" id="toggleIcon"></i>
+          <svg id="toggleIcon" viewBox="0 0 576 512" width="20" height="20" fill="#888" style="cursor:pointer;"><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4 142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.4 78.1-95.4 93-131.1 3.3-7.9 3.3-16.7 0-24.6-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM432 256c0 79.5-64.5 144-144 144s-144-64.5-144-144 64.5-144 144-144 144 64.5 144 144zm-144-80c-44.2 0-80 35.8-80 80s35.8 80 80 80 80-35.8 80-80-35.8-80-80-80z"/></svg>
         </span>
       </div>
 
@@ -144,13 +143,13 @@
           <span>Lembrar-me</span>
         </label>
         <a href="pages/login/esqueci_senha.html">
-          <i class="fa-solid fa-circle-question" style="margin-right:4px;"></i>Esqueci minha senha
+          Esqueci minha senha
         </a>
       </div>
 
       <!-- Botão único de login -->
       <button type="button" class="login-btn" id="btnEntrar" onclick="fazerLogin()">
-        <i class="fa-solid fa-right-to-bracket" style="margin-right:8px;"></i>Entrar
+        Entrar
       </button>
 
     </form>
@@ -160,21 +159,21 @@
     <div class="register">
       <p>Ainda não tem uma conta?</p>
       <a href="pages/cadastro/cadastro.html">
-        <i class="fa-solid fa-user-plus" style="margin-right:5px;"></i>Cadastre-se gratuitamente →
+        Cadastre-se gratuitamente →
       </a>
     </div>
 
     <div class="terms">
-      <a href="#"><i class="fa-solid fa-file-shield" style="margin-right:3px;"></i>Política de privacidade</a>
+      <a href="#">Política de privacidade</a>
       <span>·</span>
-      <a href="#"><i class="fa-solid fa-file-lines" style="margin-right:3px;"></i>Termos de uso</a>
+      <a href="#">Termos de uso</a>
     </div>
 
     <div class="contact">
       <p>
-        <i class="fa-solid fa-envelope" style="color:var(--primary);margin-right:5px;"></i>smartcondoip@gmail.com
+        <img src="/assets/img/icons/envelope.svg" alt="">smartcondoip@gmail.com
         &nbsp;·&nbsp;
-        <i class="fa-solid fa-phone" style="color:var(--primary);margin-right:5px;"></i>(67) 91234-5678
+        <img src="/assets/img/icons/phone.svg" alt="">(67) 91234-5678
       </p>
     </div>
 
@@ -187,9 +186,9 @@
       <img src="assets/img/acessibilidade.png" class="access-icon-img" alt="">
     </label>
     <div class="access-menu">
-      <label><input type="checkbox" id="font-toggle"> <i class="fa-solid fa-text-height"></i> Aumentar fonte</label>
-      <label><input type="checkbox" id="contrast-toggle"> <i class="fa-solid fa-circle-half-stroke"></i> Alto contraste</label>
-      <label><input type="checkbox" id="read-toggle"> <i class="fa-solid fa-book-open"></i> Modo leitura</label>
+      <label><input type="checkbox" id="font-toggle">  Aumentar fonte</label>
+      <label><input type="checkbox" id="contrast-toggle">  Alto contraste</label>
+      <label><input type="checkbox" id="read-toggle">  Modo leitura</label>
     </div>
   </div>
 
@@ -217,10 +216,10 @@
 
       if (input.type === "password") {
         input.type = "text";
-        icon.className = "fa-solid fa-eye-slash";
+        icon.innerHTML = '<path d="M38.8 5.1C28.4-3.1 13.3-1.2 5.1 9.2S-1.2 34.7 9.2 42.9l592 464c10.4 8.2 25.5 6.3 33.7-4.1s6.3-25.5-4.1-33.7L525.6 386.7c39.6-40.6 66.4-86.1 79.9-118.4 3.3-7.9 3.3-16.7 0-24.6-14.9-35.7-46.2-87.7-93-131.1C465.5 68.8 400.8 32 320 32c-68.2 0-125 26.3-169.3 60.8L38.8 5.1zM223.1 149.5C248.6 126.2 282.7 112 320 112c79.5 0 144 64.5 144 144 0 24.9-6.3 48.3-17.4 68.7L408 294.5c5.2-11.8 8-24.8 8-38.5 0-53-43-96-96-96-2.8 0-5.6.1-8.4.4l-80.5-10.9zM299.8 349.6L169.4 251.2c-.9 6.5-1.4 13.2-1.4 20.8 0 53 43 96 96 96 12.2 0 23.9-2.3 34.6-6.5l1.2-12zM145.5 210.2c-10.1 14.2-16.6 30.8-18.5 48.7L47.1 296.6C34.7 290.1 23.5 282.4 14.5 274.3c-31-28.9-14.9-14.4 0 0L14.5 274.3z"/>';
       } else {
         input.type = "password";
-        icon.className = "fa-solid fa-eye";
+        icon.innerHTML = '<path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4 142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.4 78.1-95.4 93-131.1 3.3-7.9 3.3-16.7 0-24.6-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM432 256c0 79.5-64.5 144-144 144s-144-64.5-144-144 64.5-144 144-144 144 64.5 144 144zm-144-80c-44.2 0-80 35.8-80 80s35.8 80 80 80 80-35.8 80-80-35.8-80-80-80z"/>';
       }
       input.focus();
     }
@@ -239,13 +238,13 @@
 
       if (senha === SENHAS.morador) {
         div.classList.add("visivel", "morador");
-        texto.innerHTML = '<i class="fa-solid fa-user" style="margin-right:5px;"></i>Perfil detectado: <strong>Morador</strong>';
+        texto.innerHTML = '<img src="/assets/img/icons/user.svg" alt="">Perfil detectado: <strong>Morador</strong>';
       } else if (senha === SENHAS.porteiro) {
         div.classList.add("visivel", "porteiro");
-        texto.innerHTML = '<i class="fa-solid fa-shield-halved" style="margin-right:5px;"></i>Perfil detectado: <strong>Porteiro</strong>';
+        texto.innerHTML = '<img src="/assets/img/icons/shield-halved.svg" alt="">Perfil detectado: <strong>Porteiro</strong>';
       } else if (senha === SENHAS.sindico) {
         div.classList.add("visivel", "sindico");
-        texto.innerHTML = '<i class="fa-solid fa-star" style="margin-right:5px;"></i>Perfil detectado: <strong>Síndico</strong>';
+        texto.innerHTML = '<img src="/assets/img/icons/star.svg" alt="">Perfil detectado: <strong>Síndico</strong>';
       }
       // Se não casar com nenhuma senha, o indicador fica oculto
     }
@@ -258,7 +257,7 @@
       const form  = document.getElementById("loginForm");
 
       // Loading no botão
-      btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin" style="margin-right:8px;"></i>Verificando...';
+      btn.innerHTML = 'Verificando...';
       btn.disabled = true;
 
       setTimeout(() => {
@@ -278,7 +277,7 @@
           document.getElementById("senhaInput").value = "";
           document.getElementById("perfilDetectado").className = "perfil-detectado";
 
-          btn.innerHTML = '<i class="fa-solid fa-right-to-bracket" style="margin-right:8px;"></i>Entrar';
+          btn.innerHTML = 'Entrar';
           btn.disabled = false;
 
           // Efeito shake no formulário

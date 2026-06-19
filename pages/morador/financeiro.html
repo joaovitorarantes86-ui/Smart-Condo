@@ -8,8 +8,7 @@
   <link rel="stylesheet" href="../../assets/css/style.css">
   <link rel="stylesheet" href="../../assets/css/dashboard.css">
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css">
-</head>
+  </head>
 <body class="dashboard-body layout-mobile">
   <header class="app-bar">
     <div class="app-bar-inner">
@@ -18,15 +17,15 @@
         <span class="brand-name">Smart<strong>Condo</strong></span>
       </a>
       <div class="app-bar-right">
-        <a href="perfil.html" class="profile-link"><span class="profile-avatar"><i class="fa-solid fa-user"></i></span><span class="profile-name" id="hdrName">João Silva</span><span class="profile-role">Morador</span></a>
-        <a href="../../index.html" class="logout-btn"><i class="fa-solid fa-right-from-bracket"></i> Sair</a>
+        <a href="perfil.html" class="profile-link"><span class="profile-avatar"><img src="/assets/img/icons/user.svg" alt="" style="width:16px;height:16px;display:block;"></span><span class="profile-name" id="hdrName">João Silva</span><span class="profile-role">Morador</span></a>
+        <a href="../../index.html" class="logout-btn"><img src="/assets/img/icons/right-from-bracket.svg" alt=""> Sair</a>
       </div>
     </div>
   </header>
   <main class="dash-wrapper">
 
     <a href="dashboard.html" class="dash-back">
-      <i class="fa-solid fa-arrow-left"></i> Painel do Morador
+      <img src="/assets/img/icons/arrow-left.svg" alt=""> Painel do Morador
     </a>
 
     <div class="balance-card">
@@ -34,29 +33,29 @@
       <p class="balance-value">R$ 320,00</p>
       <p class="balance-sub">Em aberto referente a março/2025</p>
       <div class="balance-pills">
-        <span class="balance-pill"><i class="fa-solid fa-calendar"></i> Vence em 27/03</span>
-        <span class="balance-pill"><i class="fa-solid fa-building"></i> Cond. das Palmeiras</span>
+        <span class="balance-pill"> Vence em 27/03</span>
+        <span class="balance-pill"><img src="/assets/img/icons/building.svg" alt=""> Cond. das Palmeiras</span>
       </div>
     </div>
 
     <div class="alert-box warning">
-      <i class="fa-solid fa-circle-exclamation"></i>
+      <img src="/assets/img/icons/circle-exclamation.svg" alt="">
       <span>Seu boleto de <strong>março/2025</strong> vence em 9 dias. Clique em "Ver Boleto" para pagar.</span>
     </div>
 
     <div class="stats-row">
-      <div class="stat-card amber"><span class="stat-value">R$320</span><span class="stat-label"><i class="fa-solid fa-clock" style="margin-right:4px;font-size:11px;"></i>A pagar</span></div>
-      <div class="stat-card teal"><span class="stat-value">12</span><span class="stat-label"><i class="fa-solid fa-circle-check" style="margin-right:4px;font-size:11px;"></i>Pagamentos</span></div>
-      <div class="stat-card blue"><span class="stat-value">0</span><span class="stat-label"><i class="fa-solid fa-xmark" style="margin-right:4px;font-size:11px;"></i>Em atraso</span></div>
+      <div class="stat-card amber"><span class="stat-value">R$320</span><span class="stat-label"><img src="/assets/img/icons/clock.svg" alt="">A pagar</span></div>
+      <div class="stat-card teal"><span class="stat-value">12</span><span class="stat-label"><img src="/assets/img/icons/circle-check.svg" alt="">Pagamentos</span></div>
+      <div class="stat-card blue"><span class="stat-value">0</span><span class="stat-label"><img src="/assets/img/icons/xmark.svg" alt="">Em atraso</span></div>
     </div>
 
-    <p class="section-title"><i class="fa-solid fa-file-invoice-dollar"></i> Boleto em Aberto</p>
+    <p class="section-title"><img src="/assets/img/icons/file-invoice-dollar.svg" alt=""> Boleto em Aberto</p>
     <div class="form-card" style="border-left:3px solid #e6a23c;">
       <div style="display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;">
         <div>
           <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px;">
             <div class="card-icon icon-yellow" style="width:44px;height:44px;border-radius:12px;flex-shrink:0;">
-              <i class="fa-solid fa-file-invoice-dollar"></i>
+              <img src="/assets/img/icons/file-invoice-dollar.svg" alt="">
             </div>
             <div>
               <p style="font-size:15px;font-weight:700;color:var(--text);">Taxa de Condomínio — Março 2025</p>
@@ -66,14 +65,14 @@
           <p style="font-size:13px;color:var(--text-2);">Vencimento: <strong>27/03/2025</strong> &nbsp;·&nbsp; Valor: <strong style="color:#c88b1a;">R$ 320,00</strong></p>
         </div>
         <a href="#" class="action-btn" style="width:auto;padding:12px 22px;font-size:14px;margin:0;">
-          <i class="fa-solid fa-barcode"></i> Ver Boleto
+           Ver Boleto
         </a>
       </div>
     </div>
 
-    <p class="section-title"><i class="fa-solid fa-clock-rotate-left"></i> Histórico de Pagamentos</p>
+    <p class="section-title"> Histórico de Pagamentos</p>
     <div class="data-table">
-      <div class="table-head cols-4"><span><i class="fa-solid fa-file-invoice" style="margin-right:5px;color:var(--primary);"></i>Referência</span><span><i class="fa-regular fa-calendar" style="margin-right:4px;color:var(--muted);"></i>Vencimento</span><span><i class="fa-solid fa-dollar-sign" style="margin-right:4px;color:var(--muted);"></i>Valor</span><span><i class="fa-solid fa-flag"></i> Status</span></div>
+      <div class="table-head cols-4"><span>Referência</span><span>Vencimento</span><span>Valor</span><span> Status</span></div>
       <div class="table-row cols-4"><span>Fevereiro/2025</span><span>10/02/2025</span><span>R$ 320,00</span><span><span class="badge badge-ok">Pago</span></span></div>
       <div class="table-row cols-4"><span>Janeiro/2025</span><span>10/01/2025</span><span>R$ 320,00</span><span><span class="badge badge-ok">Pago</span></span></div>
       <div class="table-row cols-4"><span>Dezembro/2024</span><span>10/12/2024</span><span>R$ 320,00</span><span><span class="badge badge-ok">Pago</span></span></div>
@@ -84,9 +83,9 @@
       <div class="table-row cols-4"><span>Julho/2024</span><span>10/07/2024</span><span>R$ 295,00</span><span><span class="badge badge-ok">Pago</span></span></div>
     </div>
 
-    <p class="section-title"><i class="fa-solid fa-list-check"></i> Composição da Taxa — Março 2025</p>
+    <p class="section-title"> Composição da Taxa — Março 2025</p>
     <div class="data-table">
-      <div class="table-head cols-3"><span><i class="fa-solid fa-list-check" style="margin-right:5px;color:var(--primary);"></i>Item</span><span><i class="fa-solid fa-tag"></i> Tipo</span><span><i class="fa-solid fa-dollar-sign" style="margin-right:4px;color:var(--muted);"></i>Valor</span></div>
+      <div class="table-head cols-3"><span>Item</span><span> Tipo</span><span>Valor</span></div>
       <div class="table-row cols-3"><span>Fundo de reserva</span><span>Mensal</span><span>R$ 80,00</span></div>
       <div class="table-row cols-3"><span>Segurança / portaria</span><span>Mensal</span><span>R$ 90,00</span></div>
       <div class="table-row cols-3"><span>Limpeza e manutenção</span><span>Mensal</span><span>R$ 70,00</span></div>
@@ -98,7 +97,7 @@
     </div>
 
     <a href="#" class="action-btn outline">
-      <i class="fa-solid fa-download" style="margin-right:6px;"></i>Baixar Comprovante (PDF)
+      Baixar Comprovante (PDF)
     </a>
 
   </main>
@@ -109,9 +108,9 @@
       <img src="../../assets/img/acessibilidade.png" class="access-icon-img" alt="">
     </label>
     <div class="access-menu">
-      <label><input type="checkbox" id="font-toggle"> <i class="fa-solid fa-text-height"></i> Aumentar fonte</label>
-      <label><input type="checkbox" id="contrast-toggle"> <i class="fa-solid fa-circle-half-stroke"></i> Alto contraste</label>
-      <label><input type="checkbox" id="read-toggle"> <i class="fa-solid fa-book-open"></i> Modo leitura</label>
+      <label><input type="checkbox" id="font-toggle">  Aumentar fonte</label>
+      <label><input type="checkbox" id="contrast-toggle">  Alto contraste</label>
+      <label><input type="checkbox" id="read-toggle">  Modo leitura</label>
     </div>
   </div>
 <script src="../../assets/js/validation.js"></script>

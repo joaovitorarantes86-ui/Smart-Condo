@@ -8,12 +8,11 @@
   <link rel="stylesheet" href="../../assets/css/style.css">
   <link rel="stylesheet" href="../../assets/css/dashboard.css">
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css">
   <style>
     .p-card{background:var(--surface);border-radius:var(--radius-sm);padding:24px;margin-bottom:18px;border:1px solid var(--border);box-shadow:var(--shadow-sm);transition:all .25s var(--ease-smooth);}
     .p-card:hover{box-shadow:var(--shadow-md);}
     .p-card h3{font-size:13px;font-weight:800;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;margin-bottom:18px;display:flex;align-items:center;gap:8px;}
-    .p-card h3 i{font-size:16px;color:var(--primary);width:20px;}
+    .p-card h3 img{width:20px;height:20px;}
     .p-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
     .p-field{min-height:44px;}
     .p-field .p-lbl{font-size:10.5px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.4px;margin-bottom:3px;}
@@ -36,15 +35,14 @@
     .p-avatar input[type="file"]{position:absolute;inset:0;opacity:0;cursor:pointer;z-index:2;}
     .p-name h1{font-size:24px;font-weight:800;color:var(--text);margin:0 0 4px;letter-spacing:-.3px;}
     .p-name .p-role{font-size:13px;color:var(--text-2);display:flex;align-items:center;gap:6px;}
-    .p-name .p-role i{font-size:13px;}
+    .p-name .p-role img{width:14px;height:14px;}
     .p-name .p-tag{display:inline-flex;align-items:center;gap:5px;margin-top:8px;padding:4px 12px;border-radius:20px;font-size:11px;font-weight:700;background:#f0e6ff;color:#7c3aed;}
     .p-name .p-tag.morador-tag{background:var(--primary-light);color:var(--primary);}
     .p-name .p-tag.porteiro-tag{background:#e6f0ff;color:#2563eb;}
     .p-actions{display:flex;flex-direction:column;gap:10px;margin-top:8px;}
     .toast{position:fixed;bottom:30px;left:50%;transform:translateX(-50%) translateY(80px);background:#1a2e3a;color:#fff;padding:14px 28px;border-radius:14px;font-size:14px;font-weight:600;box-shadow:0 8px 32px rgba(0,0,0,.25);opacity:0;transition:all .4s var(--ease-smooth);z-index:999;pointer-events:none;display:flex;align-items:center;gap:10px;}
     .toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
-    .toast i{font-size:18px;}
-    .toast.success i{color:#34d399;}
+    .toast img{width:20px;height:20px;}
     .empty-field{color:#b8c6cc!important;font-style:italic;font-weight:400!important;}
     .p-field .p-edit select{cursor:pointer;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%237a909a' d='M1 1l5 5 5-5'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 13px center;padding-right:32px;}
     .edit-mode .p-field .p-val{display:none;}
@@ -57,37 +55,37 @@
 <body class="dashboard-body layout-mobile">
   <header class="app-bar"><div class="app-bar-inner wide">
     <div class="app-bar-left">
-      <a href="dashboard.html" class="mobile-back"><i class="fa-solid fa-arrow-left"></i></a>
+      <a href="dashboard.html" class="mobile-back"><img src="/assets/img/icons/arrow-left.svg" alt=""></a>
       <a href="../../index.html" class="app-bar-brand"><img src="../../assets/img/logo.png" alt="" class="logo-sm"><span class="brand-name">Smart<strong>Condo</strong></span></a>
     </div>
-    <div class="app-bar-right"><span class="profile-link"><span class="profile-avatar"><i class="fa-solid fa-star"></i></span><span class="profile-name" id="hdrName">Roberto Nascimento</span><span class="profile-role">Síndico</span></span><a href="../../index.html" class="logout-btn"><i class="fa-solid fa-right-from-bracket"></i> Sair</a></div>
+    <div class="app-bar-right"><span class="profile-link"><span class="profile-avatar"><img src="/assets/img/icons/star.svg" alt="" style="width:16px;height:16px;display:block;"></span><span class="profile-name" id="hdrName">Roberto Nascimento</span><span class="profile-role">Síndico</span></span><a href="../../index.html" class="logout-btn"><img src="/assets/img/icons/right-from-bracket.svg" alt=""> Sair</a></div>
   </div></header>
   <main class="dash-wrapper wide">
 
     <div class="dash-greeting">
-      <p class="greeting-sub"><i class="fa-solid fa-user-tie"></i> Perfil do Síndico</p>
-      <h2 class="greeting-name"><i class="fa-solid fa-user" style="margin-right:8px;font-size:22px;opacity:.85;"></i>Meu Perfil</h2>
-      <p class="greeting-condo"><i class="fa-solid fa-info-circle"></i> Seus dados pessoais e informações do condomínio</p>
+      <p class="greeting-sub"> Perfil do Síndico</p>
+      <h2 class="greeting-name"><img src="/assets/img/icons/user.svg" alt="">Meu Perfil</h2>
+      <p class="greeting-condo"> Seus dados pessoais e informações do condomínio</p>
     </div>
 
     <div class="profile-top">
       <div class="p-avatar-wrap">
         <div class="p-avatar sindico" onclick="document.getElementById('avatarInput').click()">
-          <i class="fa-solid fa-user" id="avatarIcon"></i>
+          <img src="/assets/img/icons/user.svg" alt="" id="avatarIcon">
           <img id="avatarPreview" src="" alt="" style="display:none;">
-          <div class="avatar-overlay"><i class="fa-solid fa-camera"></i></div>
+          <div class="avatar-overlay"><img src="/assets/img/icons/camera.svg" alt=""></div>
           <input type="file" id="avatarInput" accept="image/*" onchange="trocarAvatar(event)">
         </div>
       </div>
       <div class="p-name">
         <h1 id="viewNome">Roberto Nascimento</h1>
-        <p class="p-role"><i class="fa-solid fa-star" style="color:#9164fa;"></i> Síndico</p>
+        <p class="p-role"><img src="/assets/img/icons/star.svg" alt=""> Síndico</p>
         <span class="p-tag">Residencial das Palmeiras</span>
       </div>
     </div>
 
     <div id="dadosPessoais" class="p-card">
-      <h3><i class="fa-solid fa-user" style="color:#7c3aed;"></i> Dados Pessoais</h3>
+      <h3><img src="/assets/img/icons/user.svg" alt=""> Dados Pessoais</h3>
       <div class="p-grid">
         <div class="p-field"><div class="p-lbl">CPF</div><div class="p-val" id="val-cpf">321.654.987-00</div></div>
         <div class="p-field"><div class="p-lbl">RG</div><div class="p-val" id="val-rg">45.678.901-2</div></div>
@@ -99,7 +97,7 @@
     </div>
 
     <div id="dadosCondo" class="p-card">
-      <h3><i class="fa-solid fa-building" style="color:#7c3aed;"></i> Dados do Condomínio</h3>
+      <h3><img src="/assets/img/icons/building.svg" alt=""> Dados do Condomínio</h3>
       <div class="p-grid">
         <div class="p-field"><div class="p-lbl">Nome do Condomínio</div><div class="p-val" id="val-condNome">Residencial das Palmeiras</div><div class="p-edit"><input type="text" id="edit-condNome" value="Residencial das Palmeiras"></div></div>
         <div class="p-field"><div class="p-lbl">CNPJ</div><div class="p-val" id="val-cnpj">12.345.678/0001-90</div></div>
@@ -111,7 +109,7 @@
     </div>
 
     <div id="dadosMandato" class="p-card">
-      <h3><i class="fa-solid fa-calendar-check" style="color:#7c3aed;"></i> Mandato</h3>
+      <h3><img src="/assets/img/icons/calendar-check.svg" alt=""> Mandato</h3>
       <div class="p-grid">
         <div class="p-field"><div class="p-lbl">Início do Mandato</div><div class="p-val" id="val-mandatoInicio">Janeiro de 2023</div><div class="p-edit"><input type="text" id="edit-mandatoInicio" value="Janeiro de 2023"></div></div>
         <div class="p-field"><div class="p-lbl">Término do Mandato</div><div class="p-val" id="val-mandatoFim">Janeiro de 2025</div><div class="p-edit"><input type="text" id="edit-mandatoFim" value="Janeiro de 2025"></div></div>
@@ -119,18 +117,18 @@
     </div>
 
     <div class="p-actions" id="viewActions">
-      <button class="action-btn" onclick="entrarEdicao()"><i class="fa-solid fa-pen"></i> Editar Perfil</button>
-      <a href="dashboard.html" class="action-btn outline"><i class="fa-solid fa-arrow-left"></i> Voltar</a>
+      <button class="action-btn" onclick="entrarEdicao()"><img src="/assets/img/icons/pen.svg" alt=""> Editar Perfil</button>
+      <a href="dashboard.html" class="action-btn outline"><img src="/assets/img/icons/arrow-left.svg" alt=""> Voltar</a>
     </div>
 
     <div class="p-actions" id="editActions" style="display:none;">
-      <button class="action-btn" onclick="salvarDados()"><i class="fa-solid fa-floppy-disk"></i> Salvar Alterações</button>
-      <button class="action-btn outline" onclick="cancelarEdicao()"><i class="fa-solid fa-xmark"></i> Cancelar</button>
+      <button class="action-btn" onclick="salvarDados()"><img src="/assets/img/icons/floppy-disk.svg" alt=""> Salvar Alterações</button>
+      <button class="action-btn outline" onclick="cancelarEdicao()"><img src="/assets/img/icons/xmark.svg" alt=""> Cancelar</button>
     </div>
 
   </main>
 
-  <div id="toast" class="toast"><i class="fa-solid fa-circle-check"></i> <span id="toastMsg">Dados salvos com sucesso!</span></div>
+  <div id="toast" class="toast"><img src="/assets/img/icons/circle-check.svg" alt=""> <span id="toastMsg">Dados salvos com sucesso!</span></div>
 
   <div class="accessibility-widget">
     <input type="checkbox" id="access-toggle">
@@ -138,9 +136,9 @@
       <img src="../../assets/img/acessibilidade.png" class="access-icon-img" alt="">
     </label>
     <div class="access-menu">
-      <label><input type="checkbox" id="font-toggle"> <i class="fa-solid fa-text-height"></i> Aumentar fonte</label>
-      <label><input type="checkbox" id="contrast-toggle"> <i class="fa-solid fa-circle-half-stroke"></i> Alto contraste</label>
-      <label><input type="checkbox" id="read-toggle"> <i class="fa-solid fa-book-open"></i> Modo leitura</label>
+      <label><input type="checkbox" id="font-toggle">  Aumentar fonte</label>
+      <label><input type="checkbox" id="contrast-toggle">  Alto contraste</label>
+      <label><input type="checkbox" id="read-toggle">  Modo leitura</label>
     </div>
   </div>
   <script src="../../assets/js/validation.js"></script>

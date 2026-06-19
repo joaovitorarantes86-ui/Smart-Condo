@@ -8,8 +8,7 @@
   <link rel="stylesheet" href="../../assets/css/style.css">
   <link rel="stylesheet" href="../../assets/css/dashboard.css">
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css">
-</head>
+  </head>
 <body class="dashboard-body layout-desktop">
 
   <header class="app-bar">
@@ -19,8 +18,8 @@
         <span class="brand-name">Smart<strong>Condo</strong></span>
       </a>
       <div class="app-bar-right">
-        <a href="perfil.html" class="profile-link"><span class="profile-avatar"><i class="fa-solid fa-shield-halved"></i></span><span class="profile-name" id="hdrName">Carlos Pereira</span><span class="profile-role">Porteiro</span></a>
-        <a href="../../index.html" class="logout-btn"><i class="fa-solid fa-right-from-bracket"></i> Sair</a>
+        <a href="perfil.html" class="profile-link"><span class="profile-avatar"><img src="/assets/img/icons/shield-halved.svg" alt="" style="width:16px;height:16px;display:block;"></span><span class="profile-name" id="hdrName">Carlos Pereira</span><span class="profile-role">Porteiro</span></a>
+        <a href="../../index.html" class="logout-btn"><img src="/assets/img/icons/right-from-bracket.svg" alt=""> Sair</a>
       </div>
     </div>
   </header>
@@ -28,23 +27,23 @@
   <main class="dash-wrapper">
 
     <a href="dashboard.html" class="dash-back">
-      <i class="fa-solid fa-arrow-left"></i> Painel do Porteiro
+      <img src="/assets/img/icons/arrow-left.svg" alt=""> Painel do Porteiro
     </a>
 
     <div class="dash-greeting">
-      <p class="greeting-sub"><i class="fa-solid fa-clock" style="margin-right:6px;color:var(--primary);"></i>Turno 07h – 15h · Carlos Pereira</p>
+      <p class="greeting-sub"><img src="/assets/img/icons/clock.svg" alt="">Turno 07h – 15h · Carlos Pereira</p>
       <h2 class="greeting-name"><img src="../../assets/img/icons/car.svg" alt="" style="width:26px;height:26px;vertical-align:middle;margin-right:8px;filter:brightness(0) invert(1);"> Controle de Veículos</h2>
       <p class="greeting-condo"><img src="../../assets/img/icons/car.svg" alt="" style="width:16px;height:16px;vertical-align:middle;margin-right:6px;filter:brightness(0) invert(1);"> Estacionamento — Residencial das Palmeiras</p>
     </div>
 
     <div class="stats-row">
-      <div class="stat-card teal"><span class="stat-value">18</span><span class="stat-label"><i class="fa-solid fa-car" style="margin-right:4px;font-size:11px;"></i>No estac.</span></div>
-      <div class="stat-card blue"><span class="stat-value">24</span><span class="stat-label"><i class="fa-solid fa-p" style="margin-right:4px;font-size:11px;"></i>Total vagas</span></div>
-      <div class="stat-card amber"><span class="stat-value">6</span><span class="stat-label"><i class="fa-solid fa-circle-check" style="margin-right:4px;font-size:11px;color:#4ade80;"></i>Livres</span></div>
+      <div class="stat-card teal"><span class="stat-value">18</span><span class="stat-label"><img src="/assets/img/icons/car.svg" alt="">No estac.</span></div>
+      <div class="stat-card blue"><span class="stat-value">24</span><span class="stat-label">Total vagas</span></div>
+      <div class="stat-card amber"><span class="stat-value">6</span><span class="stat-label"><img src="/assets/img/icons/circle-check.svg" alt="">Livres</span></div>
     </div>
 
     <!-- Ocupação visual -->
-    <p class="section-title"><i class="fa-solid fa-square-parking"></i> Ocupação do Estacionamento</p>
+    <p class="section-title"> Ocupação do Estacionamento</p>
     <div style="background:var(--surface);border-radius:var(--radius-md);padding:20px;box-shadow:var(--shadow-sm);border:1px solid var(--border);margin-bottom:24px;">
       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
         <span style="font-size:14px;font-weight:700;color:var(--text);">18 de 24 vagas ocupadas</span>
@@ -80,17 +79,17 @@
     </div>
 
     <!-- Registrar entrada/saída -->
-    <p class="section-title"><i class="fa-solid fa-arrows-turn-right" style="margin-right:6px;"></i>Registrar Movimentação</p>
+    <p class="section-title">Registrar Movimentação</p>
     <div class="form-card">
-      <h3><i class="fa-solid fa-car"></i> Dados do Veículo</h3>
+      <h3><img src="/assets/img/icons/car.svg" alt=""> Dados do Veículo</h3>
       <form action="dashboard.html">
         <div class="form-row">
           <div class="form-group">
-            <label><i class="fa-solid fa-car" style="color:var(--primary);margin-right:5px;font-size:11px;"></i>Placa do veículo</label>
+            <label><img src="/assets/img/icons/car.svg" alt="">Placa do veículo</label>
             <input type="text" placeholder="ABC-1D23" class="mask-placa" style="text-transform:uppercase;letter-spacing:2px;font-weight:700;font-size:16px;" maxlength="8" required>
           </div>
           <div class="form-group">
-            <label><i class="fa-solid fa-arrows-alt-h" style="color:var(--primary);margin-right:5px;font-size:11px;"></i>Tipo de movimentação</label>
+            <label>Tipo de movimentação</label>
             <select required>
               <option value="" disabled selected>Selecione</option>
               <option>🔵 Entrada — Morador</option>
@@ -103,7 +102,7 @@
         </div>
         <div class="form-row">
           <div class="form-group">
-            <label><i class="fa-solid fa-building" style="color:var(--primary);margin-right:5px;font-size:11px;"></i>Apartamento</label>
+            <label><img src="/assets/img/icons/building.svg" alt="">Apartamento</label>
             <select required>
               <option value="" disabled selected>Selecione</option>
               <option>Apto 101</option><option>Apto 102</option><option>Apto 204</option>
@@ -111,20 +110,20 @@
             </select>
           </div>
           <div class="form-group">
-            <label><i class="fa-regular fa-clock" style="color:var(--primary);margin-right:5px;font-size:11px;"></i>Horário</label>
+            <label><img src="/assets/img/icons/clock.svg" alt="">Horário</label>
             <input type="time" required>
           </div>
         </div>
         <button class="action-btn" type="submit" style="margin-top:4px;">
-          <i class="fa-solid fa-check"></i> <i class="fa-solid fa-arrows-turn-right" style="margin-right:6px;"></i>Registrar Movimentação
+          <img src="/assets/img/icons/check.svg" alt=""> Registrar Movimentação
         </button>
       </form>
     </div>
 
     <!-- Histórico de hoje -->
-    <p class="section-title"><i class="fa-solid fa-clock-rotate-left"></i> Movimentações de Hoje</p>
+    <p class="section-title"> Movimentações de Hoje</p>
     <div class="data-table">
-      <div class="table-head cols-4"><span><i class="fa-solid fa-car" style="margin-right:5px;color:var(--primary);"></i>Placa</span><span><i class="fa-solid fa-building" style="margin-right:4px;color:var(--muted);"></i>Apto</span><span><i class="fa-regular fa-clock" style="margin-right:4px;color:var(--muted);"></i>Horário</span><span><i class="fa-solid fa-tag"></i> Tipo</span></div>
+      <div class="table-head cols-4"><span><img src="/assets/img/icons/car.svg" alt="">Placa</span><span><img src="/assets/img/icons/building.svg" alt="">Apto</span><span><img src="/assets/img/icons/clock.svg" alt="">Horário</span><span> Tipo</span></div>
       <div class="table-row cols-4"><span><strong>ABC-1234</strong></span><span>Apto 204</span><span>07h15</span><span><span class="badge badge-ok">Entrada</span></span></div>
       <div class="table-row cols-4"><span><strong>DEF-5678</strong></span><span>Apto 102</span><span>07h40</span><span><span class="badge badge-ok">Entrada</span></span></div>
       <div class="table-row cols-4"><span><strong>GHI-9012</strong></span><span>Visitante</span><span>08h30</span><span><span class="badge badge-blue">Visita</span></span></div>
@@ -140,9 +139,9 @@
       <img src="../../assets/img/acessibilidade.png" class="access-icon-img" alt="">
     </label>
     <div class="access-menu">
-      <label><input type="checkbox" id="font-toggle"> <i class="fa-solid fa-text-height"></i> Aumentar fonte</label>
-      <label><input type="checkbox" id="contrast-toggle"> <i class="fa-solid fa-circle-half-stroke"></i> Alto contraste</label>
-      <label><input type="checkbox" id="read-toggle"> <i class="fa-solid fa-book-open"></i> Modo leitura</label>
+      <label><input type="checkbox" id="font-toggle">  Aumentar fonte</label>
+      <label><input type="checkbox" id="contrast-toggle">  Alto contraste</label>
+      <label><input type="checkbox" id="read-toggle">  Modo leitura</label>
     </div>
   </div>
 

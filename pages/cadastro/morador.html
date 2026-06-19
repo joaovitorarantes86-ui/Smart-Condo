@@ -7,8 +7,7 @@
   <title>SmartCondo — Cadastro Morador</title>
   <link rel="stylesheet" href="../../assets/css/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css">
-</head>
+  </head>
 <body>
 
 <main class="container-lg">
@@ -20,7 +19,7 @@
   </header>
 
   <div class="chosen-role">
-    <i class="fa-solid fa-user"></i> Cadastro de Morador
+    <img src="/assets/img/icons/user.svg" alt=""> Cadastro de Morador
   </div>
 
   <!-- ══════════════════════════════════════
@@ -37,49 +36,49 @@
     <nav class="step-nav">
       <div class="step-nav-item active">
         <div class="step-nav-circle">1</div>
-        <span class="step-nav-label"><i class="fa-solid fa-user" style="margin-right:3px;font-size:9px;"></i>Pessoal</span>
+        <span class="step-nav-label"><img src="/assets/img/icons/user.svg" alt="">Pessoal</span>
       </div>
       <div class="step-nav-line"></div>
       <div class="step-nav-item">
         <div class="step-nav-circle">2</div>
-        <span class="step-nav-label"><i class="fa-solid fa-building" style="margin-right:3px;font-size:9px;"></i>Unidade</span>
+        <span class="step-nav-label"><img src="/assets/img/icons/building.svg" alt="">Unidade</span>
       </div>
       <div class="step-nav-line"></div>
       <div class="step-nav-item">
         <div class="step-nav-circle">3</div>
-        <span class="step-nav-label"><i class="fa-solid fa-lock" style="margin-right:3px;font-size:9px;"></i>Acesso</span>
+        <span class="step-nav-label"><img src="/assets/img/icons/lock.svg" alt="">Acesso</span>
       </div>
     </nav>
 
     <div class="form-section">
-      <p class="form-section-title"><i class="fa-solid fa-id-card"></i> Dados Pessoais <span class="section-tag obrig">Obrigatório</span></p>
+      <p class="form-section-title"><img src="/assets/img/icons/id-card.svg" alt=""> Dados Pessoais <span class="section-tag obrig">Obrigatório</span></p>
       <div class="cad-row">
         <div class="cad-group">
-          <label><i class="fa-solid fa-user" style="color:var(--primary);margin-right:5px;font-size:11px;"></i>Nome completo <span class="req">*</span></label>
+          <label><img src="/assets/img/icons/user.svg" alt="">Nome completo <span class="req">*</span></label>
           <input type="text" placeholder="Como consta no documento" required>
         </div>
         <div class="cad-group">
-          <label><i class="fa-solid fa-user-tag" style="color:var(--primary);margin-right:5px;font-size:11px;"></i>Nome social</label>
+          <label>Nome social</label>
           <input type="text" placeholder="Se diferente do oficial">
         </div>
       </div>
       <div class="cad-row">
         <div class="cad-group">
-          <label><i class="fa-solid fa-fingerprint" style="color:var(--primary);margin-right:5px;font-size:11px;"></i>CPF <span class="req">*</span></label>
+          <label>CPF <span class="req">*</span></label>
           <input type="text" placeholder="000.000.000-00" required maxlength="14">
         </div>
         <div class="cad-group">
-          <label><i class="fa-solid fa-id-card" style="color:var(--primary);margin-right:5px;font-size:11px;"></i>RG <span class="req">*</span></label>
+          <label><img src="/assets/img/icons/id-card.svg" alt="">RG <span class="req">*</span></label>
           <input type="text" placeholder="00.000.000-0" required>
         </div>
       </div>
       <div class="cad-row">
         <div class="cad-group">
-          <label><i class="fa-regular fa-calendar" style="color:var(--primary);margin-right:5px;font-size:11px;"></i>Data de nascimento <span class="req">*</span></label>
+          <label>Data de nascimento <span class="req">*</span></label>
           <input type="date" required>
         </div>
         <div class="cad-group">
-          <label><i class="fa-solid fa-balance-scale" style="color:var(--primary);margin-right:5px;font-size:11px;"></i>Estado civil</label>
+          <label>Estado civil</label>
           <select>
             <option value="" disabled selected>Selecione</option>
             <option>Solteiro(a)</option><option>Casado(a)</option>
@@ -89,7 +88,7 @@
       </div>
       <div class="cad-row">
         <div class="cad-group">
-          <label><i class="fa-solid fa-venus-mars" style="color:var(--primary);margin-right:5px;font-size:11px;"></i>Gênero</label>
+          <label>Gênero</label>
           <select>
             <option value="" disabled selected>Selecione</option>
             <option>Masculino</option><option>Feminino</option>
@@ -97,42 +96,42 @@
           </select>
         </div>
         <div class="cad-group">
-          <label><i class="fa-solid fa-briefcase" style="color:var(--primary);margin-right:5px;font-size:11px;"></i>Profissão</label>
+          <label><img src="/assets/img/icons/briefcase.svg" alt="">Profissão</label>
           <input type="text" placeholder="Ex: Engenheiro">
         </div>
       </div>
     </div>
 
     <div class="form-section">
-      <p class="form-section-title"><i class="fa-solid fa-address-book"></i> Contato <span class="section-tag obrig">Obrigatório</span></p>
+      <p class="form-section-title"> Contato <span class="section-tag obrig">Obrigatório</span></p>
       <div class="cad-row">
         <div class="cad-group">
           <label>E-mail <span class="req">*</span></label>
           <div class="cad-input-icon">
-            <i class="fa-solid fa-envelope"></i>
+            <img src="/assets/img/icons/envelope.svg" alt="">
             <input type="email" placeholder="seu@email.com" required>
           </div>
         </div>
         <div class="cad-group">
           <label>Celular / WhatsApp <span class="req">*</span></label>
           <div class="cad-input-icon">
-            <i class="fa-solid fa-mobile-screen"></i>
+            
             <input type="tel" placeholder="(00) 90000-0000" class="mask-tel" required>
           </div>
         </div>
       </div>
       <div class="info-card">
-        <i class="fa-solid fa-circle-info"></i>
+        
         <p>O celular será usado para autenticação em duas etapas. Certifique-se de que está correto e ativo.</p>
       </div>
       <p style="font-size:12px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.6px;margin:4px 0 12px;">Contato de Emergência <span class="req">*</span></p>
       <div class="cad-row">
         <div class="cad-group">
-          <label><i class="fa-solid fa-user" style="color:var(--primary);margin-right:5px;font-size:11px;"></i>Nome <span class="req">*</span></label>
+          <label><img src="/assets/img/icons/user.svg" alt="">Nome <span class="req">*</span></label>
           <input type="text" placeholder="Nome do responsável" required>
         </div>
         <div class="cad-group">
-          <label><i class="fa-solid fa-users" style="color:var(--primary);margin-right:5px;font-size:11px;"></i>Parentesco <span class="req">*</span></label>
+          <label>Parentesco <span class="req">*</span></label>
           <select required>
             <option value="" disabled selected>Selecione</option>
             <option>Cônjuge / Companheiro(a)</option><option>Pai / Mãe</option>
@@ -143,16 +142,16 @@
       <div class="cad-group">
         <label>Telefone de emergência <span class="req">*</span></label>
         <div class="cad-input-icon">
-          <i class="fa-solid fa-phone"></i>
+          <img src="/assets/img/icons/phone.svg" alt="">
           <input type="tel" placeholder="(00) 90000-0000" class="mask-tel" required>
         </div>
       </div>
     </div>
 
     <div class="form-section">
-      <p class="form-section-title"><i class="fa-solid fa-camera"></i> Foto de Perfil <span class="section-tag opc">Opcional</span></p>
+      <p class="form-section-title"><img src="/assets/img/icons/camera.svg" alt=""> Foto de Perfil <span class="section-tag opc">Opcional</span></p>
       <label class="photo-upload" for="foto-m">
-        <i class="fa-solid fa-camera"></i>
+        <img src="/assets/img/icons/camera.svg" alt="">
         <span>Clique para enviar sua foto</span>
         <small>JPG, PNG · Máx. 5 MB · Fundo neutro, rosto visível</small>
       </label>
@@ -161,10 +160,10 @@
 
     <div class="step-nav-btns">
       <a href="../cadastro/cadastro.html" class="step-btn-back">
-        <i class="fa-solid fa-arrow-left"></i> Voltar
+        <img src="/assets/img/icons/arrow-left.svg" alt=""> Voltar
       </a>
       <a href="#step2" class="step-btn-next" onclick="mostrarStep(2)">
-        Próximo <i class="fa-solid fa-arrow-right"></i>
+        Próximo 
       </a>
     </div>
 
@@ -184,51 +183,51 @@
 
     <nav class="step-nav">
       <div class="step-nav-item done">
-        <div class="step-nav-circle"><i class="fa-solid fa-check" style="font-size:12px;"></i></div>
-        <span class="step-nav-label"><i class="fa-solid fa-user" style="margin-right:3px;font-size:9px;"></i>Pessoal</span>
+        <div class="step-nav-circle"><img src="/assets/img/icons/check.svg" alt=""></div>
+        <span class="step-nav-label"><img src="/assets/img/icons/user.svg" alt="">Pessoal</span>
       </div>
       <div class="step-nav-line done-line"></div>
       <div class="step-nav-item active">
         <div class="step-nav-circle">2</div>
-        <span class="step-nav-label"><i class="fa-solid fa-building" style="margin-right:3px;font-size:9px;"></i>Unidade</span>
+        <span class="step-nav-label"><img src="/assets/img/icons/building.svg" alt="">Unidade</span>
       </div>
       <div class="step-nav-line"></div>
       <div class="step-nav-item">
         <div class="step-nav-circle">3</div>
-        <span class="step-nav-label"><i class="fa-solid fa-lock" style="margin-right:3px;font-size:9px;"></i>Acesso</span>
+        <span class="step-nav-label"><img src="/assets/img/icons/lock.svg" alt="">Acesso</span>
       </div>
     </nav>
 
     <div class="form-section">
-      <p class="form-section-title"><i class="fa-solid fa-building"></i> Dados da Unidade <span class="section-tag obrig">Obrigatório</span></p>
+      <p class="form-section-title"><img src="/assets/img/icons/building.svg" alt=""> Dados da Unidade <span class="section-tag obrig">Obrigatório</span></p>
       <div class="step-alert">
-        <i class="fa-solid fa-triangle-exclamation"></i>
+        <img src="/assets/img/icons/triangle-exclamation.svg" alt="">
         <p>Solicite o <strong>código de acesso</strong> ao síndico antes de prosseguir. O cadastro não será aprovado sem código válido.</p>
       </div>
       <div class="cad-group">
         <label>Código de acesso do condomínio <span class="req">*</span></label>
         <div class="cad-input-icon">
-          <i class="fa-solid fa-hashtag"></i>
+          
           <input type="text" placeholder="Ex: COND-2025-ABCD" required style="text-transform:uppercase;letter-spacing:1px;font-weight:600;">
         </div>
       </div>
       <div class="cad-row">
         <div class="cad-group">
-          <label><i class="fa-solid fa-door-open" style="color:var(--primary);margin-right:5px;font-size:11px;"></i>Nº do apartamento <span class="req">*</span></label>
+          <label>Nº do apartamento <span class="req">*</span></label>
           <input type="text" placeholder="Ex: 204" required>
         </div>
         <div class="cad-group">
-          <label><i class="fa-solid fa-layer-group" style="color:var(--primary);margin-right:5px;font-size:11px;"></i>Bloco / Torre</label>
+          <label>Bloco / Torre</label>
           <input type="text" placeholder="Ex: Bloco A">
         </div>
       </div>
       <div class="cad-row">
         <div class="cad-group">
-          <label><i class="fa-solid fa-stairs" style="color:var(--primary);margin-right:5px;font-size:11px;"></i>Andar</label>
+          <label>Andar</label>
           <input type="text" placeholder="Ex: 2º">
         </div>
         <div class="cad-group">
-          <label><i class="fa-solid fa-home" style="color:var(--primary);margin-right:5px;font-size:11px;"></i>Tipo de ocupação <span class="req">*</span></label>
+          <label>Tipo de ocupação <span class="req">*</span></label>
           <select required>
             <option value="" disabled selected>Selecione</option>
             <option>Proprietário</option><option>Inquilino</option><option>Coabitante autorizado</option>
@@ -237,11 +236,11 @@
       </div>
       <div class="cad-row">
         <div class="cad-group">
-          <label><i class="fa-regular fa-calendar" style="color:var(--primary);margin-right:5px;font-size:11px;"></i>Data de mudança <span class="req">*</span></label>
+          <label>Data de mudança <span class="req">*</span></label>
           <input type="date" required>
         </div>
         <div class="cad-group">
-          <label><i class="fa-solid fa-users" style="color:var(--primary);margin-right:5px;font-size:11px;"></i>Nº de moradores</label>
+          <label>Nº de moradores</label>
           <select>
             <option value="" disabled selected>Selecione</option>
             <option>1</option><option>2</option><option>3</option><option>4</option><option>5+</option>
@@ -251,9 +250,9 @@
     </div>
 
     <div class="form-section">
-      <p class="form-section-title"><i class="fa-solid fa-car"></i> Veículos <span class="section-tag opc">Opcional</span></p>
+      <p class="form-section-title"><img src="/assets/img/icons/car.svg" alt=""> Veículos <span class="section-tag opc">Opcional</span></p>
       <div class="cad-group">
-          <label><i class="fa-solid fa-car" style="color:var(--primary);margin-right:5px;font-size:11px;"></i>Quantidade de veículos a cadastrar</label>
+          <label><img src="/assets/img/icons/car.svg" alt="">Quantidade de veículos a cadastrar</label>
           <select>
             <option value="" disabled selected>Selecione</option>
             <option>Nenhum</option><option>1 veículo</option><option>2 veículos</option><option>3 ou mais</option>
@@ -261,38 +260,38 @@
       </div>
       <div class="cad-row">
         <div class="cad-group">
-          <label><i class="fa-solid fa-car" style="color:var(--primary);margin-right:5px;font-size:11px;"></i>Placa — Veículo 1</label>
+          <label><img src="/assets/img/icons/car.svg" alt="">Placa — Veículo 1</label>
           <input type="text" placeholder="ABC-1D23" style="text-transform:uppercase;" maxlength="8">
         </div>
         <div class="cad-group">
-          <label><i class="fa-solid fa-car-side" style="color:var(--primary);margin-right:5px;font-size:11px;"></i>Modelo e Cor</label>
+          <label>Modelo e Cor</label>
           <input type="text" placeholder="Ex: Honda Civic Prata">
         </div>
       </div>
       <div class="cad-row">
         <div class="cad-group">
-          <label><i class="fa-solid fa-car" style="color:var(--primary);margin-right:5px;font-size:11px;"></i>Placa — Veículo 2</label>
+          <label><img src="/assets/img/icons/car.svg" alt="">Placa — Veículo 2</label>
           <input type="text" placeholder="ABC-1D23" style="text-transform:uppercase;" maxlength="8">
         </div>
         <div class="cad-group">
-          <label><i class="fa-solid fa-square-parking" style="color:var(--primary);margin-right:5px;font-size:11px;"></i>Vaga(s) de garagem</label>
+          <label>Vaga(s) de garagem</label>
           <input type="text" placeholder="Ex: Vagas 12 e 13">
         </div>
       </div>
     </div>
 
     <div class="form-section">
-      <p class="form-section-title"><i class="fa-solid fa-people-roof"></i> Dependentes e Animais <span class="section-tag opc">Opcional</span></p>
+      <p class="form-section-title"> Dependentes e Animais <span class="section-tag opc">Opcional</span></p>
       <div class="cad-row">
         <div class="cad-group">
-          <label><i class="fa-solid fa-child" style="color:var(--primary);margin-right:5px;font-size:11px;"></i>Menores de 18 anos na unidade?</label>
+          <label>Menores de 18 anos na unidade?</label>
           <select>
             <option value="" disabled selected>Selecione</option>
             <option>Não</option><option>Sim — 1</option><option>Sim — 2 ou mais</option>
           </select>
         </div>
         <div class="cad-group">
-          <label><i class="fa-solid fa-person-cane" style="color:var(--primary);margin-right:5px;font-size:11px;"></i>Idosos (60+) na unidade?</label>
+          <label>Idosos (60+) na unidade?</label>
           <select>
             <option value="" disabled selected>Selecione</option>
             <option>Não</option><option>Sim</option>
@@ -301,7 +300,7 @@
       </div>
       <div class="cad-row">
         <div class="cad-group">
-          <label><i class="fa-solid fa-paw" style="color:var(--primary);margin-right:5px;font-size:11px;"></i>Animais de estimação?</label>
+          <label>Animais de estimação?</label>
           <select>
             <option value="" disabled selected>Selecione</option>
             <option>Não</option><option>Sim — cão(ões)</option><option>Sim — gato(s)</option>
@@ -309,15 +308,15 @@
           </select>
         </div>
         <div class="cad-group">
-          <label><i class="fa-solid fa-dog" style="color:var(--primary);margin-right:5px;font-size:11px;"></i>Raça(s) / descrição</label>
+          <label>Raça(s) / descrição</label>
           <input type="text" placeholder="Ex: 2 cães — Golden e Poodle">
         </div>
       </div>
     </div>
 
     <div class="step-nav-btns">
-      <a href="#step1" class="step-btn-back" onclick="mostrarStep(1)"><i class="fa-solid fa-arrow-left"></i> Voltar</a>
-      <a href="#step3" class="step-btn-next" onclick="mostrarStep(3)"><i class="fa-solid fa-arrow-right" style="margin-left:4px;"></i> Próximo <i class="fa-solid fa-arrow-right"></i></a>
+      <a href="#step1" class="step-btn-back" onclick="mostrarStep(1)"><img src="/assets/img/icons/arrow-left.svg" alt=""> Voltar</a>
+      <a href="#step3" class="step-btn-next" onclick="mostrarStep(3)"> Próximo </a>
     </div>
 
   </div><!-- /step2 -->
@@ -336,29 +335,29 @@
 
     <nav class="step-nav">
       <div class="step-nav-item done">
-        <div class="step-nav-circle"><i class="fa-solid fa-check" style="font-size:12px;"></i></div>
-        <span class="step-nav-label"><i class="fa-solid fa-user" style="margin-right:3px;font-size:9px;"></i>Pessoal</span>
+        <div class="step-nav-circle"><img src="/assets/img/icons/check.svg" alt=""></div>
+        <span class="step-nav-label"><img src="/assets/img/icons/user.svg" alt="">Pessoal</span>
       </div>
       <div class="step-nav-line done-line"></div>
       <div class="step-nav-item done">
-        <div class="step-nav-circle"><i class="fa-solid fa-check" style="font-size:12px;"></i></div>
-        <span class="step-nav-label"><i class="fa-solid fa-building" style="margin-right:3px;font-size:9px;"></i>Unidade</span>
+        <div class="step-nav-circle"><img src="/assets/img/icons/check.svg" alt=""></div>
+        <span class="step-nav-label"><img src="/assets/img/icons/building.svg" alt="">Unidade</span>
       </div>
       <div class="step-nav-line done-line"></div>
       <div class="step-nav-item active">
         <div class="step-nav-circle">3</div>
-        <span class="step-nav-label"><i class="fa-solid fa-lock" style="margin-right:3px;font-size:9px;"></i>Acesso</span>
+        <span class="step-nav-label"><img src="/assets/img/icons/lock.svg" alt="">Acesso</span>
       </div>
     </nav>
 
     <div class="form-section">
-      <p class="form-section-title"><i class="fa-solid fa-folder-open"></i> Documentos <span class="section-tag obrig">Obrigatório</span></p>
+      <p class="form-section-title"><img src="/assets/img/icons/folder-open.svg" alt=""> Documentos <span class="section-tag obrig">Obrigatório</span></p>
       <div class="step-alert info">
-        <i class="fa-solid fa-circle-info"></i>
+        
         <p>Envie documentos legíveis em <strong>PDF, JPG ou PNG</strong> · Máx. 10 MB por arquivo. Analisados em até 48h.</p>
       </div>
       <label class="doc-upload" for="doc-rg-m">
-        <div class="doc-upload-icon"><i class="fa-solid fa-id-card"></i></div>
+        <div class="doc-upload-icon"><img src="/assets/img/icons/id-card.svg" alt=""></div>
         <div class="doc-upload-text">
           <strong>RG ou CNH (frente e verso)</strong>
           <span>Documento de identidade oficial com foto</span>
@@ -368,7 +367,7 @@
       <input type="file" id="doc-rg-m" accept=".pdf,.jpg,.jpeg,.png" style="display:none;" required>
 
       <label class="doc-upload" for="doc-res-m">
-        <div class="doc-upload-icon amber"><i class="fa-solid fa-house"></i></div>
+        <div class="doc-upload-icon amber"></div>
         <div class="doc-upload-text">
           <strong>Comprovante de residência / Contrato de locação</strong>
           <span>Conta de água, luz, gás ou contrato assinado</span>
@@ -378,7 +377,7 @@
       <input type="file" id="doc-res-m" accept=".pdf,.jpg,.jpeg,.png" style="display:none;" required>
 
       <label class="doc-upload" for="doc-escrit-m">
-        <div class="doc-upload-icon"><i class="fa-solid fa-file-contract"></i></div>
+        <div class="doc-upload-icon"><img src="/assets/img/icons/file-contract.svg" alt=""></div>
         <div class="doc-upload-text">
           <strong>Escritura ou Matrícula do imóvel</strong>
           <span>Somente para proprietários — comprova titularidade</span>
@@ -389,11 +388,11 @@
     </div>
 
     <div class="form-section">
-      <p class="form-section-title"><i class="fa-solid fa-lock"></i> Criação de Senha <span class="section-tag obrig">Obrigatório</span></p>
+      <p class="form-section-title"><img src="/assets/img/icons/lock.svg" alt=""> Criação de Senha <span class="section-tag obrig">Obrigatório</span></p>
       <div class="cad-group">
-        <label><i class="fa-solid fa-lock" style="color:var(--primary);margin-right:5px;font-size:11px;"></i>Senha <span class="req">*</span></label>
+        <label><img src="/assets/img/icons/lock.svg" alt="">Senha <span class="req">*</span></label>
         <div class="cad-input-icon">
-          <i class="fa-solid fa-lock"></i>
+          <img src="/assets/img/icons/lock.svg" alt="">
           <input type="password" placeholder="Crie uma senha forte" required>
         </div>
         <div class="pwd-strength-row">
@@ -406,16 +405,16 @@
           <span class="pwd-level medium">Média</span>
         </div>
         <div class="pwd-reqs">
-          <div class="pwd-req ok"><i class="fa-solid fa-check-circle"></i> Mínimo 8 caracteres</div>
-          <div class="pwd-req ok"><i class="fa-solid fa-check-circle"></i> Maiúsculas e minúsculas</div>
-          <div class="pwd-req"><i class="fa-regular fa-circle"></i> Ao menos 1 número</div>
-          <div class="pwd-req"><i class="fa-regular fa-circle"></i> Ao menos 1 símbolo (!@#$...)</div>
+          <div class="pwd-req ok"> Mínimo 8 caracteres</div>
+          <div class="pwd-req ok"> Maiúsculas e minúsculas</div>
+          <div class="pwd-req"> Ao menos 1 número</div>
+          <div class="pwd-req"> Ao menos 1 símbolo (!@#$...)</div>
         </div>
       </div>
       <div class="cad-group">
-        <label><i class="fa-solid fa-lock-open" style="color:var(--primary);margin-right:5px;font-size:11px;"></i>Confirmar senha <span class="req">*</span></label>
+        <label>Confirmar senha <span class="req">*</span></label>
         <div class="cad-input-icon">
-          <i class="fa-solid fa-lock"></i>
+          <img src="/assets/img/icons/lock.svg" alt="">
           <input type="password" placeholder="Repita a senha" required>
         </div>
       </div>
@@ -442,18 +441,18 @@
       </div>
       <div class="cad-divider">Notificações</div>
       <div class="tag-select">
-        <input type="checkbox" id="n-com" checked><label for="n-com"><i class="fa-solid fa-bullhorn"></i> Comunicados</label>
-        <input type="checkbox" id="n-enc" checked><label for="n-enc"><i class="fa-solid fa-box"></i> Encomendas</label>
-        <input type="checkbox" id="n-bol" checked><label for="n-bol"><i class="fa-solid fa-file-invoice-dollar"></i> Boleto</label>
-        <input type="checkbox" id="n-res"><label for="n-res"><i class="fa-solid fa-calendar-check"></i> Reservas</label>
-        <input type="checkbox" id="n-oco"><label for="n-oco"><i class="fa-solid fa-triangle-exclamation"></i> Ocorrências</label>
+        <input type="checkbox" id="n-com" checked><label for="n-com"><img src="/assets/img/icons/bullhorn.svg" alt=""> Comunicados</label>
+        <input type="checkbox" id="n-enc" checked><label for="n-enc"><img src="/assets/img/icons/box.svg" alt=""> Encomendas</label>
+        <input type="checkbox" id="n-bol" checked><label for="n-bol"><img src="/assets/img/icons/file-invoice-dollar.svg" alt=""> Boleto</label>
+        <input type="checkbox" id="n-res"><label for="n-res"><img src="/assets/img/icons/calendar-check.svg" alt=""> Reservas</label>
+        <input type="checkbox" id="n-oco"><label for="n-oco"><img src="/assets/img/icons/triangle-exclamation.svg" alt=""> Ocorrências</label>
       </div>
     </div>
 
     <div class="form-section">
-      <p class="form-section-title"><i class="fa-solid fa-check-circle"></i> Confirmação Final</p>
+      <p class="form-section-title"> Confirmação Final</p>
       <div class="summary-box">
-        <h4><i class="fa-solid fa-user"></i> Resumo do Cadastro</h4>
+        <h4><img src="/assets/img/icons/user.svg" alt=""> Resumo do Cadastro</h4>
         <div class="summary-row"><span>Perfil</span><span>Morador</span></div>
         <div class="summary-row"><span>Unidade</span><span>A preencher no Step 2</span></div>
         <div class="summary-row"><span>Documentos</span><span>RG + Comprovante</span></div>
@@ -461,31 +460,31 @@
       </div>
       <div class="terms-check">
         <input type="checkbox" required>
-        <span><i class="fa-solid fa-check-circle" style="color:var(--primary);margin-right:5px;"></i>Li e aceito os <a href="#">Termos de Uso</a> e a <a href="#">Política de Privacidade</a> do SmartCondo.</span>
+        <span>Li e aceito os <a href="#">Termos de Uso</a> e a <a href="#">Política de Privacidade</a> do SmartCondo.</span>
       </div>
       <div class="terms-check" style="margin-top:10px;">
         <input type="checkbox" required>
-        <span><i class="fa-solid fa-check-circle" style="color:var(--primary);margin-right:5px;"></i>Declaro que todas as informações e documentos são verdadeiros, assumindo responsabilidade por eventuais falsidades.</span>
+        <span>Declaro que todas as informações e documentos são verdadeiros, assumindo responsabilidade por eventuais falsidades.</span>
       </div>
       <div class="terms-check" style="margin-top:10px;">
         <input type="checkbox" required>
-        <span><i class="fa-solid fa-check-circle" style="color:var(--primary);margin-right:5px;"></i>Autorizo o armazenamento dos meus dados conforme a <a href="#">LGPD (Lei 13.709/2018)</a>.</span>
+        <span>Autorizo o armazenamento dos meus dados conforme a <a href="#">LGPD (Lei 13.709/2018)</a>.</span>
       </div>
     </div>
 
     <div class="step-nav-btns">
-      <a href="#step2" class="step-btn-back" onclick="mostrarStep(2)"><i class="fa-solid fa-arrow-left"></i> Voltar</a>
+      <a href="#step2" class="step-btn-back" onclick="mostrarStep(2)"><img src="/assets/img/icons/arrow-left.svg" alt=""> Voltar</a>
       <a href="../morador/aguardando_aprovacao.html" class="step-btn-next" onclick="return validarStepMorador()">
-        <i class="fa-solid fa-check-circle"></i> Enviar cadastro
+         Enviar cadastro
       </a>
     </div>
 
     <div class="info-card" style="margin-top:14px;">
-      <i class="fa-solid fa-clock"></i>
+      <img src="/assets/img/icons/clock.svg" alt="">
       <p>Cadastro analisado pelo síndico em até <strong>48 horas úteis</strong>. Você receberá confirmação por e-mail.</p>
     </div>
 
-    <p class="cad-login-link">Já tem conta? <a href="../../index.html"><i class="fa-solid fa-arrow-right-to-bracket"></i> Fazer login</a></p>
+    <p class="cad-login-link">Já tem conta? <a href="../../index.html"> Fazer login</a></p>
 
   </div><!-- /step3 -->
 
@@ -497,9 +496,9 @@
     <img src="../../assets/img/acessibilidade.png" class="access-icon-img" alt="">
   </label>
   <div class="access-menu">
-      <label><input type="checkbox" id="font-toggle"> <i class="fa-solid fa-text-height"></i> Aumentar fonte</label>
-      <label><input type="checkbox" id="contrast-toggle"> <i class="fa-solid fa-circle-half-stroke"></i> Alto contraste</label>
-      <label><input type="checkbox" id="read-toggle"> <i class="fa-solid fa-book-open"></i> Modo leitura</label>
+      <label><input type="checkbox" id="font-toggle">  Aumentar fonte</label>
+      <label><input type="checkbox" id="contrast-toggle">  Alto contraste</label>
+      <label><input type="checkbox" id="read-toggle">  Modo leitura</label>
   </div>
 </div>
 

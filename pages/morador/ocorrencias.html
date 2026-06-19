@@ -8,8 +8,7 @@
   <link rel="stylesheet" href="../../assets/css/style.css">
   <link rel="stylesheet" href="../../assets/css/dashboard.css">
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css">
-</head>
+  </head>
 <body class="dashboard-body layout-mobile">
 
   <header class="app-bar">
@@ -19,8 +18,8 @@
         <span class="brand-name">Smart<strong>Condo</strong></span>
       </a>
       <div class="app-bar-right">
-        <a href="perfil.html" class="profile-link"><span class="profile-avatar"><i class="fa-solid fa-user"></i></span><span class="profile-name" id="hdrName">João Silva</span><span class="profile-role">Morador</span></a>
-        <a href="../../index.html" class="logout-btn"><i class="fa-solid fa-right-from-bracket"></i> Sair</a>
+        <a href="perfil.html" class="profile-link"><span class="profile-avatar"><img src="/assets/img/icons/user.svg" alt="" style="width:16px;height:16px;display:block;"></span><span class="profile-name" id="hdrName">João Silva</span><span class="profile-role">Morador</span></a>
+        <a href="../../index.html" class="logout-btn"><img src="/assets/img/icons/right-from-bracket.svg" alt=""> Sair</a>
       </div>
     </div>
   </header>
@@ -28,29 +27,29 @@
   <main class="dash-wrapper">
 
     <a href="dashboard.html" class="dash-back">
-      <i class="fa-solid fa-arrow-left"></i> Painel do Morador
+      <img src="/assets/img/icons/arrow-left.svg" alt=""> Painel do Morador
     </a>
 
     <div class="dash-greeting">
-      <p class="greeting-sub"><i class="fa-solid fa-home" style="margin-right:6px;color:var(--primary);"></i>Apto 204 — João Silva</p>
-      <h2 class="greeting-name"><i class="fa-solid fa-triangle-exclamation" style="margin-right:8px;font-size:22px;opacity:.85;"></i>Ocorrências</h2>
-      <p class="greeting-condo"><i class="fa-solid fa-triangle-exclamation"></i> Registre e acompanhe incidentes no condomínio</p>
+      <p class="greeting-sub">Apto 204 — João Silva</p>
+      <h2 class="greeting-name"><img src="/assets/img/icons/triangle-exclamation.svg" alt="">Ocorrências</h2>
+      <p class="greeting-condo"><img src="/assets/img/icons/triangle-exclamation.svg" alt=""> Registre e acompanhe incidentes no condomínio</p>
     </div>
 
     <div class="stats-row">
-      <div class="stat-card teal"><span class="stat-value">1</span><span class="stat-label"><i class="fa-solid fa-circle" style="margin-right:4px;font-size:8px;color:#f56c6c;"></i>Abertas</span></div>
-      <div class="stat-card blue"><span class="stat-value">2</span><span class="stat-label"><i class="fa-solid fa-magnifying-glass" style="margin-right:4px;font-size:11px;"></i>Em análise</span></div>
-      <div class="stat-card amber"><span class="stat-value">5</span><span class="stat-label"><i class="fa-solid fa-circle-check" style="margin-right:4px;font-size:11px;"></i>Resolvidas</span></div>
+      <div class="stat-card teal"><span class="stat-value">1</span><span class="stat-label">Abertas</span></div>
+      <div class="stat-card blue"><span class="stat-value">2</span><span class="stat-label">Em análise</span></div>
+      <div class="stat-card amber"><span class="stat-value">5</span><span class="stat-label"><img src="/assets/img/icons/circle-check.svg" alt="">Resolvidas</span></div>
     </div>
 
     <!-- Nova ocorrência -->
-    <p class="section-title"><i class="fa-solid fa-plus-circle"></i> Registrar Nova Ocorrência</p>
+    <p class="section-title"> Registrar Nova Ocorrência</p>
     <div class="form-card">
-      <h3><i class="fa-solid fa-circle-exclamation"></i> Descrição da Ocorrência</h3>
+      <h3><img src="/assets/img/icons/circle-exclamation.svg" alt=""> Descrição da Ocorrência</h3>
       <form action="dashboard.html" onsubmit="return validarOcorrencias()">
         <div class="form-row">
           <div class="form-group">
-            <label><i class="fa-solid fa-tag" style="color:var(--primary);margin-right:5px;font-size:11px;"></i>Tipo de ocorrência</label>
+            <label>Tipo de ocorrência</label>
             <select required>
               <option value="" disabled selected>Selecione</option>
               <option>Barulho excessivo</option>
@@ -65,7 +64,7 @@
             </select>
           </div>
           <div class="form-group">
-            <label><i class="fa-solid fa-exclamation-triangle" style="color:var(--primary);margin-right:5px;font-size:11px;"></i>Prioridade</label>
+            <label>Prioridade</label>
             <select required>
               <option value="" disabled selected>Selecione</option>
               <option>🔴 Urgente — risco imediato</option>
@@ -76,7 +75,7 @@
           </div>
         </div>
         <div class="form-group">
-          <label><i class="fa-solid fa-map-marker-alt" style="color:var(--primary);margin-right:5px;font-size:11px;"></i>Local da ocorrência</label>
+          <label>Local da ocorrência</label>
           <select required>
             <option value="" disabled selected>Selecione</option>
             <option>Minha unidade (Apto 204)</option>
@@ -89,29 +88,29 @@
           </select>
         </div>
         <div class="form-group">
-          <label><i class="fa-solid fa-align-left" style="color:var(--primary);margin-right:5px;font-size:11px;"></i>Descrição detalhada</label>
+          <label>Descrição detalhada</label>
           <textarea required placeholder="Descreva a ocorrência com o máximo de detalhes possível..." style="min-height:100px;width:100%;padding:12px;border-radius:var(--radius-xs);border:1.5px solid var(--border);font-size:14px;font-family:'Plus Jakarta Sans',sans-serif;background:var(--surface-2);resize:vertical;outline:none;" onFocus="this.style.borderColor='var(--primary)'" onBlur="this.style.borderColor='var(--border)'"></textarea>
         </div>
         <div class="form-group">
-          <label><i class="fa-solid fa-camera" style="color:var(--primary);margin-right:5px;font-size:11px;"></i>Foto ou comprovante <span style="font-size:11px;color:var(--muted);font-weight:400;">(opcional)</span></label>
+          <label><img src="/assets/img/icons/camera.svg" alt="">Foto ou comprovante <span style="font-size:11px;color:var(--muted);font-weight:400;">(opcional)</span></label>
           <label style="display:flex;align-items:center;gap:12px;padding:14px;border:2px dashed var(--border);border-radius:var(--radius-xs);cursor:pointer;background:var(--surface-2);" for="ocorr-foto">
-            <i class="fa-solid fa-camera" style="font-size:20px;color:var(--muted);"></i>
+            <img src="/assets/img/icons/camera.svg" alt="">
             <div><p style="font-size:13px;color:var(--muted);font-weight:500;">Anexar imagem ou arquivo</p><p style="font-size:11px;color:#b8c6cc;">JPG, PNG, PDF · Máx. 10 MB</p></div>
           </label>
           <input type="file" id="ocorr-foto" accept="image/*,.pdf" style="display:none;">
         </div>
         <button class="action-btn" type="submit" style="margin-top:4px;">
-          <i class="fa-solid fa-paper-plane"></i> Registrar Ocorrência
+           Registrar Ocorrência
         </button>
       </form>
     </div>
 
     <!-- Ocorrências abertas -->
-    <p class="section-title"><i class="fa-solid fa-list"></i> Minhas Ocorrências</p>
+    <p class="section-title"> Minhas Ocorrências</p>
     <div class="list-items">
 
       <div class="list-item">
-        <div class="card-icon icon-red" style="width:42px;height:42px;border-radius:10px;flex-shrink:0;"><i class="fa-solid fa-droplet"></i></div>
+        <div class="card-icon icon-red" style="width:42px;height:42px;border-radius:10px;flex-shrink:0;"></div>
         <div class="list-info">
           <h5>Infiltração no teto do banheiro</h5>
           <p>Registrada em 12/03 &nbsp;·&nbsp; Apto 204 · Minha unidade</p>
@@ -120,16 +119,16 @@
       </div>
 
       <div class="list-item">
-        <div class="card-icon icon-yellow" style="width:42px;height:42px;border-radius:10px;flex-shrink:0;"><i class="fa-solid fa-volume-xmark"></i></div>
+        <div class="card-icon icon-yellow" style="width:42px;height:42px;border-radius:10px;flex-shrink:0;"></div>
         <div class="list-info">
           <h5>Barulho excessivo — Apto acima</h5>
           <p>Registrada em 05/03 &nbsp;·&nbsp; Corredor 2º andar</p>
         </div>
-        <span class="badge badge-blue"><i class="fa-solid fa-magnifying-glass" style="margin-right:4px;font-size:11px;"></i>Em análise</span>
+        <span class="badge badge-blue">Em análise</span>
       </div>
 
       <div class="list-item">
-        <div class="card-icon icon-teal" style="width:42px;height:42px;border-radius:10px;flex-shrink:0;"><i class="fa-solid fa-lightbulb"></i></div>
+        <div class="card-icon icon-teal" style="width:42px;height:42px;border-radius:10px;flex-shrink:0;"></div>
         <div class="list-info">
           <h5>Lâmpada queimada — Corredor Bloco A</h5>
           <p>Registrada em 18/02 &nbsp;·&nbsp; Resolvida em 22/02</p>
@@ -138,7 +137,7 @@
       </div>
 
       <div class="list-item">
-        <div class="card-icon icon-blue" style="width:42px;height:42px;border-radius:10px;flex-shrink:0;"><i class="fa-solid fa-elevator"></i></div>
+        <div class="card-icon icon-blue" style="width:42px;height:42px;border-radius:10px;flex-shrink:0;"></div>
         <div class="list-info">
           <h5>Porta do elevador não fechando corretamente</h5>
           <p>Registrada em 10/01 &nbsp;·&nbsp; Resolvida em 15/01</p>
@@ -156,9 +155,9 @@
       <img src="../../assets/img/acessibilidade.png" class="access-icon-img" alt="">
     </label>
     <div class="access-menu">
-      <label><input type="checkbox" id="font-toggle"> <i class="fa-solid fa-text-height"></i> Aumentar fonte</label>
-      <label><input type="checkbox" id="contrast-toggle"> <i class="fa-solid fa-circle-half-stroke"></i> Alto contraste</label>
-      <label><input type="checkbox" id="read-toggle"> <i class="fa-solid fa-book-open"></i> Modo leitura</label>
+      <label><input type="checkbox" id="font-toggle">  Aumentar fonte</label>
+      <label><input type="checkbox" id="contrast-toggle">  Alto contraste</label>
+      <label><input type="checkbox" id="read-toggle">  Modo leitura</label>
     </div>
   </div>
 

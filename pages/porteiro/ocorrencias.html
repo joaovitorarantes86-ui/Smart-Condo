@@ -8,8 +8,7 @@
   <link rel="stylesheet" href="../../assets/css/style.css">
   <link rel="stylesheet" href="../../assets/css/dashboard.css">
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css">
-</head>
+  </head>
 <body class="dashboard-body layout-desktop">
 
   <header class="app-bar">
@@ -19,8 +18,8 @@
         <span class="brand-name">Smart<strong>Condo</strong></span>
       </a>
       <div class="app-bar-right">
-        <a href="perfil.html" class="profile-link"><span class="profile-avatar"><i class="fa-solid fa-shield-halved"></i></span><span class="profile-name" id="hdrName">Carlos Pereira</span><span class="profile-role">Porteiro</span></a>
-        <a href="../../index.html" class="logout-btn"><i class="fa-solid fa-right-from-bracket"></i> Sair</a>
+        <a href="perfil.html" class="profile-link"><span class="profile-avatar"><img src="/assets/img/icons/shield-halved.svg" alt="" style="width:16px;height:16px;display:block;"></span><span class="profile-name" id="hdrName">Carlos Pereira</span><span class="profile-role">Porteiro</span></a>
+        <a href="../../index.html" class="logout-btn"><img src="/assets/img/icons/right-from-bracket.svg" alt=""> Sair</a>
       </div>
     </div>
   </header>
@@ -28,29 +27,29 @@
   <main class="dash-wrapper">
 
     <a href="dashboard.html" class="dash-back">
-      <i class="fa-solid fa-arrow-left"></i> Painel do Porteiro
+      <img src="/assets/img/icons/arrow-left.svg" alt=""> Painel do Porteiro
     </a>
 
     <div class="dash-greeting">
-      <p class="greeting-sub"><i class="fa-solid fa-clock" style="margin-right:6px;color:var(--primary);"></i>Turno 07h – 15h · Carlos Pereira</p>
+      <p class="greeting-sub"><img src="/assets/img/icons/clock.svg" alt="">Turno 07h – 15h · Carlos Pereira</p>
       <h2 class="greeting-name"><img src="../../assets/img/icons/circle-exclamation.svg" alt="" style="width:26px;height:26px;vertical-align:middle;margin-right:8px;filter:brightness(0) invert(1);"> Registrar Ocorrência</h2>
       <p class="greeting-condo"><img src="../../assets/img/icons/circle-exclamation.svg" alt="" style="width:16px;height:16px;vertical-align:middle;margin-right:6px;filter:brightness(0) invert(1);"> Documente incidentes e irregularidades</p>
     </div>
 
     <div class="stats-row">
-      <div class="stat-card red"><span class="stat-value">2</span><span class="stat-label"><i class="fa-solid fa-circle-exclamation" style="margin-right:4px;font-size:11px;"></i>Abertas</span></div>
-      <div class="stat-card blue"><span class="stat-value">3</span><span class="stat-label"><i class="fa-regular fa-calendar-week" style="margin-right:4px;font-size:11px;"></i>Semana</span></div>
-      <div class="stat-card teal"><span class="stat-value">14</span><span class="stat-label"><i class="fa-regular fa-calendar" style="margin-right:4px;font-size:11px;"></i>Mês</span></div>
+      <div class="stat-card red"><span class="stat-value">2</span><span class="stat-label"><img src="/assets/img/icons/circle-exclamation.svg" alt="">Abertas</span></div>
+      <div class="stat-card blue"><span class="stat-value">3</span><span class="stat-label">Semana</span></div>
+      <div class="stat-card teal"><span class="stat-value">14</span><span class="stat-label">Mês</span></div>
     </div>
 
     <!-- Formulário -->
-    <p class="section-title"><i class="fa-solid fa-plus-circle"></i> Nova Ocorrência</p>
+    <p class="section-title"> Nova Ocorrência</p>
     <div class="form-card">
-      <h3><i class="fa-solid fa-pen-to-square"></i> Dados da Ocorrência</h3>
+      <h3> Dados da Ocorrência</h3>
       <form action="dashboard.html">
         <div class="form-row">
           <div class="form-group">
-            <label><i class="fa-solid fa-tag" style="color:var(--primary);margin-right:5px;font-size:11px;"></i>Tipo de ocorrência</label>
+            <label>Tipo de ocorrência</label>
             <select required>
               <option value="" disabled selected>Selecione</option>
               <option>Entrada não autorizada</option>
@@ -65,7 +64,7 @@
             </select>
           </div>
           <div class="form-group">
-            <label><i class="fa-solid fa-exclamation-triangle" style="color:var(--primary);margin-right:5px;font-size:11px;"></i>Grau de urgência</label>
+            <label>Grau de urgência</label>
             <select required>
               <option value="" disabled selected>Selecione</option>
               <option>🔴 Urgente — acionar síndico imediatamente</option>
@@ -76,7 +75,7 @@
         </div>
         <div class="form-row">
           <div class="form-group">
-            <label><i class="fa-solid fa-map-marker-alt" style="color:var(--primary);margin-right:5px;font-size:11px;"></i>Local da ocorrência</label>
+            <label>Local da ocorrência</label>
             <select required>
               <option value="" disabled selected>Selecione</option>
               <option>Portaria</option>
@@ -89,7 +88,7 @@
             </select>
           </div>
           <div class="form-group">
-            <label><i class="fa-solid fa-building" style="color:var(--primary);margin-right:5px;font-size:11px;"></i>Apartamento envolvido</label>
+            <label><img src="/assets/img/icons/building.svg" alt="">Apartamento envolvido</label>
             <select required>
               <option value="" disabled selected>Não aplicável / selecione</option>
               <option>Apto 101</option><option>Apto 102</option><option>Apto 103</option>
@@ -98,20 +97,20 @@
           </div>
         </div>
         <div class="form-group">
-          <label><i class="fa-regular fa-calendar" style="color:var(--primary);margin-right:5px;font-size:11px;"></i>Data e horário da ocorrência</label>
+          <label>Data e horário da ocorrência</label>
           <input type="datetime-local" style="width:100%;padding:12px;border-radius:var(--radius-xs);border:1.5px solid var(--border);font-size:14px;font-family:'Plus Jakarta Sans',sans-serif;background:var(--surface-2);outline:none;" required>
         </div>
         <div class="form-group">
-          <label><i class="fa-solid fa-align-left" style="color:var(--primary);margin-right:5px;font-size:11px;"></i>Descrição completa</label>
+          <label>Descrição completa</label>
           <textarea placeholder="Descreva detalhadamente o que ocorreu: quem estava envolvido, o que foi feito, quais medidas foram tomadas..." style="min-height:120px;width:100%;padding:12px;border-radius:var(--radius-xs);border:1.5px solid var(--border);font-size:14px;font-family:'Plus Jakarta Sans',sans-serif;background:var(--surface-2);resize:vertical;outline:none;" required></textarea>
         </div>
         <div class="form-row">
           <div class="form-group">
-            <label><i class="fa-solid fa-users" style="color:var(--primary);margin-right:5px;font-size:11px;"></i>Testemunhas</label>
+            <label>Testemunhas</label>
             <input type="text" placeholder="Nomes de quem presenciou">
           </div>
           <div class="form-group">
-            <label><i class="fa-solid fa-check-circle" style="color:var(--primary);margin-right:5px;font-size:11px;"></i>Providência tomada</label>
+            <label>Providência tomada</label>
             <select required>
               <option value="" disabled selected>Selecione</option>
               <option>Apenas registrado</option>
@@ -123,24 +122,24 @@
           </div>
         </div>
         <div class="form-group">
-          <label><i class="fa-solid fa-camera" style="color:var(--primary);margin-right:5px;font-size:11px;"></i>Evidências fotográficas <span style="font-size:11px;color:var(--muted);font-weight:400;">(opcional)</span></label>
+          <label><img src="/assets/img/icons/camera.svg" alt="">Evidências fotográficas <span style="font-size:11px;color:var(--muted);font-weight:400;">(opcional)</span></label>
           <label style="display:flex;align-items:center;gap:12px;padding:14px;border:2px dashed var(--border);border-radius:var(--radius-xs);cursor:pointer;background:var(--surface-2);" for="ocorr-p-foto">
-            <i class="fa-solid fa-camera" style="font-size:20px;color:var(--muted);"></i>
+            <img src="/assets/img/icons/camera.svg" alt="">
             <div><p style="font-size:13px;color:var(--muted);font-weight:500;">Anexar imagem ou arquivo</p><p style="font-size:11px;color:#b8c6cc;">JPG, PNG, PDF · Máx. 10 MB</p></div>
           </label>
           <input type="file" id="ocorr-p-foto" accept="image/*,.pdf" style="display:none;">
         </div>
         <button class="action-btn" type="submit" style="margin-top:4px;">
-          <i class="fa-solid fa-file-circle-check"></i> Registrar Ocorrência
+           Registrar Ocorrência
         </button>
       </form>
     </div>
 
     <!-- Ocorrências abertas -->
-    <p class="section-title"><i class="fa-solid fa-list"></i> Ocorrências em Aberto</p>
+    <p class="section-title"> Ocorrências em Aberto</p>
     <div class="list-items">
       <div class="list-item">
-        <div class="card-icon icon-red" style="width:44px;height:44px;border-radius:12px;flex-shrink:0;"><i class="fa-solid fa-person-running"></i></div>
+        <div class="card-icon icon-red" style="width:44px;height:44px;border-radius:12px;flex-shrink:0;"></div>
         <div class="list-info">
           <h5>Entrada não autorizada — Fundos</h5>
           <p>Indivíduo escalou o muro pela saída de serviço às 06h50 · Câmeras registraram · Polícia notificada</p>
@@ -148,7 +147,7 @@
         <span class="badge badge-alert">Urgente</span>
       </div>
       <div class="list-item">
-        <div class="card-icon icon-yellow" style="width:44px;height:44px;border-radius:12px;flex-shrink:0;"><i class="fa-solid fa-volume-high"></i></div>
+        <div class="card-icon icon-yellow" style="width:44px;height:44px;border-radius:12px;flex-shrink:0;"></div>
         <div class="list-info">
           <h5>Barulho excessivo após 22h — Apto 302</h5>
           <p>Morador do Apto 301 reclamou. Aviso verbal dado ao ocupante do 302 · 15/03 às 23h15</p>
@@ -158,9 +157,9 @@
     </div>
 
     <!-- Histórico -->
-    <p class="section-title"><i class="fa-solid fa-clock-rotate-left"></i> Histórico da Semana</p>
+    <p class="section-title"> Histórico da Semana</p>
     <div class="data-table">
-      <div class="table-head cols-4"><span><i class="fa-solid fa-circle-exclamation" style="margin-right:5px;color:var(--primary);"></i>Tipo</span><span><i class="fa-solid fa-location-dot" style="margin-right:4px;color:var(--muted);"></i>Local</span><span><i class="fa-regular fa-calendar" style="margin-right:4px;color:var(--muted);"></i>Data</span><span><i class="fa-solid fa-flag"></i> Status</span></div>
+      <div class="table-head cols-4"><span><img src="/assets/img/icons/circle-exclamation.svg" alt="">Tipo</span><span>Local</span><span>Data</span><span> Status</span></div>
       <div class="table-row cols-4"><span>Dano ao patrimônio</span><span>Estacionamento</span><span>16/03</span><span><span class="badge badge-ok">Resolvida</span></span></div>
       <div class="table-row cols-4"><span>Descumprimento de regra</span><span>Piscina</span><span>15/03</span><span><span class="badge badge-ok">Resolvida</span></span></div>
       <div class="table-row cols-4"><span>Barulho excessivo</span><span>Apto 302</span><span>15/03</span><span><span class="badge badge-pending">Em análise</span></span></div>
@@ -175,9 +174,9 @@
       <img src="../../assets/img/acessibilidade.png" class="access-icon-img" alt="">
     </label>
     <div class="access-menu">
-      <label><input type="checkbox" id="font-toggle"> <i class="fa-solid fa-text-height"></i> Aumentar fonte</label>
-      <label><input type="checkbox" id="contrast-toggle"> <i class="fa-solid fa-circle-half-stroke"></i> Alto contraste</label>
-      <label><input type="checkbox" id="read-toggle"> <i class="fa-solid fa-book-open"></i> Modo leitura</label>
+      <label><input type="checkbox" id="font-toggle">  Aumentar fonte</label>
+      <label><input type="checkbox" id="contrast-toggle">  Alto contraste</label>
+      <label><input type="checkbox" id="read-toggle">  Modo leitura</label>
     </div>
   </div>
 
