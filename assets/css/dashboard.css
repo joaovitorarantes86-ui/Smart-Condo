@@ -1000,3 +1000,119 @@ body:has(.step-page:target) .step-page.default-step {
   .step-nav-line  { min-width: 14px; }
   .step-btn-next  { font-size: 14px; }
 }
+
+/* ═══════════════════════════════════════════════════════════
+   PREMIUM — Camada de polimento visual
+   Sem alteração de cores — apenas refinamentos
+   ═══════════════════════════════════════════════════════════ */
+
+/* ── Card subtle glass hover ─────────────────────────────── */
+.dash-card::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,.5), transparent);
+  opacity: 0;
+  transition: opacity .3s var(--ease-smooth);
+  pointer-events: none;
+}
+.dash-card:hover::after { opacity: 1; }
+
+/* ── List item subtle shine ───────────────────────────────── */
+.list-item::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,.4), transparent);
+  background-size: 200% 100%;
+  opacity: 0;
+  transition: opacity .3s;
+  pointer-events: none;
+}
+.list-item { position: relative; overflow: hidden; }
+.list-item:hover::after { opacity: 1; animation: shimmer 1s linear; }
+
+/* ── Stat card subtle gradient overlay ────────────────────── */
+.stat-card::after {
+  content: '';
+  position: absolute; bottom: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--primary), transparent);
+  opacity: 0;
+  transition: opacity .3s;
+}
+.stat-card:hover::after { opacity: .6; }
+
+/* ── Badge subtle pulse ──────────────────────────────────── */
+.badge-alert { animation: badge-pulse 2.8s ease-in-out infinite; }
+
+@keyframes badge-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(245,108,108,.3); }
+  50% { box-shadow: 0 0 0 5px rgba(245,108,108,0); }
+}
+
+/* ── Section title subtle accent ──────────────────────────── */
+.section-title { position: relative; display: inline-block; }
+.section-title::after {
+  content: '';
+  position: absolute; bottom: -3px; left: 0; right: 0;
+  height: 1.5px;
+  background: linear-gradient(90deg, var(--primary), transparent);
+  border-radius: 1px;
+  opacity: .35;
+}
+
+/* ── Button loading state ─────────────────────────────────── */
+.action-btn.loading,
+.login-btn.loading,
+.cad-submit.loading {
+  pointer-events: none;
+  opacity: .75;
+}
+.action-btn.loading::before,
+.login-btn.loading::before,
+.cad-submit.loading::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(90deg, transparent 30%, rgba(255,255,255,.2) 50%, transparent 70%);
+  background-size: 200% 100%;
+  animation: shimmer 1s linear infinite;
+}
+
+/* ── Table row subtle divider ─────────────────────────────── */
+.data-table { border-collapse: separate; }
+.table-row { position: relative; }
+.table-row::after {
+  content: '';
+  position: absolute; left: 18px; right: 18px; bottom: 0;
+  height: 1px;
+  background: var(--border-soft);
+}
+.table-row:last-child::after { display: none; }
+
+/* ── Smooth number display ────────────────────────────────── */
+.stat-value { font-variant-numeric: tabular-nums; }
+
+/* ── Reserve card subtle accent ───────────────────────────── */
+.reserve-card { position: relative; }
+.reserve-card::after {
+  content: '';
+  position: absolute; left: 0; top: 10%; bottom: 10%;
+  width: 3px;
+  border-radius: 3px;
+  background: var(--primary);
+  opacity: 0;
+  transition: opacity .25s;
+}
+.reserve-card:hover::after { opacity: .5; }
+
+/* ── Space card subtle top accent ─────────────────────────── */
+.space-card { position: relative; }
+.space-card::after {
+  content: '';
+  position: absolute; top: 0; left: 20%; right: 20%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--primary), transparent);
+  border-radius: 2px;
+  opacity: 0;
+  transition: opacity .25s;
+}
+.space-card:hover::after { opacity: .5; }
