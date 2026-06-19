@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="../../assets/css/style.css">
   <link rel="stylesheet" href="../../assets/css/dashboard.css">
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.5.1/css/all.css">
   <style>
     .p-card{background:var(--surface);border-radius:var(--radius-sm);padding:24px;margin-bottom:18px;border:1px solid var(--border);box-shadow:var(--shadow-sm);transition:all .25s var(--ease-smooth);}
     .p-card:hover{box-shadow:var(--shadow-md);}
@@ -56,12 +56,13 @@
 </head>
 <body class="dashboard-body layout-mobile">
   <header class="app-bar"><div class="app-bar-inner wide">
-    <a href="../../index.html" class="app-bar-brand"><img src="../../assets/img/logo.png" alt="" class="logo-sm"><span class="brand-name">Smart<strong>Condo</strong></span></a>
+    <div class="app-bar-left">
+      <a href="dashboard.html" class="mobile-back"><i class="fa-solid fa-arrow-left"></i></a>
+      <a href="../../index.html" class="app-bar-brand"><img src="../../assets/img/logo.png" alt="" class="logo-sm"><span class="brand-name">Smart<strong>Condo</strong></span></a>
+    </div>
     <div class="app-bar-right"><span class="profile-link"><span class="profile-avatar"><i class="fa-solid fa-star"></i></span><span class="profile-name" id="hdrName">Roberto Nascimento</span><span class="profile-role">Síndico</span></span><a href="../../index.html" class="logout-btn"><i class="fa-solid fa-right-from-bracket"></i> Sair</a></div>
   </div></header>
   <main class="dash-wrapper wide">
-
-    <a href="dashboard.html" class="dash-back"><i class="fa-solid fa-arrow-left"></i> Painel do Síndico</a>
 
     <div class="dash-greeting">
       <p class="greeting-sub"><i class="fa-solid fa-user-tie"></i> Perfil do Síndico</p>
