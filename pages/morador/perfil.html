@@ -52,7 +52,7 @@
 <body class="dashboard-body layout-mobile">
   <header class="app-bar"><div class="app-bar-inner">
     <a href="../../index.html" class="app-bar-brand"><img src="../../assets/img/logo.png" alt="" class="logo-sm"><span class="brand-name">Smart<strong>Condo</strong></span></a>
-    <div class="app-bar-right"><span class="profile-link"><span class="profile-avatar"><i class="fa-solid fa-user"></i></span><span class="profile-role">Morador</span></span><a href="../../index.html" class="logout-btn"><i class="fa-solid fa-right-from-bracket"></i> Sair</a></div>
+    <div class="app-bar-right"><span class="profile-link"><span class="profile-avatar"><i class="fa-solid fa-user"></i></span><span class="profile-name" id="hdrName">João Silva</span><span class="profile-role">Morador</span></span><a href="../../index.html" class="logout-btn"><i class="fa-solid fa-right-from-bracket"></i> Sair</a></div>
   </div></header>
   <main class="dash-wrapper">
 
@@ -268,5 +268,6 @@
 
     carregarDados();
   </script>
+<script>try{var _d=JSON.parse(localStorage.getItem("smartcondo_perfil_morador"));if(_d&&_d.nome)document.getElementById("hdrName").textContent=_d.nome;}catch(_e){}</script>
 </body>
 </html>

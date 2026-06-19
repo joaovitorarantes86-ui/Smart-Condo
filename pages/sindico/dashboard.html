@@ -18,7 +18,7 @@
         <span class="brand-name">Smart<strong>Condo</strong></span>
       </a>
       <div class="app-bar-right">
-        <a href="perfil.html" class="profile-link"><span class="profile-avatar"><i class="fa-solid fa-star"></i></span><span class="profile-role">Síndico</span></a>
+        <a href="perfil.html" class="profile-link"><span class="profile-avatar"><i class="fa-solid fa-star"></i></span><span class="profile-name" id="hdrName">Roberto Nascimento</span><span class="profile-role">Síndico</span></a>
         <a href="../../index.html" class="logout-btn"><i class="fa-solid fa-right-from-bracket"></i> Sair</a>
       </div>
     </div>
@@ -129,5 +129,6 @@
     </div>
   </div>
 <script src="../../assets/js/validation.js"></script>
+<script>try{var _d=JSON.parse(localStorage.getItem("smartcondo_perfil_sindico"));if(_d&&_d.nome)document.getElementById("hdrName").textContent=_d.nome;}catch(_e){}</script>
 </body>
 </html>

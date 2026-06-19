@@ -11,7 +11,7 @@
 <body class="dashboard-body layout-mobile">
   <header class="app-bar"><div class="app-bar-inner wide">
     <a href="../../index.html" class="app-bar-brand"><img src="../../assets/img/logo.png" alt="" class="logo-sm"><span class="brand-name">Smart<strong>Condo</strong></span></a>
-    <div class="app-bar-right"><a href="perfil.html" class="profile-link"><span class="profile-avatar"><i class="fa-solid fa-star"></i></span><span class="profile-role">Síndico</span></a><a href="../../index.html" class="logout-btn"><i class="fa-solid fa-right-from-bracket"></i> Sair</a></div>
+    <div class="app-bar-right"><a href="perfil.html" class="profile-link"><span class="profile-avatar"><i class="fa-solid fa-star"></i></span><span class="profile-name" id="hdrName">Roberto Nascimento</span><span class="profile-role">Síndico</span></a><a href="../../index.html" class="logout-btn"><i class="fa-solid fa-right-from-bracket"></i> Sair</a></div>
   </div></header>
   <main class="dash-wrapper wide">
     <a href="dashboard.html" class="dash-back"><i class="fa-solid fa-arrow-left"></i> Painel do Síndico</a>
@@ -79,4 +79,5 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 });
 </script>
+<script>try{var _d=JSON.parse(localStorage.getItem("smartcondo_perfil_sindico"));if(_d&&_d.nome)document.getElementById("hdrName").textContent=_d.nome;}catch(_e){}</script>
 </body></html>
