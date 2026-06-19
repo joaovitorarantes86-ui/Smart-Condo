@@ -55,37 +55,37 @@
 <body class="dashboard-body layout-mobile">
   <header class="app-bar"><div class="app-bar-inner wide">
     <div class="app-bar-left">
-      <a href="dashboard.html" class="mobile-back"><img src="/assets/img/icons/arrow-left.svg" alt=""></a>
+      <a href="dashboard.html" class="mobile-back"><img src="/assets/img/icons/arrow-left.svg" width="16" height="16" alt=""></a>
       <a href="../../index.html" class="app-bar-brand"><img src="../../assets/img/logo.png" alt="" class="logo-sm"><span class="brand-name">Smart<strong>Condo</strong></span></a>
     </div>
-    <div class="app-bar-right"><span class="profile-link"><span class="profile-avatar"><img src="/assets/img/icons/star.svg" alt="" style="width:16px;height:16px;display:block;"></span><span class="profile-name" id="hdrName">Roberto Nascimento</span><span class="profile-role">Síndico</span></span><a href="../../index.html" class="logout-btn"><img src="/assets/img/icons/right-from-bracket.svg" alt=""> Sair</a></div>
+    <div class="app-bar-right"><span class="profile-link"><span class="profile-avatar"><img src="/assets/img/icons/star.svg" alt="" style="width:16px;height:16px;display:block;width:16px;height:16px"></span><span class="profile-name" id="hdrName">Roberto Nascimento</span><span class="profile-role">Síndico</span></span><a href="../../index.html" class="logout-btn"><img src="/assets/img/icons/right-from-bracket.svg" width="16" height="16" alt=""> Sair</a></div>
   </div></header>
   <main class="dash-wrapper wide">
 
     <div class="dash-greeting">
       <p class="greeting-sub"> Perfil do Síndico</p>
-      <h2 class="greeting-name"><img src="/assets/img/icons/user.svg" alt="">Meu Perfil</h2>
+      <h2 class="greeting-name"><img src="/assets/img/icons/user.svg" width="16" height="16" alt="">Meu Perfil</h2>
       <p class="greeting-condo"> Seus dados pessoais e informações do condomínio</p>
     </div>
 
     <div class="profile-top">
       <div class="p-avatar-wrap">
         <div class="p-avatar sindico" onclick="document.getElementById('avatarInput').click()">
-          <img src="/assets/img/icons/user.svg" alt="" id="avatarIcon">
+          <img src="/assets/img/icons/user.svg" width="16" height="16" alt="" id="avatarIcon">
           <img id="avatarPreview" src="" alt="" style="display:none;">
-          <div class="avatar-overlay"><img src="/assets/img/icons/camera.svg" alt=""></div>
+          <div class="avatar-overlay"><img src="/assets/img/icons/camera.svg" width="16" height="16" alt=""></div>
           <input type="file" id="avatarInput" accept="image/*" onchange="trocarAvatar(event)">
         </div>
       </div>
       <div class="p-name">
         <h1 id="viewNome">Roberto Nascimento</h1>
-        <p class="p-role"><img src="/assets/img/icons/star.svg" alt=""> Síndico</p>
+        <p class="p-role"><img src="/assets/img/icons/star.svg" width="16" height="16" alt=""> Síndico</p>
         <span class="p-tag">Residencial das Palmeiras</span>
       </div>
     </div>
 
     <div id="dadosPessoais" class="p-card">
-      <h3><img src="/assets/img/icons/user.svg" alt=""> Dados Pessoais</h3>
+      <h3><img src="/assets/img/icons/user.svg" width="16" height="16" alt=""> Dados Pessoais</h3>
       <div class="p-grid">
         <div class="p-field"><div class="p-lbl">CPF</div><div class="p-val" id="val-cpf">321.654.987-00</div></div>
         <div class="p-field"><div class="p-lbl">RG</div><div class="p-val" id="val-rg">45.678.901-2</div></div>
@@ -97,7 +97,7 @@
     </div>
 
     <div id="dadosCondo" class="p-card">
-      <h3><img src="/assets/img/icons/building.svg" alt=""> Dados do Condomínio</h3>
+      <h3><img src="/assets/img/icons/building.svg" width="16" height="16" alt=""> Dados do Condomínio</h3>
       <div class="p-grid">
         <div class="p-field"><div class="p-lbl">Nome do Condomínio</div><div class="p-val" id="val-condNome">Residencial das Palmeiras</div><div class="p-edit"><input type="text" id="edit-condNome" value="Residencial das Palmeiras"></div></div>
         <div class="p-field"><div class="p-lbl">CNPJ</div><div class="p-val" id="val-cnpj">12.345.678/0001-90</div></div>
@@ -109,7 +109,7 @@
     </div>
 
     <div id="dadosMandato" class="p-card">
-      <h3><img src="/assets/img/icons/calendar-check.svg" alt=""> Mandato</h3>
+      <h3><img src="/assets/img/icons/calendar-check.svg" width="16" height="16" alt=""> Mandato</h3>
       <div class="p-grid">
         <div class="p-field"><div class="p-lbl">Início do Mandato</div><div class="p-val" id="val-mandatoInicio">Janeiro de 2023</div><div class="p-edit"><input type="text" id="edit-mandatoInicio" value="Janeiro de 2023"></div></div>
         <div class="p-field"><div class="p-lbl">Término do Mandato</div><div class="p-val" id="val-mandatoFim">Janeiro de 2025</div><div class="p-edit"><input type="text" id="edit-mandatoFim" value="Janeiro de 2025"></div></div>
@@ -117,18 +117,18 @@
     </div>
 
     <div class="p-actions" id="viewActions">
-      <button class="action-btn" onclick="entrarEdicao()"><img src="/assets/img/icons/pen.svg" alt=""> Editar Perfil</button>
-      <a href="dashboard.html" class="action-btn outline"><img src="/assets/img/icons/arrow-left.svg" alt=""> Voltar</a>
+      <button class="action-btn" onclick="entrarEdicao()"><img src="/assets/img/icons/pen.svg" width="16" height="16" alt=""> Editar Perfil</button>
+      <a href="dashboard.html" class="action-btn outline"><img src="/assets/img/icons/arrow-left.svg" width="16" height="16" alt=""> Voltar</a>
     </div>
 
     <div class="p-actions" id="editActions" style="display:none;">
-      <button class="action-btn" onclick="salvarDados()"><img src="/assets/img/icons/floppy-disk.svg" alt=""> Salvar Alterações</button>
-      <button class="action-btn outline" onclick="cancelarEdicao()"><img src="/assets/img/icons/xmark.svg" alt=""> Cancelar</button>
+      <button class="action-btn" onclick="salvarDados()"><img src="/assets/img/icons/floppy-disk.svg" width="16" height="16" alt=""> Salvar Alterações</button>
+      <button class="action-btn outline" onclick="cancelarEdicao()"><img src="/assets/img/icons/xmark.svg" width="16" height="16" alt=""> Cancelar</button>
     </div>
 
   </main>
 
-  <div id="toast" class="toast"><img src="/assets/img/icons/circle-check.svg" alt=""> <span id="toastMsg">Dados salvos com sucesso!</span></div>
+  <div id="toast" class="toast"><img src="/assets/img/icons/circle-check.svg" width="16" height="16" alt=""> <span id="toastMsg">Dados salvos com sucesso!</span></div>
 
   <div class="accessibility-widget">
     <input type="checkbox" id="access-toggle">
