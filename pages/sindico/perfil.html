@@ -72,7 +72,7 @@
     <div class="profile-top">
       <div class="p-avatar-wrap">
         <div class="p-avatar sindico" onclick="document.getElementById('avatarInput').click()">
-          <i class="fa-solid fa-user-tie" id="avatarIcon"></i>
+          <i class="fa-solid fa-user" id="avatarIcon"></i>
           <img id="avatarPreview" src="" alt="" style="display:none;">
           <div class="avatar-overlay"><i class="fa-solid fa-camera"></i></div>
           <input type="file" id="avatarInput" accept="image/*" onchange="trocarAvatar(event)">
@@ -88,8 +88,8 @@
     <div id="dadosPessoais" class="p-card">
       <h3><i class="fa-solid fa-user" style="color:#7c3aed;"></i> Dados Pessoais</h3>
       <div class="p-grid">
-        <div class="p-field"><div class="p-lbl">CPF</div><div class="p-val" id="val-cpf">321.654.987-00</div><div class="p-edit"><input type="text" id="edit-cpf" value="321.654.987-00" class="mask-cpf"></div></div>
-        <div class="p-field"><div class="p-lbl">RG</div><div class="p-val" id="val-rg">45.678.901-2</div><div class="p-edit"><input type="text" id="edit-rg" value="45.678.901-2"></div></div>
+        <div class="p-field"><div class="p-lbl">CPF</div><div class="p-val" id="val-cpf">321.654.987-00</div></div>
+        <div class="p-field"><div class="p-lbl">RG</div><div class="p-val" id="val-rg">45.678.901-2</div></div>
         <div class="p-field"><div class="p-lbl">Data de Nascimento</div><div class="p-val" id="val-nasc">15/03/1978</div><div class="p-edit"><input type="date" id="edit-nasc" value="1978-03-15"></div></div>
         <div class="p-field"><div class="p-lbl">Tipo de Síndico</div><div class="p-val" id="val-tipo">Síndico Morador Eleito</div><div class="p-edit"><select id="edit-tipo"><option value="Síndico Morador Eleito" selected>Síndico Morador Eleito</option><option value="Síndico Profissional Contratado">Síndico Profissional Contratado</option><option value="Subsíndico">Subsíndico</option><option value="Administrador Delegado">Administrador Delegado</option></select></div></div>
         <div class="p-field"><div class="p-lbl">E-mail</div><div class="p-val" id="val-email">roberto.nascimento@email.com</div><div class="p-edit"><input type="email" id="edit-email" value="roberto.nascimento@email.com"></div></div>
@@ -101,7 +101,7 @@
       <h3><i class="fa-solid fa-building" style="color:#7c3aed;"></i> Dados do Condomínio</h3>
       <div class="p-grid">
         <div class="p-field"><div class="p-lbl">Nome do Condomínio</div><div class="p-val" id="val-condNome">Residencial das Palmeiras</div><div class="p-edit"><input type="text" id="edit-condNome" value="Residencial das Palmeiras"></div></div>
-        <div class="p-field"><div class="p-lbl">CNPJ</div><div class="p-val" id="val-cnpj">12.345.678/0001-90</div><div class="p-edit"><input type="text" id="edit-cnpj" value="12.345.678/0001-90" class="mask-cnpj"></div></div>
+        <div class="p-field"><div class="p-lbl">CNPJ</div><div class="p-val" id="val-cnpj">12.345.678/0001-90</div></div>
         <div class="p-field"><div class="p-lbl">Tipo</div><div class="p-val" id="val-tipoCondo">Residencial</div><div class="p-edit"><select id="edit-tipoCondo"><option value="Residencial" selected>Residencial</option><option value="Comercial">Comercial</option><option value="Misto">Misto</option></select></div></div>
         <div class="p-field"><div class="p-lbl">Unidades</div><div class="p-val" id="val-unidades">48 apartamentos</div><div class="p-edit"><input type="text" id="edit-unidades" value="48 apartamentos"></div></div>
         <div class="p-field"><div class="p-lbl">Taxa Mensal</div><div class="p-val" id="val-taxa">R$ 380,00</div><div class="p-edit"><input type="text" id="edit-taxa" value="R$ 380,00"></div></div>
@@ -149,14 +149,11 @@
 
     const fields = [
       { id: 'nome', edit: 'editNome', view: 'viewNome', isNome: true },
-      { id: 'cpf', edit: 'edit-cpf', view: 'val-cpf' },
-      { id: 'rg', edit: 'edit-rg', view: 'val-rg' },
       { id: 'nasc', edit: 'edit-nasc', view: 'val-nasc', isDate: true },
       { id: 'tipo', edit: 'edit-tipo', view: 'val-tipo' },
       { id: 'email', edit: 'edit-email', view: 'val-email' },
       { id: 'tel', edit: 'edit-tel', view: 'val-tel' },
       { id: 'condNome', edit: 'edit-condNome', view: 'val-condNome' },
-      { id: 'cnpj', edit: 'edit-cnpj', view: 'val-cnpj' },
       { id: 'tipoCondo', edit: 'edit-tipoCondo', view: 'val-tipoCondo' },
       { id: 'unidades', edit: 'edit-unidades', view: 'val-unidades' },
       { id: 'taxa', edit: 'edit-taxa', view: 'val-taxa' },

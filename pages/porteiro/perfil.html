@@ -67,7 +67,7 @@
     <div class="profile-top">
       <div class="p-avatar-wrap">
         <div class="p-avatar" onclick="document.getElementById('avatarInput').click()">
-          <i class="fa-solid fa-shield-halved" id="avatarIcon"></i>
+          <i class="fa-solid fa-user" id="avatarIcon"></i>
           <img id="avatarPreview" src="" alt="" style="display:none;">
           <div class="avatar-overlay"><i class="fa-solid fa-camera"></i></div>
           <input type="file" id="avatarInput" accept="image/*" onchange="trocarAvatar(event)">
@@ -83,8 +83,8 @@
     <div class="p-card">
       <h3><i class="fa-solid fa-user" style="color:#409eff;"></i> Dados Pessoais</h3>
       <div class="p-grid">
-        <div class="p-field"><div class="p-lbl">CPF</div><div class="p-val" id="val-cpf">987.654.321-00</div><div class="p-edit"><input type="text" id="edit-cpf" value="987.654.321-00" class="mask-cpf"></div></div>
-        <div class="p-field"><div class="p-lbl">RG</div><div class="p-val" id="val-rg">98.765.432-1</div><div class="p-edit"><input type="text" id="edit-rg" value="98.765.432-1"></div></div>
+        <div class="p-field"><div class="p-lbl">CPF</div><div class="p-val" id="val-cpf">987.654.321-00</div></div>
+        <div class="p-field"><div class="p-lbl">RG</div><div class="p-val" id="val-rg">98.765.432-1</div></div>
         <div class="p-field"><div class="p-lbl">Data de Nascimento</div><div class="p-val" id="val-nasc">22/08/1990</div><div class="p-edit"><input type="date" id="edit-nasc" value="1990-08-22"></div></div>
         <div class="p-field"><div class="p-lbl">E-mail</div><div class="p-val" id="val-email">carlos.pereira@email.com</div><div class="p-edit"><input type="email" id="edit-email" value="carlos.pereira@email.com"></div></div>
         <div class="p-field"><div class="p-lbl">Celular / WhatsApp</div><div class="p-val" id="val-tel">(11) 97654-3210</div><div class="p-edit"><input type="tel" id="edit-tel" value="(11) 97654-3210" class="mask-tel"></div></div>
@@ -144,7 +144,7 @@
 
     const fields = [
       { id: 'nome', isNome: true },
-      { id: 'cpf' }, { id: 'rg' }, { id: 'nasc', isDate: true },
+      { id: 'nasc', isDate: true },
       { id: 'email' }, { id: 'tel' },
       { id: 'turno' }, { id: 'contrato' }, { id: 'inicio', isDate: true }, { id: 'local' },
     ];
