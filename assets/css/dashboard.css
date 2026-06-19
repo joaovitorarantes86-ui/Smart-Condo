@@ -66,6 +66,7 @@ body.dashboard-body {
   padding: 6px 13px; border-radius: 30px;
 }
 .user-chip i { color: var(--primary); font-size: 12px; }
+.user-chip img { width: 14px; height: 14px; }
 a.user-chip { text-decoration: none; color: var(--text-2); transition: all .2s; }
 a.user-chip:hover { background: var(--primary-light); border-color: var(--primary); color: var(--primary); }
 
@@ -78,6 +79,7 @@ a.user-chip:hover { background: var(--primary-light); border-color: var(--primar
 .profile-name{font-size:13px;font-weight:700;color:var(--text);max-width:110px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
 
 .mobile-back{display:flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;background:var(--surface-2);border:1px solid var(--border);color:var(--text-2);font-size:16px;text-decoration:none;flex-shrink:0;transition:all .2s;}
+.mobile-back img{width:16px;height:16px;display:block;}
 .mobile-back:hover{background:var(--primary-light);border-color:var(--primary);color:var(--primary);}
 .app-bar-left{display:flex;align-items:center;gap:10px;}
 
@@ -90,6 +92,7 @@ a.user-chip:hover { background: var(--primary-light); border-color: var(--primar
   background: var(--surface-2);
   transition: all .2s;
 }
+.logout-btn img { width: 14px; height: 14px; }
 .logout-btn:hover { background: #fff0f0; color: #e04040; border-color: #fdd; }
 
 /* ═══════════════════════════════════════════
@@ -155,6 +158,7 @@ a.user-chip:hover { background: var(--primary-light); border-color: var(--primar
   letter-spacing: .1px;
   position: relative; z-index: 1;
 }
+.greeting-sub img { width: 14px; height: 14px; vertical-align: middle; margin-right: 4px; display: inline-block; }
 
 .greeting-name {
   font-size: 26px;
@@ -164,6 +168,7 @@ a.user-chip:hover { background: var(--primary-light); border-color: var(--primar
   position: relative; z-index: 1;
   line-height: 1.1;
 }
+.greeting-name img { width: 26px; height: 26px; vertical-align: middle; margin-right: 6px; display: inline-block; }
 
 .greeting-condo {
   font-size: 12.5px;
@@ -172,6 +177,7 @@ a.user-chip:hover { background: var(--primary-light); border-color: var(--primar
   font-weight: 500;
   position: relative; z-index: 1;
 }
+.greeting-condo img { width: 14px; height: 14px; }
 
 /* ═══════════════════════════════════════════
    STATS ROW  (3 colunas)
@@ -225,6 +231,7 @@ a.user-chip:hover { background: var(--primary-light); border-color: var(--primar
   color: var(--muted);
   text-transform: uppercase; letter-spacing: .5px;
 }
+.stat-label img { width: 12px; height: 12px; display: inline-block; vertical-align: middle; margin-right: 3px; }
 
 /* ═══════════════════════════════════════════
    ADMIN STATS  (4 colunas, síndico)
@@ -350,6 +357,7 @@ a.user-chip:hover { background: var(--primary-light); border-color: var(--primar
 .card-info h4 { font-size: 14.5px; font-weight: 700; margin-bottom: 3px; color: var(--text); }
 .card-info p  { font-size: 12px; color: var(--muted); font-weight: 400; }
 .card-arrow   { color: #c8d4d8; font-size: 12px; }
+.card-arrow img { width: 12px; height: 12px; }
 
 /* ═══════════════════════════════════════════
    LISTA DE ITENS
@@ -388,6 +396,7 @@ a.user-chip:hover { background: var(--primary-light); border-color: var(--primar
   font-size: 11px; font-weight: 700; white-space: nowrap;
   letter-spacing: .1px;
 }
+.badge img { width: 12px; height: 12px; vertical-align: middle; margin-right: 2px; display: inline-block; }
 .badge-pending { background: rgba(230,162,60,.12);  color: #a87200; border: 1px solid rgba(230,162,60,.2); }
 .badge-ok      { background: rgba(16,182,168,.1);   color: #0a7a73; border: 1px solid rgba(16,182,168,.2); }
 .badge-alert   { background: rgba(245,108,108,.1);  color: #b52020; border: 1px solid rgba(245,108,108,.2); }
@@ -445,6 +454,7 @@ a.user-chip:hover { background: var(--primary-light); border-color: var(--primar
 .action-btn:hover::after { opacity: 1; animation: shimmer .7s linear; }
 .action-btn:active { transform: translateY(0); }
 
+.action-btn img { width: 16px; height: 16px; display: inline-block; vertical-align: middle; }
 .action-btn.outline {
   background: var(--surface);
   color: var(--primary);
@@ -469,6 +479,7 @@ a.user-chip:hover { background: var(--primary-light); border-color: var(--primar
   transition: all .2s;
   box-shadow: var(--shadow-xs);
 }
+.dash-back img { width: 14px; height: 14px; }
 .dash-back:hover { color: var(--primary); border-color: rgba(16,182,168,.3); transform: translateX(-2px); }
 
 /* ═══════════════════════════════════════════
@@ -521,6 +532,7 @@ a.user-chip:hover { background: var(--primary-light); border-color: var(--primar
   background: linear-gradient(135deg, var(--surface), #f4fffe);
 }
 .space-card i     { font-size: 30px; color: var(--primary); margin-bottom: 10px; display: block; }
+.space-card img   { width: 30px; height: 30px; margin-bottom: 10px; display: block; margin-left: auto; margin-right: auto; }
 .space-card h4    { font-size: 14px; font-weight: 700; margin-bottom: 4px; }
 .space-card p     { font-size: 11.5px; color: var(--muted); font-weight: 400; }
 .space-card .avail{ font-size: 11px; color: #1e9956; font-weight: 700; margin-top: 7px; }
@@ -565,6 +577,7 @@ a.user-chip:hover { background: var(--primary-light); border-color: var(--primar
   display: flex; align-items: center; gap: 6px;
   backdrop-filter: blur(4px);
 }
+.balance-pill img { width: 14px; height: 14px; }
 
 /* ═══════════════════════════════════════════
    DATA TABLE
@@ -587,6 +600,7 @@ a.user-chip:hover { background: var(--primary-light); border-color: var(--primar
   text-transform: uppercase; letter-spacing: .7px;
   border-bottom: 1px solid var(--border);
 }
+.table-head img { width: 12px; height: 12px; vertical-align: middle; margin-right: 3px; display: inline-block; }
 
 .table-row {
   padding: 14px 18px;
@@ -604,6 +618,7 @@ a.user-chip:hover { background: var(--primary-light); border-color: var(--primar
 /* ── EMPTY STATE ─────────────────────────────────────────── */
 .empty-state { text-align: center; padding: 40px 20px; color: var(--muted); }
 .empty-state i { font-size: 40px; opacity: .25; margin-bottom: 12px; display: block; }
+.empty-state img { width: 40px; height: 40px; opacity: .25; margin-bottom: 12px; display: block; margin-left: auto; margin-right: auto; }
 .empty-state p { font-size: 14px; }
 
 /* ═══════════════════════════════════════════
@@ -623,6 +638,7 @@ a.user-chip:hover { background: var(--primary-light); border-color: var(--primar
   border-color: rgba(230,162,60,.28); color: #7a5200;
 }
 .alert-box i { font-size: 17px; flex-shrink: 0; }
+.alert-box img { width: 17px; height: 17px; flex-shrink: 0; }
 
 /* ═══════════════════════════════════════════
    LAYOUT: MOBILE  (morador / síndico)
@@ -714,16 +730,19 @@ a.user-chip:hover { background: var(--primary-light); border-color: var(--primar
   min-width: 56px;
 }
 
-.layout-mobile .tab-bar a i {
+.layout-mobile .tab-bar a i,
+.layout-mobile .tab-bar a img {
   font-size: 18px;
   color: var(--muted);
 }
+.layout-mobile .tab-bar a img { width: 18px; height: 18px; }
 
 .layout-mobile .tab-bar a.active {
   color: var(--primary);
 }
 
-.layout-mobile .tab-bar a.active i {
+.layout-mobile .tab-bar a.active i,
+.layout-mobile .tab-bar a.active img {
   color: var(--primary);
 }
 
@@ -854,6 +873,7 @@ body:has(.step-page:target) .step-page.default-step {
   transition: all .3s var(--ease-smooth);
   z-index: 1;
 }
+.step-nav-circle img { width: 14px; height: 14px; display: block; }
 
 .step-nav-label {
   font-size: 10px; color: var(--muted);
@@ -925,6 +945,8 @@ body:has(.step-page:target) .step-page.default-step {
   position: relative; overflow: hidden;
   cursor: pointer;
 }
+.step-btn-next img { width: 14px; height: 14px; }
+.step-btn-back img { width: 14px; height: 14px; }
 .step-btn-next:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(16,182,168,.3), 0 10px 24px rgba(16,182,168,.22); }
 
 .step-btn-next.purple { background: linear-gradient(135deg,#9e72fc,#7a4ee0); box-shadow: 0 2px 6px rgba(145,100,250,.25), 0 6px 16px rgba(145,100,250,.18); }
