@@ -174,12 +174,6 @@ SmartCondo/
 
 ---
 
-## 📄 Licença
-
-Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
-
----
-
 <div align="center">
   <p>Desenvolvido por <a href="https://github.com/joaovitorarantes86-ui">João Vitor Arantes</a></p>
   <p>Projeto Integrador — Faculdade</p>
