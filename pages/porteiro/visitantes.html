@@ -10,48 +10,49 @@
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   </head>
 <body class="dashboard-body layout-desktop">
-  <header class="app-bar">
+  <a href="#conteudo-principal" class="skip-link">Pular para o conteúdo principal</a>
+  <header class="app-bar" role="banner">
     <div class="app-bar-inner">
-      <a href="../../index.html" class="app-bar-brand">
+      <a href="../../index.html" class="app-bar-brand" aria-label="Voltar à página inicial">
         <img src="../../assets/img/logo.png" alt="SmartCondo" class="logo-sm">
         <span class="brand-name">Smart<strong>Condo</strong></span>
       </a>
       <div class="app-bar-right">
-        <a href="perfil.html" class="profile-link"><span class="profile-avatar"><img src="/assets/img/icons/shield-halved.svg" alt="" style="width:16px;height:16px;display:block;width:16px;height:16px"></span><span class="profile-name" id="hdrName">Carlos Pereira</span><span class="profile-role">Porteiro</span></a>
-        <a href="../../index.html" class="logout-btn"><img src="/assets/img/icons/right-from-bracket.svg" width="16" height="16" alt=""> Sair</a>
+        <a href="perfil.html" class="profile-link" aria-label="Ver perfil"><span class="profile-avatar"><img src="/assets/img/icons/shield-halved.svg" alt="" aria-hidden="true" style="width:16px;height:16px;display:block;width:16px;height:16px"></span><span class="profile-name" id="hdrName">Carlos Pereira</span><span class="profile-role">Porteiro</span></a>
+        <a href="../../index.html" class="logout-btn"><img src="/assets/img/icons/right-from-bracket.svg" width="16" height="16" alt="" aria-hidden="true"> Sair</a>
       </div>
     </div>
   </header>
-  <main class="dash-wrapper">
+  <main class="dash-wrapper" id="conteudo-principal" role="main">
 
     <a href="dashboard.html" class="dash-back">
       <img src="/assets/img/icons/arrow-left.svg" width="16" height="16" alt=""> Painel do Porteiro
     </a>
 
-    <div class="dash-greeting">
-      <p class="greeting-sub"><img src="/assets/img/icons/clock.svg" width="16" height="16" alt="">Turno 07h – 15h &nbsp;·&nbsp; Carlos Pereira</p>
-      <h2 class="greeting-name"><img src="/assets/img/icons/person-walking-arrow-right.svg" alt="" style="width:26px;height:26px;vertical-align:middle;margin-right:8px;filter:brightness(0) invert(1);width:16px;height:16px"> Controle de Visitantes</h2>
-      <p class="greeting-condo"><img src="/assets/img/icons/person-walking-arrow-right.svg" alt="" style="width:16px;height:16px;vertical-align:middle;margin-right:6px;filter:brightness(0) invert(1);width:16px;height:16px"> Registre entradas e saídas em tempo real</p>
+    <div class="dash-greeting" role="region" aria-label="Informações do turno">
+      <p class="greeting-sub"><img src="/assets/img/icons/clock.svg" width="16" height="16" alt="" aria-hidden="true">Turno 07h – 15h &nbsp;·&nbsp; Carlos Pereira</p>
+      <h1 class="greeting-name"><img src="/assets/img/icons/person-walking-arrow-right.svg" alt="" aria-hidden="true"> Controle de Visitantes</h1>
+      <p class="greeting-condo"><img src="/assets/img/icons/person-walking-arrow-right.svg" alt="" aria-hidden="true"> Registre entradas e saídas em tempo real</p>
     </div>
 
-    <div class="stats-row">
-      <div class="stat-card teal"><span class="stat-value">4</span><span class="stat-label"><img src="/assets/img/icons/building.svg" width="16" height="16" alt="">No cond.</span></div>
-      <div class="stat-card blue"><span class="stat-value">11</span><span class="stat-label">Total hoje</span></div>
-      <div class="stat-card amber"><span class="stat-value">7</span><span class="stat-label">Saíram</span></div>
+    <div class="stats-row" role="region" aria-label="Resumo de visitantes">
+      <div class="stat-card teal"><span class="stat-value" aria-label="4 no condomínio">4</span><span class="stat-label"><img src="/assets/img/icons/building.svg" width="16" height="16" alt="" aria-hidden="true">No cond.</span></div>
+      <div class="stat-card blue"><span class="stat-value" aria-label="11 total hoje">11</span><span class="stat-label">Total hoje</span></div>
+      <div class="stat-card amber"><span class="stat-value" aria-label="7 saíram">7</span><span class="stat-label">Saíram</span></div>
     </div>
 
-    <p class="section-title"> Registrar Novo Visitante</p>
-    <div class="form-card">
+    <h2 class="section-title" id="titulo-registro"> Registrar Novo Visitante</h2>
+    <div class="form-card" role="region" aria-labelledby="titulo-registro">
       <h3> Dados do Visitante</h3>
-      <form action="dashboard.html">
+      <form action="dashboard.html" novalidate aria-label="Formulário de registro de visitante">
         <div class="form-row">
-          <div class="form-group"><label><img src="/assets/img/icons/user.svg" width="16" height="16" alt="">Nome completo</label><input type="text" placeholder="Nome do visitante" required></div>
-          <div class="form-group"><label><img src="/assets/img/icons/id-card.svg" width="16" height="16" alt="">CPF / Documento</label><input type="text" placeholder="000.000.000-00" class="mask-cpf" required></div>
+          <div class="form-group"><label for="nome-visitante"><img src="/assets/img/icons/user.svg" width="16" height="16" alt="" aria-hidden="true">Nome completo</label><input type="text" id="nome-visitante" placeholder="Nome do visitante" required autocomplete="name"></div>
+          <div class="form-group"><label for="doc-visitante"><img src="/assets/img/icons/id-card.svg" width="16" height="16" alt="" aria-hidden="true">CPF / Documento</label><input type="text" id="doc-visitante" placeholder="000.000.000-00" class="mask-cpf" required autocomplete="off"></div>
         </div>
         <div class="form-row">
           <div class="form-group">
-            <label><img src="/assets/img/icons/building.svg" width="16" height="16" alt="">Visitando o apartamento</label>
-            <select required>
+            <label for="apto-visitante"><img src="/assets/img/icons/building.svg" width="16" height="16" alt="" aria-hidden="true">Visitando o apartamento</label>
+            <select id="apto-visitante" required>
               <option value="" disabled selected>Selecione o apto</option>
               <option>Apto 101</option><option>Apto 102</option><option>Apto 103</option>
               <option>Apto 201</option><option>Apto 202</option><option>Apto 203</option><option>Apto 204</option>
@@ -61,8 +62,8 @@
             </select>
           </div>
           <div class="form-group">
-            <label>Tipo de visita</label>
-            <select required>
+            <label for="tipo-visita">Tipo de visita</label>
+            <select id="tipo-visita" required>
               <option value="" disabled selected>Selecione o tipo</option>
               <option>Visita pessoal</option>
               <option>Prestador de serviço</option>
@@ -73,81 +74,93 @@
           </div>
         </div>
         <div class="form-row">
-          <div class="form-group"><label><img src="/assets/img/icons/car.svg" width="16" height="16" alt="">Placa do veículo (opcional)</label><input type="text" placeholder="ABC-1D23"></div>
-          <div class="form-group"><label><img src="/assets/img/icons/clock.svg" width="16" height="16" alt="">Horário de entrada</label><input type="time" required></div>
+          <div class="form-group"><label for="placa-visitante"><img src="/assets/img/icons/car.svg" width="16" height="16" alt="" aria-hidden="true">Placa do veículo (opcional)</label><input type="text" id="placa-visitante" placeholder="ABC-1D23" class="mask-placa"></div>
+          <div class="form-group"><label for="hora-visitante"><img src="/assets/img/icons/clock.svg" width="16" height="16" alt="" aria-hidden="true">Horário de entrada</label><input type="time" id="hora-visitante" required></div>
         </div>
-        <button class="action-btn" type="submit" style="margin-top:8px;">
+        <button class="action-btn" type="submit" style="margin-top:8px;" aria-label="Registrar entrada do visitante">
           Registrar Entrada
         </button>
       </form>
     </div>
 
-    <p class="section-title"> Visitantes no Condomínio Agora</p>
-    <div class="list-items">
-      <div class="list-item">
-        <div class="list-avatar">MA</div>
-        <div class="list-info"><h5>Marcos Alves</h5><p>Apto 102 &nbsp;·&nbsp; Visita pessoal &nbsp;·&nbsp; Entrada: 09h15</p></div>
-        <span class="badge badge-ok">Dentro</span>
+    <h2 class="section-title" id="titulo-presentes"> Visitantes no Condomínio Agora</h2>
+    <div class="list-items" role="list" aria-labelledby="titulo-presentes" aria-live="polite">
+      <div class="list-item" role="listitem">
+        <div class="list-avatar" aria-hidden="true">MA</div>
+        <div class="list-info"><h3>Marcos Alves</h3><p>Apto 102 &nbsp;·&nbsp; Visita pessoal &nbsp;·&nbsp; Entrada: 09h15</p></div>
+        <span class="badge badge-ok" aria-label="Status: Dentro">Dentro</span>
       </div>
-      <div class="list-item">
-        <div class="list-avatar amber">FS</div>
-        <div class="list-info"><h5>Fernanda Souza</h5><p>Apto 305 &nbsp;·&nbsp; Visita pessoal &nbsp;·&nbsp; Entrada: 10h40</p></div>
-        <span class="badge badge-ok">Dentro</span>
+      <div class="list-item" role="listitem">
+        <div class="list-avatar amber" aria-hidden="true">FS</div>
+        <div class="list-info"><h3>Fernanda Souza</h3><p>Apto 305 &nbsp;·&nbsp; Visita pessoal &nbsp;·&nbsp; Entrada: 10h40</p></div>
+        <span class="badge badge-ok" aria-label="Status: Dentro">Dentro</span>
       </div>
-      <div class="list-item">
-        <div class="list-avatar blue">LO</div>
-        <div class="list-info"><h5>Lucas Oliveira</h5><p>Apto 201 &nbsp;·&nbsp; Técnico de manutenção &nbsp;·&nbsp; Entrada: 11h00</p></div>
-        <span class="badge badge-blue">Serviço</span>
+      <div class="list-item" role="listitem">
+        <div class="list-avatar blue" aria-hidden="true">LO</div>
+        <div class="list-info"><h3>Lucas Oliveira</h3><p>Apto 201 &nbsp;·&nbsp; Técnico de manutenção &nbsp;·&nbsp; Entrada: 11h00</p></div>
+        <span class="badge badge-blue" aria-label="Status: Serviço">Serviço</span>
       </div>
-      <div class="list-item">
-        <div class="list-avatar purple">RP</div>
-        <div class="list-info"><h5>Rafael Pinto</h5><p>Apto 410 &nbsp;·&nbsp; Visita pessoal &nbsp;·&nbsp; Entrada: 12h55</p></div>
-        <span class="badge badge-ok">Dentro</span>
+      <div class="list-item" role="listitem">
+        <div class="list-avatar purple" aria-hidden="true">RP</div>
+        <div class="list-info"><h3>Rafael Pinto</h3><p>Apto 410 &nbsp;·&nbsp; Visita pessoal &nbsp;·&nbsp; Entrada: 12h55</p></div>
+        <span class="badge badge-ok" aria-label="Status: Dentro">Dentro</span>
       </div>
     </div>
 
-    <p class="section-title"> Histórico de Hoje — 18/03/2025</p>
-    <div class="data-table">
-      <div class="table-head cols-5"><span><img src="/assets/img/icons/user.svg" width="16" height="16" alt="">Visitante</span><span>Apto</span><span>Entrada</span><span>Saída</span><span> Tipo</span></div>
-      <div class="table-row cols-5"><span><strong>Ana Carvalho</strong></span><span>204</span><span>07h30</span><span>08h15</span><span><span class="badge badge-neutral">Delivery</span></span></div>
-      <div class="table-row cols-5"><span><strong>José Mendes</strong></span><span>101</span><span>07h50</span><span>09h00</span><span><span class="badge badge-neutral">Visita</span></span></div>
-      <div class="table-row cols-5"><span><strong>Técnico Eletro</strong></span><span>502</span><span>08h20</span><span>10h10</span><span><span class="badge badge-blue">Serviço</span></span></div>
-      <div class="table-row cols-5"><span><strong>Patrícia Lima</strong></span><span>303</span><span>08h45</span><span>09h30</span><span><span class="badge badge-neutral">Delivery</span></span></div>
-      <div class="table-row cols-5"><span><strong>Marcos Alves</strong></span><span>102</span><span>09h15</span><span>—</span><span><span class="badge badge-ok">Dentro</span></span></div>
-      <div class="table-row cols-5"><span><strong>Fernanda Souza</strong></span><span>305</span><span>10h40</span><span>—</span><span><span class="badge badge-ok">Dentro</span></span></div>
-      <div class="table-row cols-5"><span><strong>Lucas Oliveira</strong></span><span>201</span><span>11h00</span><span>—</span><span><span class="badge badge-blue">Serviço</span></span></div>
+    <h2 class="section-title" id="titulo-historico"> Histórico de Hoje — 18/03/2025</h2>
+    <div class="data-table history-table" role="region" aria-labelledby="titulo-historico">
+      <div class="table-head cols-5" role="row" aria-label="Cabeçalho da tabela"><span role="columnheader"><img src="/assets/img/icons/user.svg" width="16" height="16" alt="" aria-hidden="true">Visitante</span><span role="columnheader">Apto</span><span role="columnheader">Entrada</span><span role="columnheader">Saída</span><span role="columnheader"> Tipo</span></div>
+      <div class="table-row cols-5" role="row" aria-label="Ana Carvalho, Apto 204, entrou 07h30, saiu 08h15, Delivery"><span><strong>Ana Carvalho</strong></span><span>204</span><span>07h30</span><span>08h15</span><span><span class="badge badge-neutral">Delivery</span></span></div>
+      <div class="table-row cols-5" role="row" aria-label="José Mendes, Apto 101, entrou 07h50, saiu 09h00, Visita"><span><strong>José Mendes</strong></span><span>101</span><span>07h50</span><span>09h00</span><span><span class="badge badge-neutral">Visita</span></span></div>
+      <div class="table-row cols-5" role="row" aria-label="Técnico Eletro, Apto 502, entrou 08h20, saiu 10h10, Serviço"><span><strong>Técnico Eletro</strong></span><span>502</span><span>08h20</span><span>10h10</span><span><span class="badge badge-blue">Serviço</span></span></div>
+      <div class="table-row cols-5" role="row" aria-label="Patrícia Lima, Apto 303, entrou 08h45, saiu 09h30, Delivery"><span><strong>Patrícia Lima</strong></span><span>303</span><span>08h45</span><span>09h30</span><span><span class="badge badge-neutral">Delivery</span></span></div>
+      <div class="table-row cols-5 status-dentro" role="row" aria-label="Marcos Alves, Apto 102, entrou 09h15, ainda no condomínio"><span><strong>Marcos Alves</strong></span><span>102</span><span>09h15</span><span>—</span><span><span class="badge badge-ok">Dentro</span></span></div>
+      <div class="table-row cols-5 status-dentro" role="row" aria-label="Fernanda Souza, Apto 305, entrou 10h40, ainda no condomínio"><span><strong>Fernanda Souza</strong></span><span>305</span><span>10h40</span><span>—</span><span><span class="badge badge-ok">Dentro</span></span></div>
+      <div class="table-row cols-5 status-dentro" role="row" aria-label="Lucas Oliveira, Apto 201, entrou 11h00, ainda no condomínio"><span><strong>Lucas Oliveira</strong></span><span>201</span><span>11h00</span><span>—</span><span><span class="badge badge-blue">Serviço</span></span></div>
     </div>
 
   </main>
 
-  <div class="accessibility-widget">
-    <input type="checkbox" id="access-toggle">
-    <label for="access-toggle" class="access-button" title="Acessibilidade">
-      <img src="../../assets/img/acessibilidade.png" class="access-icon-img" alt="">
+  <div class="accessibility-widget" role="region" aria-label="Ferramentas de acessibilidade">
+    <input type="checkbox" id="access-toggle" aria-label="Abrir menu de acessibilidade">
+    <label for="access-toggle" class="access-button" title="Abrir ferramentas de acessibilidade" aria-label="Abrir ferramentas de acessibilidade">
+      <img src="../../assets/img/acessibilidade.png" class="access-icon-img" alt="" aria-hidden="true">
     </label>
-    <div class="access-menu">
-      <label><input type="checkbox" id="font-toggle">  Aumentar fonte</label>
-      <label><input type="checkbox" id="contrast-toggle">  Alto contraste</label>
-      <label><input type="checkbox" id="read-toggle">  Modo leitura</label>
+    <div class="access-menu" role="menu" aria-label="Opções de acessibilidade">
+      <label role="menuitem" tabindex="0"><input type="checkbox" id="font-toggle"> Aumentar fonte</label>
+      <label role="menuitem" tabindex="0"><input type="checkbox" id="contrast-toggle"> Alto contraste</label>
+      <label role="menuitem" tabindex="0"><input type="checkbox" id="read-toggle"> Modo leitura</label>
     </div>
   </div>
   <script src="../../assets/js/validation.js"></script>
   <script>
   document.addEventListener('DOMContentLoaded', function() {
-    document.querySelector('.form-card form').addEventListener('submit', function(e) {
-      var inputs = this.querySelectorAll('input[required], select[required]');
-      var valido = true;
-      document.querySelectorAll('.erro-validacao').forEach(function(el) { el.remove(); });
-      inputs.forEach(function(inp) {
-        if (!inp.value.trim()) {
-          mostrarErro(inp, 'Campo obrigatório');
-          valido = false;
+    var form = document.querySelector('.form-card form');
+    if (form) {
+      form.addEventListener('submit', function(e) {
+        var inputs = this.querySelectorAll('input[required], select[required]');
+        var valido = true;
+        document.querySelectorAll('.erro-validacao').forEach(function(el) { el.remove(); });
+        inputs.forEach(function(inp) {
+          limparErro(inp);
+          if (!inp.value.trim()) {
+            mostrarErro(inp, 'Campo obrigatório');
+            valido = false;
+          }
+        });
+        if (!valido) {
+          e.preventDefault();
+          var primeiroErro = this.querySelector('.erro-validacao');
+          if (primeiroErro && primeiroErro.previousElementSibling) {
+            primeiroErro.previousElementSibling.focus();
+          }
         }
       });
-      if (!valido) e.preventDefault();
-    });
+    }
+
   });
   </script>
 <script>try{var _d=JSON.parse(localStorage.getItem("smartcondo_perfil_porteiro"));if(_d&&_d.nome)document.getElementById("hdrName").textContent=_d.nome;}catch(_e){}</script>
+<script src="../../assets/js/acessibilidade.js"></script>
 </body>
 </html>

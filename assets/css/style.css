@@ -444,6 +444,85 @@ h2 {
 }
 
 /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   SKIP LINK  —  Pular para o conteÃºdo
+   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--primary);
+  color: #fff;
+  padding: 10px 24px;
+  border-radius: 0 0 12px 12px;
+  font-size: 14px;
+  font-weight: 700;
+  z-index: 10000;
+  text-decoration: none;
+  transition: top .25s var(--ease-smooth);
+  box-shadow: 0 4px 16px rgba(0,0,0,.2);
+}
+.skip-link:focus {
+  top: 0;
+  outline: none;
+  box-shadow: 0 4px 16px rgba(0,0,0,.2), 0 0 0 4px rgba(255,255,255,.5);
+}
+
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   MODOS DE ACESSIBILIDADE  (font-grande, alto-contraste, modo-leitura)
+   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+body.font-grande {
+  zoom: 1.25;
+}
+
+body.alto-contraste {
+  --primary: #006b62 !important;
+  --primary-dark: #004d46 !important;
+  --text: #000 !important;
+  --text-2: #111 !important;
+  --muted: #333 !important;
+  --border: #555 !important;
+  --background: #fff !important;
+  --surface-2: #eee !important;
+}
+body.alto-contraste .dash-greeting {
+  background: #004d46 !important;
+}
+body.alto-contraste .dash-greeting::before,
+body.alto-contraste .dash-greeting::after {
+  display: none !important;
+}
+body.alto-contraste .table-head {
+  background: #333 !important;
+  color: #fff !important;
+}
+body.alto-contraste .table-row:hover {
+  background: #ddd !important;
+}
+body.alto-contraste .list-item {
+  border: 2px solid #555 !important;
+}
+body.alto-contraste .badge { border-width: 2px !important; }
+body.alto-contraste .action-btn { border: 2px solid #000 !important; }
+
+body.modo-leitura {
+  max-width: 780px !important;
+  margin: 0 auto !important;
+  background: #fafafa !important;
+}
+body.modo-leitura .dash-wrapper {
+  box-shadow: none !important;
+  border: none !important;
+  background: #fff !important;
+}
+body.modo-leitura .app-bar { display: none !important; }
+body.modo-leitura .dash-greeting {
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+body.modo-leitura .stats-row { display: none !important; }
+
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    ACESSIBILIDADE
    â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 .accessibility-widget { position: fixed; bottom: 28px; right: 28px; z-index: 999; }
@@ -489,8 +568,13 @@ h2 {
   padding: 9px 12px; border-radius: var(--radius-xs);
   transition: all .15s; font-weight: 600; color: var(--text-2); font-size: 13px;
 }
-.access-menu label:hover { background: var(--primary-light); color: var(--primary); }
+.access-menu label:hover,
+.access-menu label:focus-within { background: var(--primary-light); color: var(--primary); }
 .access-menu label input { accent-color: var(--primary); }
+.access-menu label:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--primary-glow), 0 0 0 1px var(--primary);
+}
 
 /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    FORMULÃRIOS DE CADASTRO
@@ -1286,7 +1370,7 @@ input.erro:focus, select.erro:focus, textarea.erro:focus {
 .doc-upload-icon img { width: 22px; height: 22px; }
 
 /* ═══════════════════════════════════════════════════════════
-   PREMIUM — Camada de polimento visual
+           Camada de polimento visual
    Sem alteração de cores — apenas refinamentos
    ═══════════════════════════════════════════════════════════ */
 
