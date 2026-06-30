@@ -175,6 +175,5 @@ SmartCondo/
 ---
 
 <div align="center">
-  <p>Desenvolvido por <a href="https://github.com/joaovitorarantes86-ui">João Vitor Arantes</a></p>
   <p>Projeto Integrador — Faculdade</p>
 </div>
